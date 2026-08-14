@@ -37,8 +37,15 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero section">
-      <div class="hero-content fade-in">
+    <section id="home" class="hero section" style="position: relative; overflow: hidden; justify-content: center;">
+      <!-- Video Background -->
+      <video class="hero-bg-video" autoplay loop muted playsinline>
+        <source src="/ShowReal1.mp4" type="video/mp4">
+      </video>
+      <!-- Dark Overlay -->
+      <div class="hero-bg-overlay"></div>
+
+      <div class="hero-content fade-in" style="position: relative; z-index: 2;">
         <h2 class="greeting">สวัสดีครับ ผมวิทย์</h2>
         <h1 class="name">Danaiwit Kanthawong</h1>
         <p class="tagline">3D Modeler, IT Infrastructure & AI System Integration</p>
@@ -47,7 +54,7 @@
           <a href="#contact" class="btn btn-secondary">ติดต่อ</a>
         </div>
       </div>
-      <div class="hero-graphic fade-in-delayed">
+      <div class="hero-graphic fade-in-delayed" style="position: relative; z-index: 2;">
         <div class="profile-img-container">
           <img src="/profile.jpg" alt="Danaiwit Kanthawong" class="profile-img">
         </div>
