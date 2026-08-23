@@ -739,11 +739,11 @@ footer {
 }
 
 .modal-content {
-  background: var(--surface-color);
+  background: #111116;
   border: 1px solid var(--surface-border);
   border-radius: 20px;
-  width: 90%;
-  max-width: 600px;
+  width: 92%;
+  max-width: 860px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
@@ -823,8 +823,8 @@ footer {
 
 .modal-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
   margin-top: 25px;
 }
 
