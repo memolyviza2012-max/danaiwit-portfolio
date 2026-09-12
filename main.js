@@ -1,3 +1,5 @@
+import { initVisitorCounter } from './stats.js';
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 
@@ -233,3 +235,5 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// Initialize real-time visitor counter & presence
+initVisitorCounter();
