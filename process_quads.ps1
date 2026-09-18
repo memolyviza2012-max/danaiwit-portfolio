@@ -1,7 +1,7 @@
-Add-Type -AssemblyName System.Drawing
+﻿Add-Type -AssemblyName System.Drawing
 
 $sourceDir = "D:\backUp File\Quads\00_ImageQuads"
-$targetDir = "D:\Home_Dashboard\portfolio\public\drones"
+$targetDir = "Z:\01_Work\02_Home_Dashboard\portfolio\public\drones"
 
 if (-not (Test-Path $targetDir)) {
     New-Item -ItemType Directory -Path $targetDir -Force | Out-Null
