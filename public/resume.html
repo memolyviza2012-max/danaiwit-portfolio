@@ -4,6 +4,46 @@
   <meta charset="UTF-8">
   <title>Resume - Danaiwit Kanthawong</title>
   <link rel="stylesheet" href="resume.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .job-title {
+      font-size: 10pt;
+      letter-spacing: 0.3px;
+      color: var(--accent-secondary);
+      font-weight: 600;
+    }
+    .summary {
+      line-height: 1.55;
+      font-size: 9pt;
+      margin-bottom: 12px;
+    }
+    .exp-bullets li, .skill-list li {
+      line-height: 1.45;
+      font-size: 8.8pt;
+    }
+    .experience-item {
+      margin-bottom: 11px;
+    }
+    .exp-title {
+      font-size: 10pt;
+      font-weight: 700;
+    }
+    .exp-company {
+      font-size: 9pt;
+      margin-bottom: 4px;
+    }
+    .sidebar {
+      padding: 30px 20px;
+    }
+    .main-content {
+      padding: 30px 25px;
+    }
+  </style>
 </head>
 <body>
   <div class="page">
@@ -12,7 +52,6 @@
     <div class="sidebar">
       <div class="profile-section">
         <div class="profile-img-wrap">
-          <!-- Adjust path if running locally or deployed -->
           <img src="profile_tiny.jpeg" alt="Profile" class="profile-img" onerror="this.src='https://danaiwitk-portfolio.vercel.app/profile.jpg'">
         </div>
       </div>
@@ -30,125 +69,118 @@
         <div class="contact-item">
           <span class="icon">GitHub:</span> github.com/memolyviza2012-max
         </div>
+        <div class="contact-item">
+          <span class="icon">Portfolio:</span> danaiwitk-portfolio.vercel.app
+        </div>
       </div>
 
       <div class="sidebar-title">Core Competencies</div>
       
-      <h4 style="color: var(--accent-secondary); font-size: 9.5pt; margin-bottom: 5px;">3D & Hard-Surface</h4>
+      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 4px;">Project & Product Management</h4>
+      <ul class="skill-list" style="margin-bottom: 10px;">
+        <li>Agile & Kanban (Trello, Sheets, LINE)</li>
+        <li>Scope Management & MVP Scoping</li>
+        <li>User Stories & Requirement Definition</li>
+        <li>UAT, QA Testing & Bug Triage</li>
+        <li>Value-Driven Milestone Prioritization</li>
+      </ul>
+
+      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 4px;">AI-Augmented Workflows</h4>
+      <ul class="skill-list" style="margin-bottom: 10px;">
+        <li>Advanced Prompt & Skill Engineering</li>
+        <li>AI Pipelines (Visual, Audio & Code)</li>
+        <li>Rapid Prototype & Demo Generation</li>
+        <li>Distributed LAN Multi-PC AI Cluster</li>
+      </ul>
+
+      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 4px;">Technical Systems Literacy</h4>
+      <ul class="skill-list" style="margin-bottom: 10px;">
+        <li>Web Architecture (React, REST APIs)</li>
+        <li>Cloud Platforms (Cloudflare, Supabase, Firebase)</li>
+        <li>High-Speed Private Cloud NAS (SMB)</li>
+        <li>Release Engineering (Inno Setup, Git)</li>
+      </ul>
+
+      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 12px;">Studio Operations & Compliance</h4>
       <ul class="skill-list" style="margin-bottom: 12px;">
-        <li>Blender Expert (Hard-Surface)</li>
-        <li>Architecture, Machinery & Medical 3D</li>
-        <li>Quads Topology (105+ Drones)</li>
-        <li>Cameraman (DJI Ronin RS5)</li>
+        <li>Budgeting & High-End IT Procurement</li>
+        <li>Accounting Docs & FX Compliance (USD/THB)</li>
+        <li>Cross-Functional Collaboration</li>
       </ul>
 
-      <h4 style="color: var(--accent-secondary); font-size: 9.5pt; margin-bottom: 5px;">Full-Stack & Web</h4>
-      <ul class="skill-list" style="margin-bottom: 12px;">
-        <li>React 19 & Vite</li>
-        <li>Firebase (Firestore, Realtime DB)</li>
-        <li>REST APIs & Cloud Auth</li>
-      </ul>
-
-      <h4 style="color: var(--accent-secondary); font-size: 9.5pt; margin-bottom: 5px;">Systems & Network</h4>
-      <ul class="skill-list" style="margin-bottom: 12px;">
-        <li>Multi-PC LAN AI Clustering</li>
-        <li>Ugreen & Synology NAS</li>
-        <li>OpenSSH & Remote Compute</li>
-        <li>High-Performance PC Building</li>
-      </ul>
-
-      <h4 style="color: var(--accent-secondary); font-size: 9.5pt; margin-bottom: 5px;">Automation & Scripting</h4>
-      <ul class="skill-list" style="margin-bottom: 15px;">
-        <li>Python & Windows Automation</li>
-        <li>FFmpeg Video Pipelines</li>
-        <li>Inno Setup & Font Engineering</li>
-      </ul>
-
-      <div class="sidebar-title" style="margin-top: 10px;">Education</div>
-      <div style="font-size: 9.5pt; color: white; font-weight: 600;">B.Sc. in Animation</div>
-      <div style="font-size: 8.5pt; color: var(--text-muted);">Chiang Mai University (Dec 2015)</div>
+      <div class="sidebar-title" style="margin-top: 6px;">Education</div>
+      <div style="font-size: 9pt; color: white; font-weight: 600;">B.Sc. in Animation</div>
+      <div style="font-size: 8pt; color: var(--text-muted);">Chiang Mai University (Dec 2015)</div>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
       <div class="header-title">
         <h1 class="name">Danaiwit Kanthawong</h1>
-        <div class="job-title">Senior 3D Modeler | Full-Stack Web Developer | AI & Systems Architect</div>
+        <div class="job-title">Technical Project Manager | AI-Augmented Product Lead | Operations Coordinator</div>
       </div>
 
       <div class="summary">
-        Senior 3D Modeler & Blender Expert specializing in <strong>Hard-Surface 3D Modeling</strong> (Architecture, Machinery, FPV Drones, Medical Robotics), combined with production full-stack web application development (React 19, Firebase), studio IT infrastructure, and distributed <strong>Generative AI & Automation</strong> workflows.
+        Technical Project Manager and Operations Lead skilled in integrating Generative AI to accelerate delivery across production software and digital media. Proven track record as Product Lead delivering a 100-game localized software catalog on nodnuattranslator.com and nurturing an engaged community of 7,000+ followers on Facebook. Adept at data-driven prioritization, pragmatic MVP scope control under tight deadlines, cross-functional facilitation, and architecting smart automated workflows that drastically reduce production lead time and costs.
       </div>
 
       <h2 class="section-title">Professional Experience</h2>
 
-      <div class="experience-item" style="background: rgba(139, 92, 246, 0.1); padding: 12px 15px 12px 25px; border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.3);">
+      <div class="experience-item" style="background: rgba(139, 92, 246, 0.1); padding: 10px 14px 10px 20px; border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.3);">
         <div class="exp-header">
-          <span class="exp-title" style="color: var(--accent-secondary);">Grand Prix Winner (Best AI Short Film)</span>
+          <span class="exp-title" style="color: var(--accent-secondary);">🏆 Grand Prix Winner (Best AI Short Film)</span>
           <span class="exp-date">July 2026</span>
         </div>
         <div class="exp-company" style="color: white;">Thailand International AI Film Festival (TIAIF 2026)</div>
-        <div style="font-size: 9pt; color: var(--text-muted);">
-          Won the top Grand Prix award for the AI short film <em>"The Stroke of Night"</em> (co-created with Animation Renaissance), demonstrating industry-leading AI-driven cinematic storytelling.
+        <div style="font-size: 8.8pt; color: var(--text-muted); line-height: 1.5;">
+          Awarded top Grand Prix honor for the AI short film <em>"The Stroke of Night"</em> (co-produced with Animation Renaissance), demonstrating world-class mastery in managing end-to-end generative AI pipelines, rapid prototyping, and storytelling under strict competition deadlines.
         </div>
       </div>
 
       <div class="experience-item">
         <div class="exp-header">
-          <span class="exp-title">Full-Stack Web Developer & Systems Architect</span>
+          <span class="exp-title">Founder, Product Lead & Release Engineer</span>
+          <span class="exp-date">2022 - Present</span>
+        </div>
+        <div class="exp-company">NodNuat Translator Community (7,000+ Followers | 100-Game Official Catalog)</div>
+        <ul class="exp-bullets">
+          <li><strong>End-to-End Product Lifecycle:</strong> Directed scope, translation pipelines, and milestone delivery for over 100 localized PC game titles on official platform <strong>www.nodnuattranslator.com</strong>.</li>
+          <li><strong>Tooling for Distributed Teams:</strong> Defined requirements and architected <strong>TStudio Web</strong> with AI, empowering external translators and collaborators with real-time multi-user editing.</li>
+          <li><strong>Issue Triage & UAT:</strong> Handled end-user bug reports, conducted root-cause analysis, distributed release candidates for user validation (UAT), and published regular changelog release notes to 7,000+ followers.</li>
+          <li><strong>Data-Driven Prioritization:</strong> Balanced project roadmap between high-engagement trending releases and complex technical milestones based on community demand and feasibility.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-title">Operations Lead & Production Process Specialist</span>
+          <span class="exp-date">2019 - Present</span>
+        </div>
+        <div class="exp-company">Animation Renaissance Co., Ltd.</div>
+        <ul class="exp-bullets">
+          <li><strong>Process Improvement with PM:</strong> Partnered with Project Managers and creative leads to design and optimize studio production pipelines, accelerating turnaround for 3D and digital video deliverables.</li>
+          <li><strong>Scope & Timeline Management:</strong> Resolved crunch time bottlenecks by defining MVP deliverables, deferring non-essential features, and maintaining on-time client handovers without sacrificing quality.</li>
+          <li><strong>Corporate Compliance & Accounting:</strong> Streamlined corporate financial documentation, managed international wire transactions (USD/THB), and liaised with external audit teams for compliance.</li>
+          <li><strong>Resource Planning & Media:</strong> Directed high-performance IT workstation procurement, managed cloud/storage infrastructure, and oversaw studio brand media production.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-title">AI-Augmented Product & Systems Architect</span>
           <span class="exp-date">2024 - Present</span>
         </div>
         <div class="exp-company">Home Dashboard & Distributed Studio Ecosystem</div>
         <ul class="exp-bullets">
-          <li>Architected and deployed production web applications: <strong>TStudio Web</strong> (Real-time collaborative localization platform on Cloudflare Pages), <strong>TimeTracker</strong> (React 19, Firebase), <strong>NodNuat Platform</strong> (nodnuattranslator.com), and <strong>CMU Exam Prep</strong>.</li>
-          <li>Engineered multi-workstation AI compute clusters (LAN/OpenSSH) and automated AI media generation pipelines.</li>
-          <li>Configured high-speed private cloud storage across Ugreen DXP2800 and Synology NAS systems.</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="exp-header">
-          <span class="exp-title">Manager & Operations Lead / Senior 3D Modeler</span>
-          <span class="exp-date">Present</span>
-        </div>
-        <div class="exp-company">Animation Renaissance Co., Ltd.</div>
-        <ul class="exp-bullets">
-          <li>Lead senior-level 3D modeling and texturing for studio productions.</li>
-          <li>Lead cameraman (DJI Ronin RS5 gimbal) and end-to-end video production director.</li>
-          <li>Architected IT infrastructure, workstation builds, and high-performance compute setups.</li>
-          <li>Managed operational budgets, facilities, and international transactions (USD/THB).</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="exp-header">
-          <span class="exp-title">Founder & Localization Engineer</span>
-          <span class="exp-date">Present</span>
-        </div>
-        <div class="exp-company">NodNuat Translator Community (4.5k+ Followers)</div>
-        <ul class="exp-bullets">
-          <li>Founded and engineered official localization platform at <strong>www.nodnuattranslator.com</strong> (Cloudflare Pages, NAS sync, automated PromptPay slip validation) for 4,500+ followers.</li>
-          <li>Pioneered AI-driven localization workflows combined with meticulous human editing for AAA titles.</li>
-          <li>Specialized in font forging, IGGY injection, and Inno Setup installer engineering for games.</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="exp-header">
-          <span class="exp-title">3D Medical Equipment & Environment Artist</span>
-          <span class="exp-date">Past Project</span>
-        </div>
-        <div class="exp-company">Intuitive Surgical (Interactive Project)</div>
-        <ul class="exp-bullets">
-          <li>Modeled high-precision 3D surgical robotics (da Vinci systems).</li>
-          <li>Built immersive Virtual Operating Room (OR) environments for real-time engines.</li>
+          <li><strong>AI-Accelerated Web Product Delivery:</strong> Engineered requirements, user flows, and testing loops to ship production web apps: <strong>TStudio Web</strong> (Cloudflare Pages), <strong>TimeTracker</strong> (Firebase), and <strong>CMU Exam Prep</strong>.</li>
+          <li><strong>Distributed Infrastructure:</strong> Built multi-workstation AI clusters (LAN/OpenSSH), automated batch media pipelines (TTS, ComfyUI, FFmpeg), and high-throughput private NAS storage (Ugreen & Synology).</li>
         </ul>
       </div>
 
       <a href="https://danaiwitk-portfolio.vercel.app/" class="cta-banner">
         <div class="cta-banner-text">
           <h3>View Interactive Portfolio</h3>
-          <p>Click to explore interactive galleries, video showcases, and full projects.</p>
+          <p>Click to explore live production web apps, project case studies, and complete showcases.</p>
         </div>
         <div class="cta-banner-link">Click Here -></div>
       </a>
