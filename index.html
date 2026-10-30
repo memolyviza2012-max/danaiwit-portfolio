@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Danaiwit Kanthawong (Wit) - 3D Modeler, IT Infrastructure & AI System Integration" />
-    <title>Danaiwit Kanthawong | Portfolio</title>
+    <meta name="description" content="Portfolio of Danaiwit Kanthawong (Wit) - Technical Project Manager, 3D Modeler & AI Systems Integrator" />
+    <title>Danaiwit Kanthawong (ดนัยวิทย์ กันทวงค์) | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+Thai:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
     <style>
       body {
-        font-family: 'Outfit', 'Noto Sans Thai', sans-serif;
+        font-family: 'Outfit', 'Prompt', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
     </style>
     <!-- Vercel Web Analytics -->
@@ -23,12 +23,20 @@
       <div class="nav-content">
         <a href="#" class="logo">Wit<span>.</span></a>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home"><span class="lang-th">หน้าแรก</span><span class="lang-en">Home</span></a></li>
+          <li><a href="#about"><span class="lang-th">เกี่ยวกับผม</span><span class="lang-en">About</span></a></li>
+          <li><a href="#experience"><span class="lang-th">ประสบการณ์</span><span class="lang-en">Experience</span></a></li>
+          <li><a href="#projects"><span class="lang-th">ผลงานเด่น</span><span class="lang-en">Projects</span></a></li>
+          <li><a href="#contact"><span class="lang-th">ติดต่อ</span><span class="lang-en">Contact</span></a></li>
         </ul>
+
+        <!-- Language Switcher -->
+        <div class="lang-switch-container">
+          <button id="lang-btn-th" class="lang-btn active" type="button" title="เปลี่ยนเป็นภาษาไทย">TH</button>
+          <span class="lang-separator">/</span>
+          <button id="lang-btn-en" class="lang-btn" type="button" title="Switch to English">EN</button>
+        </div>
+
         <a href="https://github.com/memolyviza2012-max" target="_blank" class="github-card">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -49,14 +57,33 @@
 
       <div class="hero-inner" style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 20px;">
         <div class="hero-content fade-in">
-          <h2 class="greeting">Hello, I'm Wit</h2>
-          <h1 class="name">Danaiwit Kanthawong</h1>
-          <p class="tagline">3D Modeler, IT Infrastructure & AI System Integration</p>
+          <h2 class="greeting">
+            <span class="lang-th">สวัสดีครับ ผมวิทย์</span>
+            <span class="lang-en">Hello, I'm Wit</span>
+          </h2>
+          <h1 class="name">
+            <span class="lang-th">ดนัยวิทย์ กันทวงค์</span>
+            <span class="lang-en">Danaiwit Kanthawong</span>
+          </h1>
+          <p class="tagline">
+            <span class="lang-th">Technical Project Manager • Senior 3D Modeler • AI System Integrator</span>
+            <span class="lang-en">Technical Project Manager • Senior 3D Modeler • AI System Integrator</span>
+          </p>
           <div class="cta-group">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="/Danaiwit_Resume.pdf" target="_blank" class="btn btn-secondary" title="English Resume PDF">Resume (EN)</a>
-            <a href="/Danaiwit_Resume_TH.pdf" target="_blank" class="btn btn-secondary" title="เรซูเม่ฉบับภาษาไทย PDF">เรซูเม่ (TH)</a>
-            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <a href="#projects" class="btn btn-primary">
+              <span class="lang-th">ชมผลงานทั้งหมด</span>
+              <span class="lang-en">View My Work</span>
+            </a>
+            <a href="/Danaiwit_Resume_TH.pdf" target="_blank" class="btn btn-secondary" title="เรซูเม่ฉบับภาษาไทย (PDF)">
+              📄 เรซูเม่ (TH)
+            </a>
+            <a href="/Danaiwit_Resume.pdf" target="_blank" class="btn btn-secondary" title="English Resume PDF">
+              📄 Resume (EN)
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span class="lang-th">ติดต่อผม</span>
+              <span class="lang-en">Contact Me</span>
+            </a>
           </div>
         </div>
         <div class="hero-graphic fade-in-delayed">
@@ -73,33 +100,73 @@
     <!-- About Section -->
     <section id="about" class="about section">
       <div class="section-header reveal">
-        <h2>About <span>Me</span></h2>
+        <h2>
+          <span class="lang-th">เกี่ยวกับ <span>ผม</span></span>
+          <span class="lang-en">About <span>Me</span></span>
+        </h2>
         <div class="line"></div>
       </div>
       <div class="about-content reveal">
         <div class="about-text">
-          <p>I began my creative journey by earning a <strong>Bachelor of Science in Animation from Chiang Mai University in 2015</strong>. Over more than a decade of hands-on production experience, I have developed deep mastery as a <strong>Senior 3D Modeler & Texture Artist</strong>, specializing as a <strong>Blender expert in precision Hard-Surface 3D modeling</strong>. My specialized modeling scope spans architectural structures, industrial machinery, FPV racing drones, high-precision surgical medical equipment, and complex mechanical assemblies.</p>
-          <p>Beyond creative 3D artistry, I manage corporate <strong>IT Support & Infrastructure Operations</strong> and operate as an <strong>Advanced AI Integrator & Power User</strong>. I integrate 3D production pipelines and IT systems with cutting-edge Generative AI to build automated workflows across web development, system analysis, technical copywriting, automated Thai game localization, and award-winning AI filmmaking.</p>
-          <p>As the studio's <strong>Lead Cameraman & Photographer</strong>, I have documented company milestones and culture since its inception. My end-to-end media skillset covers professional filming (operating gimbals like DJI Ronin RS5), photo retouching, and video editing.</p>
+          <!-- Thai Version -->
+          <div class="lang-th">
+            <p>ผมเริ่มต้นเส้นทางสายครีเอทีฟด้วยปริญญา <strong>วิทยาศาสตรบัณฑิต (แอนิเมชัน) มหาวิทยาลัยเชียงใหม่ ปี 2558</strong> จากประสบการณ์โปรดักชันจริงกว่า 10 ปี ได้พัฒนาความเชี่ยวชาญระดับสูงในฐานะ <strong>Senior 3D Modeler & Texture Artist</strong> โดยเป็นผู้เชี่ยวชาญโปรแกรม <strong>Blender ในงาน 3D Hard-Surface</strong> ความละเอียดสูง ครอบคลุมงานสถาปัตยกรรม เครื่องจักรกล โดรนแข่ง FPV หุ่นยนต์เครื่องมือแพทย์ผ่าตัด และชิ้นส่วนกลไกที่ซับซ้อน</p>
+            <p>นอกเหนือจากงาน 3D ยังรับผิดชอบการบริหาร <strong>ฝ่ายปฏิบัติการและระบบไอที (Operations & IT Infrastructure)</strong> ควบคู่กับการเป็น <strong>Technical Project Manager & AI Integrator</strong> โดยเชื่อมโยงไปป์ไลน์ 3D และระบบไอทีเข้ากับโมเดล Generative AI เพื่อสร้างระบบอัตโนมัติ ทั้งการพัฒนาเว็บแอปพลิเคชัน การวิเคราะห์ระบบ งานแปลม็อดเกมภาษาไทย และผลงานภาพยนตร์สั้น AI ที่ได้รับรางวัลระดับนานาชาติ</p>
+            <p>ในฐานะ <strong>หัวหน้าช่างภาพและผู้กำกับสื่อ (Lead Cameraman & Photographer)</strong> ของสตูดิโอ ทำหน้าที่บันทึกภาพประวัติศาสตร์และวัฒนธรรมองค์กรมาตั้งแต่เริ่มก่อตั้ง มีทักษะครอบคลุมทั้งการถ่ายทำระดับมืออาชีพ (ควบคุมกล้องกิมบอล DJI Ronin RS5) การรีทัชภาพ และการตัดต่อวิดีโอ</p>
+          </div>
+          <!-- English Version -->
+          <div class="lang-en">
+            <p>I began my creative journey by earning a <strong>Bachelor of Science in Animation from Chiang Mai University in 2015</strong>. Over more than a decade of hands-on production experience, I have developed deep mastery as a <strong>Senior 3D Modeler & Texture Artist</strong>, specializing as a <strong>Blender expert in precision Hard-Surface 3D modeling</strong>. My specialized modeling scope spans architectural structures, industrial machinery, FPV racing drones, high-precision surgical medical equipment, and complex mechanical assemblies.</p>
+            <p>Beyond creative 3D artistry, I manage corporate <strong>IT Support & Infrastructure Operations</strong> and operate as an <strong>Advanced AI Integrator & Technical Project Manager</strong>. I integrate 3D production pipelines and IT systems with cutting-edge Generative AI to build automated workflows across web development, system analysis, technical copywriting, automated Thai game localization, and award-winning AI filmmaking.</p>
+            <p>As the studio's <strong>Lead Cameraman & Photographer</strong>, I have documented company milestones and culture since its inception. My end-to-end media skillset covers professional filming (operating gimbals like DJI Ronin RS5), photo retouching, and video editing.</p>
+          </div>
         </div>
+
         <div class="about-stats-wrapper" style="display: flex; flex-direction: column;">
-          <h3 style="color: var(--accent-primary); margin-bottom: 20px; font-size: 1.5rem; text-align: left; border-bottom: 2px solid var(--surface-border); padding-bottom: 10px;">Core Competencies</h3>
+          <h3 style="color: var(--accent-primary); margin-bottom: 20px; font-size: 1.5rem; text-align: left; border-bottom: 2px solid var(--surface-border); padding-bottom: 10px;">
+            <span class="lang-th">ทักษะความเชี่ยวชาญหลัก</span>
+            <span class="lang-en">Core Competencies</span>
+          </h3>
           <div class="about-stats" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
             <div class="stat-card" style="padding: 20px; text-align: left;">
-              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">3D & Hard-Surface</h3>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">Blender Expert, Precision Hard-Surface (Architecture, Machinery, Drones, Medical Devices), Quads Topology, PBR Texturing</p>
+              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">
+                <span class="lang-th">3D & Hard-Surface</span>
+                <span class="lang-en">3D & Hard-Surface</span>
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">
+                <span class="lang-th">ผู้เชี่ยวชาญ Blender, Hard-Surface ความแม่นยำสูง (สถาปัตยกรรม, เครื่องจักร, โดรน, เครื่องมือแพทย์), Quads Topology, PBR Texturing</span>
+                <span class="lang-en">Blender Expert, Precision Hard-Surface (Architecture, Machinery, Drones, Medical Devices), Quads Topology, PBR Texturing</span>
+              </p>
             </div>
             <div class="stat-card" style="padding: 20px; text-align: left;">
-              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">Full-Stack Web Dev</h3>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">React 19, Vite, Firebase (Firestore, Auth, Realtime DB), REST APIs, Responsive Glassmorphism UI</p>
+              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">
+                <span class="lang-th">Technical PM & Web</span>
+                <span class="lang-en">Technical PM & Web</span>
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">
+                <span class="lang-th">บริหารโครงการซอฟต์แวร์, Agile & Kanban, การวาง Scope แบบ MVP, React 19/18, Cloudflare Pages, Supabase, Firebase</span>
+                <span class="lang-en">Software Project Management, Agile & Kanban, MVP Scoping, React 19/18, Cloudflare Pages, Supabase, Firebase, REST APIs</span>
+              </p>
             </div>
             <div class="stat-card" style="padding: 20px; text-align: left;">
-              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">IT & Network Systems</h3>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">High-Performance PC Building, Ugreen & Synology NAS Storage, Multi-PC LAN Clustering, OpenSSH</p>
+              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">
+                <span class="lang-th">ระบบเครือข่ายและไอที</span>
+                <span class="lang-en">IT & Network Systems</span>
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">
+                <span class="lang-th">การวางแผนทรัพยากรไอที, Ugreen & Synology NAS Storage ความเร็วสูง, คลัสเตอร์ประมวลผล AI LAN, OpenSSH</span>
+                <span class="lang-en">IT Infrastructure Planning, Ugreen & Synology NAS Storage, Multi-PC LAN AI Clustering, OpenSSH Remote Compute</span>
+              </p>
             </div>
             <div class="stat-card" style="padding: 20px; text-align: left;">
-              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">Distributed AI & Automation</h3>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">Multi-Agent Workstation Orchestration, Python & Batch Automation, FFmpeg Video Pipelines, AI Filmmaking</p>
+              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">
+                <span class="lang-th">AI & Workflow Automation</span>
+                <span class="lang-en">AI & Workflow Automation</span>
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">
+                <span class="lang-th">Prompt & Skill Engineering ขั้นสูง, ออกแบบระบบอัตโนมัติด้วย Python, ไปป์ไลน์ภาพ-เสียง-วิดีโอ (TTS, ComfyUI, FFmpeg)</span>
+                <span class="lang-en">Advanced Prompt & Skill Engineering, Python Automation, Media Generation Pipelines (TTS, ComfyUI, FFmpeg), AI Filmmaking</span>
+              </p>
             </div>
           </div>
         </div>
@@ -109,7 +176,10 @@
     <!-- Experience Section -->
     <section id="experience" class="experience section">
       <div class="section-header reveal">
-        <h2>Work <span>Experience</span></h2>
+        <h2>
+          <span class="lang-th">ประสบการณ์ <span>การทำงาน</span></span>
+          <span class="lang-en">Work <span>Experience</span></span>
+        </h2>
         <div class="line"></div>
       </div>
       <div class="experience-timeline reveal">
@@ -117,27 +187,45 @@
         <div class="timeline-item">
           <div class="timeline-dot" style="background: linear-gradient(135deg, #FFD700, #FDB931); box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);"></div>
           <div class="timeline-content" style="border-left: 3px solid #FFD700;">
-            <h3>🏆 Grand Prix Winner: Best AI Short Film</h3>
+            <h3>
+              <span class="lang-th">🏆 รางวัลชนะเลิศ Grand Prix: Best AI Short Film</span>
+              <span class="lang-en">🏆 Grand Prix Winner: Best AI Short Film</span>
+            </h3>
             <h4 class="company">Thailand International AI Film Festival (TIAIF)</h4>
-            <p class="date">July 2026</p>
-            <ul class="experience-details">
-              <li>Awarded the highest Grand Prix honor for the AI short film <em>"The Stroke of Night"</em> in collaboration with Animation Renaissance Studio.</li>
-              <li>Demonstrates advanced expertise in integrating AI technologies into cinematic storytelling, visual arts, and end-to-end production pipelines.</li>
-            </ul>
+            <p class="date"><span class="lang-th">กรกฎาคม 2569</span><span class="lang-en">July 2026</span></p>
+            <div class="experience-details-wrap">
+              <ul class="experience-details lang-th">
+                <li>คว้ารางวัลชนะเลิศสูงสุด Grand Prix จากผลงานภาพยนตร์สั้น AI เรื่อง <em>"The Stroke of Night"</em> ร่วมกับสตูดิโอ Animation Renaissance</li>
+                <li>พิสูจน์ความเป็นเลิศในการบริหารและส่งมอบผลงานนวัตกรรม Generative AI ภายใต้ข้อจำกัดด้านเวลาและการแข่งขันระดับนานาชาติ</li>
+              </ul>
+              <ul class="experience-details lang-en">
+                <li>Awarded the highest Grand Prix honor for the AI short film <em>"The Stroke of Night"</em> in collaboration with Animation Renaissance Studio.</li>
+                <li>Demonstrates advanced expertise in integrating AI technologies into cinematic storytelling, visual arts, and end-to-end production pipelines.</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <!-- Experience Item: Full-Stack Developer & Systems Architect -->
+        <!-- Experience Item: Technical PM & Web Systems Architect -->
         <div class="timeline-item">
           <div class="timeline-dot" style="background: linear-gradient(135deg, #06b6d4, #3b82f6); box-shadow: 0 0 10px rgba(6, 182, 212, 0.6);"></div>
           <div class="timeline-content" style="border-left: 3px solid #06b6d4;">
-            <h3>Full-Stack Web Developer & Systems Architect</h3>
+            <h3>
+              <span class="lang-th">Technical Project Lead & Web Systems Architect</span>
+              <span class="lang-en">Technical Project Lead & Web Systems Architect</span>
+            </h3>
             <h4 class="company">Home Dashboard & Distributed Studio Ecosystem</h4>
-            <p class="date">2024 - Present</p>
-            <ul class="experience-details">
-              <li>Architected and launched full-stack production web applications: <strong>TStudio Web</strong> (Real-time collaborative game localization platform on Cloudflare Pages), <strong>TimeTracker</strong> (React 19, Firebase Firestore, Financial Analytics & Invoicing), <strong>NodNuat Mod Showcase Platform</strong> (www.nodnuattranslator.com), and the <strong>CMU Exam Preparation Web App</strong>.</li>
-              <li>Engineered high-throughput studio IT infrastructure: multi-workstation AI clusters (LAN, OpenSSH, distributed agents), private Ugreen/Synology NAS storage, automated PromptPay slip verification, and automated AI media pipelines (TTS, ComfyUI, FFmpeg).</li>
-            </ul>
+            <p class="date"><span class="lang-th">2567 - ปัจจุบัน</span><span class="lang-en">2024 - Present</span></p>
+            <div class="experience-details-wrap">
+              <ul class="experience-details lang-th">
+                <li>ออกแบบและส่งมอบเว็บแอปพลิเคชันระดับโปรดักชัน: <strong>TStudio Web</strong> (ระบบแปลเกมภาษาไทยแบบเรียลไทม์ Multi-user บน Cloudflare Pages & Supabase), <strong>TimeTracker</strong> (ระบบบริหารเวลา วิเคราะห์การเงิน และออกใบแจ้งหนี้ด้วย React 19 & Firebase) และ <strong>NodNuat Platform</strong> (www.nodnuattranslator.com)</li>
+                <li>วางสถาปัตยกรรมคลัสเตอร์ประมวลผล AI ข้ามเครื่องคอมพิวเตอร์ผ่าน LAN/OpenSSH, ระบบไปป์ไลน์สร้างสื่ออัตโนมัติ (TTS, ComfyUI, FFmpeg) และระบบ Private Cloud Storage ความเร็วสูงด้วย Ugreen และ Synology NAS</li>
+              </ul>
+              <ul class="experience-details lang-en">
+                <li>Architected and launched full-stack production web applications: <strong>TStudio Web</strong> (Real-time collaborative game localization platform on Cloudflare Pages & Supabase), <strong>TimeTracker</strong> (React 19, Firebase Firestore, Financial Analytics & Invoicing), and <strong>NodNuat Mod Showcase Platform</strong> (www.nodnuattranslator.com).</li>
+                <li>Engineered high-throughput studio IT infrastructure: multi-workstation AI clusters (LAN, OpenSSH, distributed agents), private Ugreen/Synology NAS storage, automated PromptPay slip verification, and automated AI media pipelines (TTS, ComfyUI, FFmpeg).</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -145,73 +233,133 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Founder & Localization Engineer</h3>
-            <h4 class="company">NodNuat Translator Community (4.5k+ Followers)</h4>
-            <p class="date">Present</p>
-            <ul class="experience-details">
-              <li>Founded and scaled a thriving Thai game localization community with over 4,500+ followers and official platform at <strong>www.nodnuattranslator.com</strong> (migrated to Cloudflare Pages with custom domain & NAS storage sync).</li>
-              <li>Engineered AI-driven translation workflows polished with meticulous human craftsmanship, font forging/injection (IGGY), and Inno Setup installers to deliver high-quality Thai localization mods for AAA games.</li>
-            </ul>
+            <h3>
+              <span class="lang-th">Founder, Product Lead & Release Engineer</span>
+              <span class="lang-en">Founder, Product Lead & Release Engineer</span>
+            </h3>
+            <h4 class="company">
+              <span class="lang-th">เพจ หน๊ด หนวด Translator (ผู้ติดตาม 7,000+ คน | คลังม็อดทางการ 100 เกม)</span>
+              <span class="lang-en">NodNuat Translator Community (7,000+ Followers | 100-Game Catalog)</span>
+            </h4>
+            <p class="date"><span class="lang-th">2565 - ปัจจุบัน</span><span class="lang-en">2022 - Present</span></p>
+            <div class="experience-details-wrap">
+              <ul class="experience-details lang-th">
+                <li>ก่อตั้งและบริหารแพลตฟอร์มม็อดภาษาไทยกว่า 100 เกมบน <strong>www.nodnuattranslator.com</strong> พร้อมดูแลคอมมูนิตี้ผู้ติดตามกว่า 7,000 คน</li>
+                <li>วางแผน คัดเลือก และจัดลำดับความสำคัญของโปรเจกต์จากความต้องการของผู้เล่นและการวิเคราะห์ความเป็นไปได้ทางเทคนิค (Feasibility)</li>
+                <li>รับฟังปัญหาและฟีดแบ็กจากผู้เล่น ดำเนินการตรวจสอบ ส่งมอบตัวทดสอบให้ผู้ใช้ตรวจรับงาน (UAT) ก่อนออกแพตช์และเขียน Release Notes ชี้แจงอย่างสม่ำเสมอ</li>
+              </ul>
+              <ul class="experience-details lang-en">
+                <li>Founded and scaled a thriving Thai game localization community with over 7,000+ followers and official platform at <strong>www.nodnuattranslator.com</strong> featuring over 100 localized PC game titles.</li>
+                <li>Balanced project roadmap between high-engagement trending releases and complex technical milestones based on community demand and feasibility.</li>
+                <li>Handled end-user bug reports, conducted root-cause analysis, distributed release candidates for user validation (UAT), and published regular changelog release notes.</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <!-- Experience Item 1 -->
+        <!-- Experience Item: Manager & Operations Lead -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Manager & Operations Lead</h3>
+            <h3>
+              <span class="lang-th">Manager & Operations Lead</span>
+              <span class="lang-en">Manager & Operations Lead</span>
+            </h3>
             <h4 class="company">Animation Renaissance Co., Ltd.</h4>
-            <p class="date">Present</p>
-            <ul class="experience-details">
-              <li><strong>Financial & Resource Planning:</strong> Managed operational budgets, payroll, fixed-cost modeling, and international currency transactions (USD/THB).</li>
-              <li><strong>IT Procurement & Infrastructure:</strong> Oversaw hardware procurement, custom high-performance 3D workstation builds, and vendor relations for studio IT infrastructure.</li>
-              <li><strong>Administrative & Compliance:</strong> Prepared withholding tax documentation, monthly accounting reports, and handled corporate facility management.</li>
-            </ul>
+            <p class="date"><span class="lang-th">2562 - ปัจจุบัน</span><span class="lang-en">2019 - Present</span></p>
+            <div class="experience-details-wrap">
+              <ul class="experience-details lang-th">
+                <li><strong>พัฒนากระบวนการทำงานร่วมกับ PM:</strong> ทำงานร่วมกับผู้จัดการโครงการ (PM) และทีมครีเอทีฟ ในการออกแบบและปรับปรุง Pipeline งานผลิต ช่วยให้ทีมส่งมอบงาน 3D และสื่อวิดีโอได้รวดเร็วขึ้น</li>
+                <li><strong>บริหารขอบเขตงานภายใต้แรงกดดัน (Scope & Timeline):</strong> แก้ปัญหาเฉพาะหน้าเมื่อเผชิญกำหนดส่งที่กระชั้นชิด โดยจัดลำดับฟังก์ชันแบบ MVP เพื่อให้ส่งมอบงานหลักได้ทันเวลา</li>
+                <li><strong>บริหารจัดการเอกสารและความสอดคล้องทางกฎหมาย:</strong> รวบรวมเอกสารการเงิน ธุรกรรมต่างประเทศ (USD/THB) และประสานงานกับผู้ตรวจสอบบัญชีภายนอกเพื่อความถูกต้องตามระเบียบ</li>
+                <li><strong>จัดสรรทรัพยากรไอทีและสื่อองค์กร:</strong> วางแผนและจัดสรรทรัพยากรระบบคอมพิวเตอร์สมรรถนะสูง พร้อมควบคุมการผลิตสื่อภาพลักษณ์องค์กร</li>
+              </ul>
+              <ul class="experience-details lang-en">
+                <li><strong>Process Improvement with PM:</strong> Partnered with Project Managers and creative leads to design and optimize studio production pipelines, accelerating turnaround for 3D and digital video deliverables.</li>
+                <li><strong>Scope & Timeline Management:</strong> Resolved crunch time bottlenecks by defining MVP deliverables, deferring non-essential features, and maintaining on-time client handovers without sacrificing quality.</li>
+                <li><strong>Financial & Resource Planning:</strong> Managed operational budgets, payroll, fixed-cost modeling, and international currency transactions (USD/THB).</li>
+                <li><strong>IT Infrastructure & Procurement:</strong> Directed hardware procurement, custom high-performance 3D workstation builds, and vendor relations for studio IT infrastructure.</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <!-- Experience Item 2 -->
+        <!-- Experience Item: Senior 3D Modeler -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Senior 3D Modeler & Texture Artist</h3>
+            <h3>
+              <span class="lang-th">Senior 3D Modeler & Texture Artist</span>
+              <span class="lang-en">Senior 3D Modeler & Texture Artist</span>
+            </h3>
             <h4 class="company">Animation Renaissance Co., Ltd.</h4>
-            <p class="date">Present</p>
-            <ul class="experience-details">
-              <li>Delivered high-fidelity 3D modeling and texturing assets across multiple commercial studio projects.</li>
-              <li>Seamlessly bridged creative 3D workflows with corporate IT infrastructure and operational support.</li>
-            </ul>
+            <p class="date"><span class="lang-th">ปัจจุบัน</span><span class="lang-en">Present</span></p>
+            <div class="experience-details-wrap">
+              <ul class="experience-details lang-th">
+                <li>สร้างสรรค์โมเดล 3D และทำ Texture คุณภาพสูงระดับโปรดักชันสำหรับงานพาณิชย์ของสตูดิโอ</li>
+                <li>เชื่อมโยงการทำงาน 3D เข้ากับระบบไอทีและการสนับสนุนการดำเนินงานขององค์กรอย่างราบรื่น</li>
+              </ul>
+              <ul class="experience-details lang-en">
+                <li>Delivered high-fidelity 3D modeling and texturing assets across multiple commercial studio projects.</li>
+                <li>Seamlessly bridged creative 3D workflows with corporate IT infrastructure and operational support.</li>
+              </ul>
+            </div>
           </div>
         </div>
         
-        <!-- Experience Item 3 (Interactive Medical) -->
+        <!-- Experience Item: Interactive Medical -->
         <div class="timeline-item clickable-experience" data-images="/intuitive/Screenshot%202026-07-22%20012536.png,/intuitive/Screenshot%202026-07-22%20012552.png,/intuitive/Screenshot%202026-07-22%20012725.png,/intuitive/Screenshot%202026-07-22%20013056.png,/intuitive/Screenshot%202026-07-22%20013143.png,/intuitive/Screenshot%202026-07-22%20013253.png" data-video="https://www.youtube.com/embed/uAdYiO5Vn78">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>3D Medical Equipment & Environment Artist</h3>
+            <h3>
+              <span class="lang-th">3D Medical Equipment & Environment Artist</span>
+              <span class="lang-en">3D Medical Equipment & Environment Artist</span>
+            </h3>
             <h4 class="company">
               <img src="https://www.google.com/s2/favicons?domain=intuitive.com&sz=128" alt="Intuitive" class="company-logo" onerror="this.style.display='none'">
               Intuitive Surgical (Interactive Project)
             </h4>
-            <p class="date">Past Project</p>
-            <ul class="experience-details">
-              <li>Engineered ultra-high precision 3D models for surgical robotic systems (da Vinci systems) requiring microscopic accuracy and anatomical realism.</li>
-              <li>Designed and staged immersive Virtual Operating Room (OR) environments for interactive simulations and clinical training software.</li>
-              <li>Optimized geometry and PBR materials to ensure heavy high-poly assets rendered smoothly in real-time interactive engines.</li>
-            </ul>
-            <div class="view-gallery-hint">📸 Click to view project gallery (samples)</div>
+            <p class="date"><span class="lang-th">โปรเจกต์ที่ผ่านมา</span><span class="lang-en">Past Project</span></p>
+            <div class="experience-details-wrap">
+              <ul class="experience-details lang-th">
+                <li>ปั้นโมเดล 3D หุ่นยนต์ผ่าตัดความละเอียดสูง (da Vinci Surgical Systems) ที่ต้องการความแม่นยำระดับจุลภาคและความสมจริงทางกายวิภาค</li>
+                <li>สร้างสภาพแวดล้อมห้องผ่าตัดเสมือนจริง (Virtual Operating Room) สำหรับซอฟต์แวร์จำลองสถานการณ์และการฝึกอบรมทางคลินิก</li>
+                <li>ปรับแต่งรูปทรงเรขาคณิต (Geometry) และ PBR Materials เพื่อให้โมเดลความละเอียดสูงเรนเดอร์ได้อย่างลื่นไหลใน Real-time Engines</li>
+              </ul>
+              <ul class="experience-details lang-en">
+                <li>Engineered ultra-high precision 3D models for surgical robotic systems (da Vinci systems) requiring microscopic accuracy and anatomical realism.</li>
+                <li>Designed and staged immersive Virtual Operating Room (OR) environments for interactive simulations and clinical training software.</li>
+                <li>Optimized geometry and PBR materials to ensure heavy high-poly assets rendered smoothly in real-time interactive engines.</li>
+              </ul>
+            </div>
+            <div class="view-gallery-hint">
+              <span class="lang-th">📸 คลิกเพื่อเปิดดูแกลเลอรีภาพตัวอย่างผลงาน</span>
+              <span class="lang-en">📸 Click to view project gallery (samples)</span>
+            </div>
           </div>
         </div>
+
         <!-- Education Item -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Bachelor of Science (Animation)</h3>
-            <h4 class="company">Chiang Mai University</h4>
-            <p class="date">Graduated: December 2015</p>
-            <ul class="experience-details">
-              <li>Graduated with a Bachelor of Science in Animation, focusing on 3D computer graphics and digital media production.</li>
-            </ul>
+            <h3>
+              <span class="lang-th">วิทยาศาสตรบัณฑิต (แอนิเมชัน)</span>
+              <span class="lang-en">Bachelor of Science (Animation)</span>
+            </h3>
+            <h4 class="company">
+              <span class="lang-th">มหาวิทยาลัยเชียงใหม่</span>
+              <span class="lang-en">Chiang Mai University</span>
+            </h4>
+            <p class="date"><span class="lang-th">สำเร็จการศึกษา: ธันวาคม 2558</span><span class="lang-en">Graduated: December 2015</span></p>
+            <div class="experience-details-wrap">
+              <ul class="experience-details lang-th">
+                <li>สำเร็จการศึกษาระดับปริญญาตรี วิทยาศาสตรบัณฑิต สาขาวิชาแอนิเมชัน มุ่งเน้นคอมพิวเตอร์กราฟิกส์ 3D และกระบวนการผลิตสื่อดิจิทัล</li>
+              </ul>
+              <ul class="experience-details lang-en">
+                <li>Graduated with a Bachelor of Science in Animation, focusing on 3D computer graphics and digital media production.</li>
+              </ul>
+            </div>
           </div>
         </div>
         
@@ -221,165 +369,219 @@
     <!-- Projects Section -->
     <section id="projects" class="projects section">
       <div class="section-header reveal">
-        <h2>Highlight <span>Projects</span></h2>
+        <h2>
+          <span class="lang-th">ผลงาน <span>ไฮไลท์</span></span>
+          <span class="lang-en">Highlight <span>Projects</span></span>
+        </h2>
         <div class="line"></div>
       </div>
       <div class="project-grid reveal">
         
-        <!-- Featured Project: TIAIF -->
+        <!-- Featured Project 1: TIAIF -->
         <div class="project-card featured-project" data-video="https://www.youtube.com/embed/DedqmLRSGJA" data-images="/tiaif/20260803_145547(0).jpg,/tiaif/20260803_145717.jpg,/tiaif/Screenshot_20260803_190412_File_Manager_EDIT.jpg,/tiaif/759904220_122174220590980556_2846439814603043481_n.jpg">
           <div class="project-image" style="background: url('/tiaif/20260803_145717.jpg') center/cover no-repeat; position: relative;">
              <div class="award-badge">🏆 Grand Prix Winner</div>
           </div>
           <div class="project-info">
-            <h3>Grand Prix Best AI Short Film (TIAIF 2026)</h3>
-            <p><strong>AI Short Film: "The Stroke of Night"</strong><br>
-            Co-created under Animation Renaissance Studio, achieving the highest Grand Prix award at the Thailand International AI Film Festival. Highlights cutting-edge AI integration in visual media and cinematic narrative design.</p>
+            <h3>
+              <span class="lang-th">Grand Prix ภาพยนตร์สั้น AI ยอดเยี่ยม (TIAIF 2026)</span>
+              <span class="lang-en">Grand Prix Best AI Short Film (TIAIF 2026)</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th"><strong>ภาพยนตร์สั้น AI: "The Stroke of Night"</strong><br>
+              ร่วมสร้างสรรค์ภายใต้สตูดิโอ Animation Renaissance จนคว้ารางวัลชนะเลิศสูงสุด Grand Prix ในงานเทศกาลภาพยนตร์ AI นานาชาติแห่งประเทศไทย (TIAIF 2026) แสดงถึงความเป็นเลิศในการผสานเทคโนโลยี Generative AI เข้ากับงานภาพยนตร์และการเล่าเรื่องระดับมืออาชีพ</p>
+              <p class="lang-en"><strong>AI Short Film: "The Stroke of Night"</strong><br>
+              Co-created under Animation Renaissance Studio, achieving the highest Grand Prix award at the Thailand International AI Film Festival. Highlights cutting-edge AI integration in visual media and cinematic narrative design.</p>
+            </div>
             <div class="tags">
               <span>AI Short Film</span><span>Grand Prix</span><span>TIAIF 2026</span>
             </div>
-            <a href="https://www.facebook.com/share/v/1CZSmf7Hn2/" target="_blank" class="project-link">Award Announcement ↗</a>
-            <a href="/tiaif/Certificate_The%20Stroke%20Of%20Night.pdf" target="_blank" class="project-link">Official Certificate (PDF) ↗</a>
+            <a href="https://www.facebook.com/share/v/1CZSmf7Hn2/" target="_blank" class="project-link">
+              <span class="lang-th">ประกาศรางวัล ↗</span>
+              <span class="lang-en">Award Announcement ↗</span>
+            </a>
+            <a href="/tiaif/Certificate_The%20Stroke%20Of%20Night.pdf" target="_blank" class="project-link">
+              <span class="lang-th">ใบประกาศนียบัตร (PDF) ↗</span>
+              <span class="lang-en">Official Certificate (PDF) ↗</span>
+            </a>
           </div>
         </div>
 
-        <!-- Featured Project: 3D Drone & Quads Topology Showcase -->
+        <!-- Featured Project 2: 3D Drone & Quads Topology Showcase -->
         <div class="project-card featured-project" data-images="/drones/01_Aether_5in.jpg,/drones/02_ghost.jpg,/drones/03_DRP MiB 5.jpg,/drones/04_chameleon.JPG,/drones/05_Cavity_Dual_Fin.jpg,/drones/06_oblivion.jpg,/drones/07_dreadnought.jpg,/drones/09_neato_fastback.jpg,/drones/100_SF35S.jpg,/drones/101_DinDrones OZR-5X - 5.jpg,/drones/102_Air65-Freestyle.jpg,/drones/102_Air65-Racing.jpg,/drones/103_Hummingbird RS.jpg,/drones/104_BMT_veloci.jpg,/drones/105_BabyFoxForVD.jpg,/drones/10_KAREAREA TALON_f_f.jpg,/drones/12_CarbiX Zero 5 Racer.jpg,/drones/13_Acro Frame Assembly.jpg,/drones/14_SL5.jpg,/drones/15_Atto.jpg,/drones/16_Velocity.jpg,/drones/17_SOURCE X.jpg,/drones/18_Ostrich Air O1.jpg,/drones/19_CANNONBALL 800 NO BRACES.jpg,/drones/20_Fwd broadsword.jpg,/drones/21_SuperSlamNasty 5 Inch.jpg,/drones/22_Thor-X.jpg,/drones/23_carolina_xc_3d 892mm.jpg,/drones/24_iXC13 X-CLASS 850mm.jpg,/drones/25_Beta75 Pro 2.jpg,/drones/26_Rooster.JPG,/drones/27_Tinyhawk S.jpg,/drones/28_Brushless Whoop.jpg,/drones/29_Yakuza Fujin.jpg,/drones/30_Singularitum.jpg,/drones/31_Mobula6.jpg,/drones/32_Meteor65 Brushless Whoop Quadcopter.jpg,/drones/33_beebrain.jpg,/drones/34_AcroBee Frame.jpg,/drones/35_ASM-BETAFPV HX100SE.jpg,/drones/36_Diatone GTB339.jpg,/drones/37_ASM-BETAFPV HX115-1.jpg,/drones/38_R3DWhoop ZeroGrav full kit.jpg,/drones/39_TWIG XL 3 FPV Toothpick Quad.jpg,/drones/40_Solleva v72.jpg,/drones/41_Switchback.jpg,/drones/42_Lethal_Conception.jpg,/drones/43_JS-1.jpg,/drones/44_D-Rock.jpg,/drones/45_tazmanian.jpg,/drones/46_combatdrone_arctic.jpg,/drones/46_combatdrone_autumn.jpg,/drones/46_combatdrone_concrete_jungle.jpg,/drones/46_combatdrone_desert.jpg,/drones/47_Ossa Frame and 3D.jpg,/drones/48_MoonGoat.jpg,/drones/49_Shocker_Freestyle_tank.jpg,/drones/50_Mad lite.jpg,/drones/51_Nazgul XL5.jpg,/drones/52_Beta_65X.jpg,/drones/53_junior_racer.jpg,/drones/54_ROMA F5.jpg,/drones/55_Beta95x_v3.jpg,/drones/56_PNTR.jpg,/drones/57_DJI.jpg,/drones/58_SkyX Killer .V1.0.jpg,/drones/59_Nanohawk.jpg,/drones/60_Babyhawk II HD.jpg,/drones/61_Tinyhawk 2.jpg,/drones/62_Badger.jpg,/drones/63_QAV-s-Whole.jpg,/drones/64_Chief.jpg,/drones/65_TBS Source One V4.jpg,/drones/66_Armattan Marmotte DJI Edition.jpg,/drones/67_Glide.jpg,/drones/68_Cidora SL5.jpg,/drones/69_AOS5V1.jpg,/drones/70_juicemode.jpg,/drones/71_flipmode.jpg,/drones/72_SniperX Light.jpg,/drones/73_TBS MAMBO.jpg,/drones/74_Fox_racing_v1.jpg,/drones/77_Switchback_Zero.jpg,/drones/78_MAD-open full v0.1.jpg,/drones/79_Source One.jpg,/drones/80_OpenRacer_Assembly.jpg,/drones/81_PB-Kauri-X-main.jpg,/drones/82_Practice.jpg,/drones/83_Spec7.jpg,/drones/84_Southeast Typhon V7 T700.jpg,/drones/85_Super-70.jpg,/drones/86_LSV2-Ultra.jpg,/drones/87_MidMount.jpg,/drones/88_HeavyMetal.jpg,/drones/89_SR5-Velocidrone.jpg,/drones/90_FoxCrookedV3.jpg,/drones/91_FoxCrookedV4.jpg,/drones/92_Racewhoop.jpg,/drones/93_Hummingbird V3.jpg,/drones/94_7wonders 3D.jpg,/drones/95_Mobula6 2024 1S.jpg,/drones/96_BETAFPV Aquila16.jpg,/drones/97_BETAFPV Cetus Pro.jpg,/drones/98_BETAFPV Cetus X.jpg,/drones/99_MGP_SpecQuad.jpg">
           <div class="project-image" style="background: url('/drones/51_Nazgul XL5.jpg') center/cover no-repeat; position: relative;">
             <div class="award-badge" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">🚁 105+ 3D Models</div>
           </div>
           <div class="project-info">
-            <h3>FPV Racing Drone & Quadcopter 3D Hard-Surface Engineering</h3>
-            <p><strong>105+ Custom Drone Models & Precision Quads Topology</strong><br>
-            Extensive portfolio of over 105 meticulously engineered 3D FPV racing frames, freestyle quadcopters, whoops, and specialized canopies (including Nazgul, Armattan, BetaFPV, TBS, Switchback, and Velocidrone models). Features clean quad-dominant topology, realistic PBR materials, carbon-fiber assemblies, and real-time flight simulator optimizations.</p>
+            <h3>
+              <span class="lang-th">งานวิศวกรรม 3D โดรนแข่ง FPV และ Quads Topology</span>
+              <span class="lang-en">FPV Racing Drone & Quadcopter 3D Hard-Surface Engineering</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th"><strong>ผลงานโมเดลโดรนคัสตอมกว่า 105+ แบบ และโครงข่าย Quads ที่สมบูรณ์แบบ</strong><br>
+              คลังผลงานโมเดล 3D โดรน FPV แข่งขันความเร็วสูง, ควอดคอปเตอร์สายฟรีสไตล์, และแคนโนปีเฉพาะรุ่นกว่า 105 ลำ (รวมแบรนด์ Nazgul, Armattan, BetaFPV, TBS, Switchback, Velocidrone) โครงข่ายโพลีกอน 4 เหลี่ยม (Quads) แม่นยำ พื้นผิว PBR เสมือนจริง ชิ้นส่วนคาร์บอนไฟเบอร์ และการปรับแต่งเพื่อรันใน Flight Simulator แบบ Real-time</p>
+              <p class="lang-en"><strong>105+ Custom Drone Models & Precision Quads Topology</strong><br>
+              Extensive portfolio of over 105 meticulously engineered 3D FPV racing frames, freestyle quadcopters, whoops, and specialized canopies (including Nazgul, Armattan, BetaFPV, TBS, Switchback, and Velocidrone models). Features clean quad-dominant topology, realistic PBR materials, carbon-fiber assemblies, and real-time flight simulator optimizations.</p>
+            </div>
             <div class="tags">
               <span>3D Hard-Surface</span><span>Quads Topology</span><span>FPV Drones</span><span>105+ Models</span><span>Real-Time Optimization</span>
             </div>
-            <div class="view-gallery-hint" style="margin-top: 15px; color: var(--accent-secondary); font-size: 0.95rem; font-weight: 600;">📸 Click card to explore all 105 drone models in full gallery ↗</div>
+            <div class="view-gallery-hint" style="margin-top: 15px; color: var(--accent-secondary); font-size: 0.95rem; font-weight: 600;">
+              <span class="lang-th">📸 คลิกการ์ดเพื่อเปิดดูแกลเลอรีโดรนทั้ง 105 ลำแบบเต็มจอ ↗</span>
+              <span class="lang-en">📸 Click card to explore all 105 drone models in full gallery ↗</span>
+            </div>
           </div>
         </div>
 
-        <!-- Featured Project: CMU Exam Prep -->
-        <div class="project-card" data-images="/exam_prep/cmu_prep_bg.jpg">
-          <div class="project-image" style="background: url('/exam_prep/cmu_prep_bg.jpg') center/cover no-repeat; position: relative;">
+        <!-- Featured Project 3: TStudio Web -->
+        <div class="project-card featured-project" data-images="/tstudio-web-preview.png">
+          <div class="project-image" style="background: url('/tstudio-web-preview.png') center/cover no-repeat; position: relative;">
+            <div class="award-badge" style="background: linear-gradient(135deg, #06b6d4, #10b981);">🌐 Cloudflare Pages | Web App</div>
           </div>
           <div class="project-info">
-            <h3>CMU Exam Preparation Web App</h3>
-            <p><strong>Interactive Exam Preparation Web Application</strong><br>
-            A purpose-built web application platform featuring curated curriculum, interactive mock tests, and knowledge assessment for university administrative role candidates.</p>
-            <div class="tags">
-              <span>Web Application</span><span>EdTech</span><span>CMU Exam</span>
+            <h3>
+              <span class="lang-th">TStudio Web: ระบบแปลเกมภาษาไทยแบบเรียลไทม์</span>
+              <span class="lang-en">TStudio Web: Real-Time Collaborative Game Localization Platform</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th"><strong>แพลตฟอร์มแปลเกมบนคลาวด์ เรนเดอร์ Canvas Grid 60fps พร้อมระบบทำงานร่วมกันแบบ Multi-User</strong><br>
+              เว็บแอปพลิเคชันระดับโปรดักชันที่พัฒนาด้วย React 18, TypeScript, TailwindCSS และ <code>@glideapps/glide-data-grid</code> เรนเดอร์บน HTML5 Canvas ลื่นไหลระดับ 60fps แม้ไฟล์ข้อความมากกว่า 10,000+ แถว มีระบบทำงานร่วมกันเสมือน Google Sheets แสดง Avatar เคอร์เซอร์แบบสด, ระบบตรวจสอบและอนุมัติคำแปล (Consensus Review), รองรับไฟล์แปลเกมหลากหลาย (CSV, JSON, SRT, Locres), ระบบแชร์การ์ดโปรเจกต์ Deep Linking และโฮสต์บน Cloudflare Pages ร่วมกับ Supabase & Firebase</p>
+              <p class="lang-en"><strong>Cloud-Based Translation Workspace with 60fps Canvas Grid & Multi-User Collaboration</strong><br>
+              A high-performance web platform built with React 18, TypeScript, TailwindCSS, and <code>@glideapps/glide-data-grid</code> (capable of smooth 60fps virtualized rendering across 10,000+ text entries). Features Google Sheets-style real-time collaboration with multi-user presence, peer review & gold-consensus validation system, format parsers (CSV, JSON, SRT, Locres), deep linking project card sharing, and resilient cloud sync (Cloudflare Pages, Supabase & Firebase).</p>
             </div>
-            <a href="https://exam-prep-cmu.vercel.app/" target="_blank" class="project-link">Visit Live Demo ↗</a>
+            <div class="tags">
+              <span>React 18</span><span>TypeScript</span><span>Glide Data Grid</span><span>Real-Time Collab</span><span>Cloudflare Pages</span><span>Supabase</span>
+            </div>
+            <a href="https://tstudioapp.pages.dev/" target="_blank" class="project-link">
+              <span class="lang-th">เปิดใช้งานเว็บแอปจริง (tstudioapp.pages.dev) ↗</span>
+              <span class="lang-en">Visit Live WebApp ↗</span>
+            </a>
           </div>
         </div>
 
-        <!-- Featured Project: TimeTracker -->
+        <!-- Featured Project 4: TimeTracker -->
         <div class="project-card">
           <div class="project-image" style="background: linear-gradient(135deg, #1e1b4b, #312e81); position: relative; display: flex; align-items: center; justify-content: center;">
             <div style="font-size: 3.5rem;">⏱️</div>
             <div class="award-badge" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">💼 SaaS Web App</div>
           </div>
           <div class="project-info">
-            <h3>TimeTracker: Freelance Productivity & Invoicing Web App</h3>
-            <p><strong>Cloud-Synced Time Tracking, Financial Analytics & Automated Billing</strong><br>
-            A high-productivity web application built for freelancers and teams. Features real-time task timer, hierarchical project & sub-project breakdown, interactive revenue dashboards (Recharts), customizable Invoice generation with PDF print export, and real-time cloud persistence via Firebase Firestore.</p>
-            <div class="tags">
-              <span>React 19</span><span>Firebase Firestore</span><span>Recharts</span><span>Invoicing Engine</span><span>Bilingual UI</span>
+            <h3>
+              <span class="lang-th">TimeTracker: เว็บแอปบริหารเวลาและออกใบแจ้งหนี้</span>
+              <span class="lang-en">TimeTracker: Freelance Productivity & Invoicing Web App</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th"><strong>ระบบติดตามเวลาทำงานบนคลาวด์ วิเคราะห์การเงิน และออกใบแจ้งหนี้อัตโนมัติ</strong><br>
+              เว็บแอปพลิเคชันสำหรับฟรีแลนซ์และสตูดิโอ พัฒนาด้วย React 19 และ Firebase Firestore ประกอบด้วยระบบจับเวลางานแบบเรียลไทม์, โครงสร้างโปรเจกต์และโปรเจกต์ย่อย (Sub-projects), แดชบอร์ดวิเคราะห์รายได้ด้วย Recharts, ระบบออกเอกสารใบแจ้งหนี้ (Invoice Engine) พร้อมสั่งพิมพ์เป็น PDF ทันที</p>
+              <p class="lang-en"><strong>Cloud-Synced Time Tracking, Financial Analytics & Automated Billing</strong><br>
+              A high-productivity web application built for freelancers and teams. Features real-time task timer, hierarchical project & sub-project breakdown, interactive revenue dashboards (Recharts), customizable Invoice generation with PDF print export, and real-time cloud persistence via Firebase Firestore.</p>
             </div>
-            <a href="https://timetracker-a63cb.web.app/" target="_blank" class="project-link">Visit Live App ↗</a>
+            <div class="tags">
+              <span>React 19</span><span>Firebase Firestore</span><span>Recharts</span><span>Invoicing Engine</span><span>SaaS</span>
+            </div>
+            <a href="https://timetracker-a63cb.web.app/" target="_blank" class="project-link">
+              <span class="lang-th">เปิดใช้งานเว็บแอปจริง ↗</span>
+              <span class="lang-en">Visit Live App ↗</span>
+            </a>
           </div>
         </div>
 
-        <!-- Featured Project: Distributed Multi-Agent AI Studio & Home Dashboard -->
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #0f172a, #1e293b); position: relative; display: flex; align-items: center; justify-content: center;">
-            <div style="font-size: 3.5rem;">🤖</div>
-            <div class="award-badge" style="background: linear-gradient(135deg, #06b6d4, #10b981);">⚡ AI Cluster & NAS</div>
-          </div>
-          <div class="project-info">
-            <h3>Distributed Multi-Agent AI Studio & Infrastructure</h3>
-            <p><strong>Multi-PC Computing Cluster, Automation Pipelines & Private Cloud</strong><br>
-            A centralized smart studio orchestration system. Distributes heavy generative AI rendering tasks between dual workstations (Main PC & AIPC1 via LAN/OpenSSH), executes automated AI drama video/audio generation pipelines (TTS, ComfyUI, FFmpeg), and integrates Ugreen/Synology NAS storage across high-speed local networks.</p>
-            <div class="tags">
-              <span>Python Automation</span><span>Multi-PC Cluster</span><span>NAS Private Cloud</span><span>FFmpeg Pipelines</span><span>OpenSSH</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Featured Project: TStudio Web -->
-        <div class="project-card featured-project" data-images="/tstudio-web-preview.png">
-          <div class="project-image" style="background: url('/tstudio-web-preview.png') center/cover no-repeat; position: relative;">
-            <div class="award-badge" style="background: linear-gradient(135deg, #06b6d4, #10b981);">🌐 Cloudflare Pages | Web App</div>
-          </div>
-          <div class="project-info">
-            <h3>TStudio Web: Real-Time Collaborative Game Localization Platform</h3>
-            <p><strong>Cloud-Based Translation Workspace with 60fps Canvas Grid & Multi-User Collaboration</strong><br>
-            A high-performance web platform built with React 18, TypeScript, TailwindCSS, and <code>@glideapps/glide-data-grid</code> (capable of smooth 60fps virtualized rendering across 10,000+ text entries). Features Google Sheets-style real-time collaboration with multi-user presence, peer review & gold-consensus validation system, format parsers (CSV, JSON, SRT, Locres), deep linking project card sharing, and resilient cloud sync (Cloudflare Pages, Supabase & Firebase).</p>
-            <div class="tags">
-              <span>React 18</span><span>TypeScript</span><span>Glide Data Grid</span><span>Real-Time Collab</span><span>Cloudflare Pages</span><span>Supabase</span><span>Localization Engineering</span>
-            </div>
-            <a href="https://tstudioapp.pages.dev/" target="_blank" class="project-link">Visit Live WebApp ↗</a>
-            <span class="project-link" style="margin-left: 15px; color: var(--accent-cyan); font-size: 0.85rem; border: none; padding: 0;">(Planned Domain: tstudioapp.is-a.dev)</span>
-          </div>
-        </div>
-
-        <!-- Project: NodNuat Mod Showcase Platform -->
+        <!-- Featured Project 5: NodNuat Mod Showcase Platform -->
         <div class="project-card" data-images="/nodnuat-45k-v2.png">
           <div class="project-image" style="background: url('/nodnuat-45k-v2.png') center/cover no-repeat;"></div>
           <div class="project-info">
-            <h3>NodNuat Mod Showcase Platform & Localization Engineering</h3>
-            <p><strong>Community Hub (4.5k+ Followers) & Live Mod Management Portal</strong><br>
-            Founder and lead developer of a Thai gaming community with over 4,500+ followers. Pioneered AI-driven translation workflows polished with meticulous human craftsmanship. Built a full-stack mod portal featuring live Trello API progress tracking, dynamic category filtering, PromptPay donation generator, automated NAS slip verification, and an Admin Studio backend. Migrated to Cloudflare Pages under official custom domain www.nodnuattranslator.com.</p>
-            <div class="tags">
-              <span>Community (4.5k+)</span><span>AI Translation Workflow</span><span>Cloudflare Pages</span><span>Trello API</span><span>Admin Studio</span><span>Font Engineering</span><span>Inno Setup</span>
+            <h3>
+              <span class="lang-th">แพลตฟอร์มคลังม็อดเกมและคอมมูนิตี้ หน๊ด หนวด Translator</span>
+              <span class="lang-en">NodNuat Mod Showcase Platform & Localization Engineering</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th"><strong>ศูนย์รวมคลังม็อดภาษาไทยกว่า 100 เกม และคอมมูนิตี้ผู้ติดตาม 7,000+ คน</strong><br>
+              ผู้ก่อตั้งและผู้วางระบบแพลตฟอร์มคลังม็อดทางการบน Cloudflare Pages ที่ <strong>www.nodnuattranslator.com</strong> ประกอบด้วยแท่นโชว์โมเดล 3D, สตูดิโอพากย์เสียง, ระบบระดมทุนสนับสนุนซื้อเกม, ระบบตรวจสอบสลิป PromptPay อัตโนมัติสู่ NAS ส่วนตัว และระบบแอดมินสตูดิโอหลังบ้าน พร้อมดูแลการส่งมอบม็อดภาษาไทยคุณภาพสูงสำหรับเกมพีซีระดับ AAA</p>
+              <p class="lang-en"><strong>Community Hub (7,000+ Followers) & Official 100-Game Mod Portal</strong><br>
+              Founder and lead developer of a Thai gaming community with over 7,000+ followers and official portal at <strong>www.nodnuattranslator.com</strong>. Features an interactive 3D showcase, voice dubbing studio, crowdfunding module, automated PromptPay slip verification to private NAS, and admin studio backend. Reverse-engineers game archives, crafts IGGY fonts, and scripts Inno Setup installers for AAA titles.</p>
             </div>
-            <a href="https://www.nodnuattranslator.com/" target="_blank" class="project-link">Visit Web Platform (nodnuattranslator.com) ↗</a>
-            <a href="https://www.facebook.com/NodNuatTranslator/" target="_blank" class="project-link" style="margin-left: 15px;">Facebook Page ↗</a>
+            <div class="tags">
+              <span>Community (7,000+)</span><span>100 Localized Games</span><span>Cloudflare Pages</span><span>PromptPay Auto-Verification</span><span>Inno Setup</span>
+            </div>
+            <a href="https://www.nodnuattranslator.com/" target="_blank" class="project-link">
+              <span class="lang-th">เข้าชมเว็บไซต์ทางการ (nodnuattranslator.com) ↗</span>
+              <span class="lang-en">Visit Web Platform (nodnuattranslator.com) ↗</span>
+            </a>
+            <a href="https://www.facebook.com/NodNuatTranslator/" target="_blank" class="project-link" style="margin-left: 15px;">
+              <span class="lang-th">เพจ Facebook ↗</span>
+              <span class="lang-en">Facebook Page ↗</span>
+            </a>
           </div>
         </div>
-        <!-- Project 2 -->
+
+        <!-- Featured Project 6: Animation Renaissance -->
         <div class="project-card" data-video="https://www.youtube.com/embed/JSWibqtSviA,https://www.youtube.com/embed/2O5n-d4I6xQ" data-images="/atmosphere/10-11-2022_PINO-NOOCH%20(2).jpg,/atmosphere/20220805_175427.jpg,/atmosphere/20240604_152528.jpg,/atmosphere/20250327_135209.jpg,/atmosphere/IMG_5887.jpg,/atmosphere/Marry%20Xmas_2021_92.jpg,/atmosphere/Marry%20Xmas_2022_331.jpg">
           <div class="project-image" style="background: url('/atmosphere/IMG_5887.jpg') center/cover no-repeat;"></div>
           <div class="project-info">
-            <h3>Animation Renaissance (Company Atmosphere)</h3>
-            <p>Behind-the-scenes moments and studio culture at Animation Renaissance. Serving as lead cameraman and photographer, I documented the team's milestones, collaborative spirit, and creative journey from day one.</p>
-            <div class="tags">
-              <span>Company Culture</span><span>Teamwork</span><span>Creative Studio</span>
+            <h3>
+              <span class="lang-th">Animation Renaissance (บรรยากาศสตูดิโอและการถ่ายทำ)</span>
+              <span class="lang-en">Animation Renaissance (Company Atmosphere)</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th">ภาพบรรยากาศเบื้องหลังและวัฒนธรรมการทำงานของสตูดิโอ Animation Renaissance ในฐานะหัวหน้าช่างภาพและผู้กำกับสื่อ ทำหน้าที่บันทึกช่วงเวลาสำคัญ ความร่วมมือ และการเดินทางสร้างสรรค์ของทีมงานตั้งแต่วันแรกจนถึงปัจจุบัน</p>
+              <p class="lang-en">Behind-the-scenes moments and studio culture at Animation Renaissance. Serving as lead cameraman and photographer, I documented the team's milestones, collaborative spirit, and creative journey from day one.</p>
             </div>
-            <a href="https://www.animationrenaissance.com/our-team" target="_blank" class="project-link">Studio Team ↗</a>
-            <a href="https://drive.google.com/drive/folders/1sgHL4Fa4jql4UrEHEjPkEPlmVEylAf8Z?usp=sharing" target="_blank" class="project-link" style="margin-left: 15px;">Photo Archive (Google Drive) ↗</a>
+            <div class="tags">
+              <span>Company Culture</span><span>Teamwork</span><span>Creative Studio</span><span>Cinematography</span>
+            </div>
+            <a href="https://www.animationrenaissance.com/our-team" target="_blank" class="project-link">
+              <span class="lang-th">ทีมงานสตูดิโอ ↗</span>
+              <span class="lang-en">Studio Team ↗</span>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1sgHL4Fa4jql4UrEHEjPkEPlmVEylAf8Z?usp=sharing" target="_blank" class="project-link" style="margin-left: 15px;">
+              <span class="lang-th">คลังภาพถ่าย (Google Drive) ↗</span>
+              <span class="lang-en">Photo Archive (Google Drive) ↗</span>
+            </a>
           </div>
         </div>
-        <!-- Project 3 -->
+
+        <!-- Featured Project 7: AI Films BTS -->
         <div class="project-card" data-video="https://www.youtube.com/embed/9GVlo6pFsmc,https://www.youtube.com/embed/jsNJf28ACsY,https://www.youtube.com/embed/8FCUfRRy2Io,https://www.youtube.com/embed/V5UfAy9WPaQ,https://www.youtube.com/embed/FZh_SeftD9g" data-images="/aifilms/Screenshot%202026-08-14%20225600.jpg,/aifilms/Screenshot%202026-08-14%20225610.jpg,/aifilms/Screenshot%202026-08-14%20225730.jpg,/aifilms/Screenshot%202026-08-14%20225743.jpg,/aifilms/Screenshot%202026-08-14%20225857.jpg,/aifilms/Screenshot%202026-08-14%20225944.jpg,/aifilms/Screenshot%202026-08-14%20225958.jpg">
           <div class="project-image" style="background: url('/aifilms/Screenshot%202026-08-14%20225743.jpg') center/cover no-repeat;"></div>
           <div class="project-info">
-            <h3>AI Film Production & Behind the Scenes</h3>
-            <p>Production workflows and behind-the-scenes development of AI-driven cinema. Blending generative visual tools with video editing and storytelling to produce cinematic-grade moving pictures.</p>
+            <h3>
+              <span class="lang-th">การผลิตภาพยนตร์ AI และเบื้องหลังงานสร้าง</span>
+              <span class="lang-en">AI Film Production & Behind the Scenes</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th">กระบวนการทำงานและเบื้องหลังการพัฒนาภาพยนตร์ด้วยเทคโนโลยี AI การผสานเครื่องมือสร้างภาพและเสียง Generative AI เข้ากับการตัดต่อวิดีโอ การเกรดสี และการเล่าเรื่องเพื่อสร้างสรรค์งานภาพยนตร์ที่มีมาตรฐานระดับสากล</p>
+              <p class="lang-en">Production workflows and behind-the-scenes development of AI-driven cinema. Blending generative visual tools with video editing and storytelling to produce cinematic-grade moving pictures.</p>
+            </div>
             <div class="tags">
-              <span>AI Film</span><span>Video Editing</span><span>Behind the Scenes</span>
+              <span>AI Film</span><span>Video Editing</span><span>Behind the Scenes</span><span>Workflow Integration</span>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
       <div class="section-header reveal">
-        <h2>Get in <span>Touch</span></h2>
+        <h2>
+          <span class="lang-th">ติดต่อ <span>ร่วมงาน</span></span>
+          <span class="lang-en">Get in <span>Touch</span></span>
+        </h2>
         <div class="line"></div>
       </div>
       <div class="contact-content reveal">
-        <p>Feel free to reach out for collaborations, project inquiries, or networking opportunities.</p>
+        <p>
+          <span class="lang-th">ยินดีต้อนรับสำหรับการร่วมงาน สอบถามข้อมูลโปรเจกต์ หรือโอกาสในการสร้างสรรค์ผลงานใหม่ๆ ร่วมกัน</span>
+          <span class="lang-en">Feel free to reach out for collaborations, project inquiries, or networking opportunities.</span>
+        </p>
         
         <div class="contact-details">
           <div class="contact-item">
             <strong>Email:</strong> <a href="mailto:danaiwit.dwb@gmail.com">danaiwit.dwb@gmail.com</a>
           </div>
           <div class="contact-item">
-            <strong>Phone:</strong> <a href="tel:0835795559">083-5795-559</a>
+            <strong><span class="lang-th">เบอร์โทรศัพท์:</span><span class="lang-en">Phone:</span></strong> <a href="tel:0835795559">083-5795-559</a>
           </div>
           <div class="contact-item">
             <strong>LINE ID:</strong> dwb.ani
@@ -387,20 +589,26 @@
         </div>
 
         <div style="margin: 35px auto 25px; padding: 25px; background: var(--surface-color); border: 1px solid var(--surface-border); border-radius: 16px; max-width: 760px; text-align: center;">
-          <h3 style="margin-bottom: 8px; font-size: 1.25rem;">Curriculum Vitae & Portfolio Documents</h3>
-          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px;">ดาวน์โหลดเอกสารประวัติและแฟ้มสะสมผลงานฉบับสมบูรณ์ (PDF)</p>
+          <h3 style="margin-bottom: 8px; font-size: 1.25rem;">
+            <span class="lang-th">เอกสารเรซูเม่และพอร์ตโฟลิโอ</span>
+            <span class="lang-en">Curriculum Vitae & Portfolio Documents</span>
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px;">
+            <span class="lang-th">ดาวน์โหลดเอกสารประวัติการทำงานและแฟ้มผลงานฉบับสมบูรณ์ (PDF)</span>
+            <span class="lang-en">Download official resume and comprehensive portfolio documents (PDF)</span>
+          </p>
           <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-            <a href="/Danaiwit_Resume.pdf" target="_blank" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 18px;">
-              📄 Resume (EN)
-            </a>
             <a href="/Danaiwit_Resume_TH.pdf" target="_blank" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 18px;">
               📄 เรซูเม่ (TH)
             </a>
-            <a href="/Danaiwit_Portfolio.pdf" target="_blank" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 18px;">
-              📁 Portfolio PDF (EN)
+            <a href="/Danaiwit_Resume.pdf" target="_blank" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 18px;">
+              📄 Resume (EN)
             </a>
             <a href="/Danaiwit_Portfolio_TH.pdf" target="_blank" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 18px;">
               📁 พอร์ตโฟลิโอ PDF (TH)
+            </a>
+            <a href="/Danaiwit_Portfolio.pdf" target="_blank" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 18px;">
+              📁 Portfolio PDF (EN)
             </a>
           </div>
         </div>
@@ -420,7 +628,7 @@
         <div class="modal-image" id="modal-img"></div>
         <div class="modal-body">
           <h2 id="modal-title"></h2>
-          <p id="modal-desc"></p>
+          <div id="modal-desc"></div>
           <div class="tags" id="modal-tags"></div>
           <div class="modal-links-container" id="modal-links"></div>
           <div class="modal-video-container" id="modal-video" style="display: none;"></div>
@@ -454,7 +662,7 @@
     </div>
 
     <footer>
-      <p>&copy; 2026 Danaiwit Kanthawong. Built with Passion.</p>
+      <p>&copy; 2026 Danaiwit Kanthawong (ดนัยวิทย์ กันทวงค์). Built with Passion.</p>
       <div class="footer-stats">
         <span><span class="footer-pulse"></span>Live Online: <strong id="footer-online-count" class="stat-value">1</strong></span>
         <span>•</span>

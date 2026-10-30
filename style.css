@@ -1071,3 +1071,54 @@ footer {
     font-size: 0.78rem;
   }
 }
+
+/* ==========================================================================
+   Language Switcher & Bilingual Support
+   ========================================================================== */
+html[lang="th"] .lang-en {
+  display: none !important;
+}
+html[lang="en"] .lang-th {
+  display: none !important;
+}
+
+.lang-switch-container {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 3px 5px;
+  margin-left: 15px;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-btn:hover {
+  color: #fff;
+}
+
+.lang-btn.active {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(123, 44, 191, 0.4);
+}
+
+.lang-separator {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  opacity: 0.5;
+  user-select: none;
+}

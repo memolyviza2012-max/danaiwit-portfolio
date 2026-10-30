@@ -1,5 +1,32 @@
 import { initVisitorCounter } from './stats.js';
 
+// ==========================================
+// Language Switcher (Default: Thai 'th')
+// ==========================================
+const langBtnTh = document.getElementById('lang-btn-th');
+const langBtnEn = document.getElementById('lang-btn-en');
+
+function setLanguage(lang) {
+  const targetLang = (lang === 'en') ? 'en' : 'th';
+  document.documentElement.lang = targetLang;
+  localStorage.setItem('user_lang_pref', targetLang);
+
+  if (targetLang === 'th') {
+    langBtnTh?.classList.add('active');
+    langBtnEn?.classList.remove('active');
+  } else {
+    langBtnEn?.classList.add('active');
+    langBtnTh?.classList.remove('active');
+  }
+}
+
+// On first open, default to 'th'
+const initialLang = localStorage.getItem('user_lang_pref') || 'th';
+setLanguage(initialLang);
+
+langBtnTh?.addEventListener('click', () => setLanguage('th'));
+langBtnEn?.addEventListener('click', () => setLanguage('en'));
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 
@@ -49,8 +76,10 @@ projectCards.forEach(card => {
 
     // Extract data from the clicked card
     const projImg = card.querySelector('.project-image');
-    const title = card.querySelector('h3').innerText;
-    const descHTML = card.querySelector('p').innerHTML;
+    const titleHTML = card.querySelector('h3').innerHTML;
+    const descHTML = card.querySelector('.project-desc-content')
+      ? card.querySelector('.project-desc-content').innerHTML
+      : card.querySelector('p').innerHTML;
     const tagsHTML = card.querySelector('.tags').innerHTML;
     
     // Extract links
@@ -89,7 +118,7 @@ projectCards.forEach(card => {
       if (modalGallery) modalGallery.innerHTML = '';
     }
 
-    modalTitle.innerText = title;
+    modalTitle.innerHTML = titleHTML;
     modalDesc.innerHTML = descHTML;
     modalTags.innerHTML = tagsHTML;
     modalLinks.innerHTML = linksHTML;
@@ -137,9 +166,11 @@ const modalGallery = document.getElementById('modal-gallery');
 
 expItems.forEach(item => {
   item.addEventListener('click', () => {
-    const title = item.querySelector('h3').innerText;
-    const descHTML = item.querySelector('ul').outerHTML;
-    
+    const titleHTML = item.querySelector('h3').innerHTML;
+    const descHTML = item.querySelector('.experience-details-wrap')
+      ? item.querySelector('.experience-details-wrap').innerHTML
+      : (item.querySelector('ul') ? item.querySelector('ul').outerHTML : '');
+
     const imagesStr = item.getAttribute('data-images');
     const images = imagesStr ? imagesStr.split(',') : [];
     const videoUrl = item.getAttribute('data-video');
@@ -148,7 +179,7 @@ expItems.forEach(item => {
     // Hide main modal image for gallery view
     modalImg.style.display = 'none';
     
-    modalTitle.innerText = title;
+    modalTitle.innerHTML = titleHTML;
     modalDesc.innerHTML = descHTML;
     modalTags.innerHTML = '';
     modalLinks.innerHTML = '';
