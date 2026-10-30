@@ -10,38 +10,234 @@
   <style>
     body, html {
       font-family: 'Prompt', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
-    .job-title {
-      font-size: 10pt;
-      letter-spacing: 0.3px;
-      color: var(--accent-secondary);
-      font-weight: 600;
-    }
-    .summary {
-      line-height: 1.55;
-      font-size: 9pt;
-      margin-bottom: 12px;
-    }
-    .exp-bullets li, .skill-list li {
-      line-height: 1.45;
-      font-size: 8.8pt;
-    }
-    .experience-item {
-      margin-bottom: 11px;
-    }
-    .exp-title {
-      font-size: 10pt;
-      font-weight: 700;
-    }
-    .exp-company {
-      font-size: 9pt;
-      margin-bottom: 4px;
+    .page {
+      width: 210mm;
+      height: 297mm;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      background: var(--bg-dark);
     }
     .sidebar {
-      padding: 30px 20px;
+      width: 31%;
+      padding: 24px 18px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-right: 1px solid var(--bg-panel-border);
     }
+    .profile-section {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .profile-img-wrap {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 2px solid var(--accent-primary);
+      overflow: hidden;
+      padding: 2px;
+    }
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .contact-info {
+      margin-bottom: 14px;
+    }
+    .contact-item {
+      font-size: 7.8pt;
+      margin-bottom: 5px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      word-break: break-all;
+    }
+    .contact-item .icon {
+      color: var(--accent-secondary);
+      font-weight: 600;
+      min-width: 48px;
+      font-size: 7.8pt;
+    }
+    .sidebar-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--accent-secondary);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      margin-top: 6px;
+    }
+    .sidebar-group-title {
+      color: var(--accent-secondary);
+      font-size: 8.2pt;
+      font-weight: 600;
+      margin-top: 6px;
+      margin-bottom: 3px;
+    }
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 8px 0;
+    }
+    .skill-list li {
+      font-size: 7.6pt;
+      color: #94a3b8;
+      line-height: 1.35;
+      margin-bottom: 3px;
+      position: relative;
+      padding-left: 10px;
+    }
+    .skill-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+    }
+    .education-box {
+      margin-top: auto;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+    .education-degree {
+      font-size: 8.2pt;
+      color: #fff;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .education-school {
+      font-size: 7.6pt;
+      color: #94a3b8;
+      margin-top: 2px;
+    }
+
+    /* Main Content */
     .main-content {
-      padding: 30px 25px;
+      width: 69%;
+      padding: 24px 24px 20px 24px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .header-title {
+      margin-bottom: 8px;
+    }
+    .name {
+      font-size: 19pt;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      line-height: 1.15;
+    }
+    .job-title {
+      font-size: 9.5pt;
+      color: var(--accent-secondary);
+      font-weight: 600;
+      margin-top: 3px;
+      letter-spacing: 0.2px;
+    }
+    .summary {
+      font-size: 8.2pt;
+      color: #cbd5e1;
+      line-height: 1.45;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid var(--accent-secondary);
+      padding: 6px 10px;
+      border-radius: 0 6px 6px 0;
+    }
+    .section-title {
+      font-size: 10.5pt;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 3px;
+      margin: 0 0 8px 0;
+    }
+    .experience-item {
+      margin-bottom: 8px;
+      position: relative;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .exp-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .exp-date {
+      font-size: 7.6pt;
+      color: #94a3b8;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .exp-company {
+      font-size: 8pt;
+      color: var(--accent-secondary);
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+    .exp-bullets {
+      margin: 0;
+      padding-left: 14px;
+    }
+    .exp-bullets li {
+      font-size: 7.8pt;
+      color: #94a3b8;
+      line-height: 1.35;
+      margin-bottom: 2.5px;
+    }
+    .exp-bullets li strong {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .cta-banner {
+      margin-top: auto;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.15));
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      border-radius: 8px;
+      padding: 6px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+    }
+    .cta-banner-text h3 {
+      font-size: 8.2pt;
+      color: #fff;
+      margin: 0;
+      font-weight: 600;
+    }
+    .cta-banner-text p {
+      font-size: 7.2pt;
+      color: #94a3b8;
+      margin: 1px 0 0 0;
+    }
+    .cta-banner-link {
+      font-size: 7.8pt;
+      color: var(--accent-secondary);
+      font-weight: 600;
+      white-space: nowrap;
+      margin-left: 10px;
     }
   </style>
 </head>
@@ -57,27 +253,17 @@
       </div>
 
       <div class="contact-info">
-        <div class="contact-item">
-          <span class="icon">Email:</span> danaiwit.dwb@gmail.com
-        </div>
-        <div class="contact-item">
-          <span class="icon">Tel:</span> 083-5795-559
-        </div>
-        <div class="contact-item">
-          <span class="icon">LINE:</span> dwb.ani
-        </div>
-        <div class="contact-item">
-          <span class="icon">GitHub:</span> github.com/memolyviza2012-max
-        </div>
-        <div class="contact-item">
-          <span class="icon">พอร์ตโฟลิโอ:</span> danaiwitk-portfolio.vercel.app
-        </div>
+        <div class="contact-item"><span class="icon">Email:</span> danaiwit.dwb@gmail.com</div>
+        <div class="contact-item"><span class="icon">Tel:</span> 083-5795-559</div>
+        <div class="contact-item"><span class="icon">LINE:</span> dwb.ani</div>
+        <div class="contact-item"><span class="icon">GitHub:</span> github.com/memolyviza2012-max</div>
+        <div class="contact-item"><span class="icon">Portfolio:</span> danaiwitk-portfolio.vercel.app</div>
       </div>
 
       <div class="sidebar-title">ทักษะการบริหารและเทคโนโลยี</div>
       
-      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 4px;">การบริหารโครงการ (Project Management)</h4>
-      <ul class="skill-list" style="margin-bottom: 10px;">
+      <div class="sidebar-group-title">การบริหารโครงการ (Project Management)</div>
+      <ul class="skill-list">
         <li>Agile & Kanban (Trello, Sheets, LINE)</li>
         <li>Scope Management & วางแผนแบบ MVP</li>
         <li>User Flow & กำหนด Requirement ให้ทีม</li>
@@ -85,32 +271,34 @@
         <li>การจัดลำดับความสำคัญตามคุณค่าทางธุรกิจ</li>
       </ul>
 
-      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 4px;">การประยุกต์ใช้ AI ในการทำงาน</h4>
-      <ul class="skill-list" style="margin-bottom: 10px;">
+      <div class="sidebar-group-title">การประยุกต์ใช้ AI ในการทำงาน</div>
+      <ul class="skill-list">
         <li>AI Prompt & Skill Engineering ขั้นสูง</li>
         <li>วาง Workflow สร้างภาพ เสียง และโค้ดด้วย AI</li>
         <li>การจัดทำ Demo & Prototype ด้วย AI</li>
         <li>คลัสเตอร์ประมวลผล AI LAN ข้ามเครื่อง</li>
       </ul>
 
-      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 4px;">ความเข้าใจเชิงเทคนิค (Technical Literacy)</h4>
-      <ul class="skill-list" style="margin-bottom: 10px;">
+      <div class="sidebar-group-title">ความเข้าใจเชิงเทคนิคและระบบ (Technical Literacy)</div>
+      <ul class="skill-list">
         <li>สถาปัตยกรรม Web App (React, REST APIs)</li>
-        <li>คลาวด์และดาต้าเบส (Cloudflare, Supabase, Firebase)</li>
+        <li>Cloud Platforms (Cloudflare, Supabase, Firebase)</li>
         <li>ระบบจัดเก็บข้อมูล Private Cloud NAS</li>
         <li>การคอมไพล์แพ็กเกจติดตั้ง (Inno Setup)</li>
       </ul>
 
-      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 12px;">การดำเนินงานองค์กร (Operations)</h4>
-      <ul class="skill-list" style="margin-bottom: 12px;">
-        <li>บริหารจัดการงบประมาณและจัดซื้ออุปกรณ์ไอที</li>
+      <div class="sidebar-group-title">การดำเนินงานองค์กร (Operations)</div>
+      <ul class="skill-list">
+        <li>บริหารงบประมาณและจัดซื้ออุปกรณ์ไอที</li>
         <li>ดูแลเอกสารบัญชีและการเงินระหว่างประเทศ</li>
         <li>ประสานงานข้ามสายงาน (Cross-functional)</li>
       </ul>
 
-      <div class="sidebar-title" style="margin-top: 6px;">ประวัติการศึกษา</div>
-      <div style="font-size: 9pt; color: white; font-weight: 600;">วิทยาศาสตรบัณฑิต (แอนิเมชัน)</div>
-      <div style="font-size: 8pt; color: var(--text-muted);">มหาวิทยาลัยเชียงใหม่ (ธ.ค. 2558)</div>
+      <div class="education-box">
+        <div class="sidebar-title" style="margin-top: 0; padding-bottom: 2px;">ประวัติการศึกษา</div>
+        <div class="education-degree">วิทยาศาสตรบัณฑิต (แอนิเมชัน)</div>
+        <div class="education-school">มหาวิทยาลัยเชียงใหม่ (ธ.ค. 2558)</div>
+      </div>
     </div>
 
     <!-- Main Content -->
@@ -121,22 +309,24 @@
       </div>
 
       <div class="summary">
-        ผู้เชี่ยวชาญด้านการบริหารโครงการและออกแบบกระบวนการทำงาน (Operations Lead) ที่ผสานเทคโนโลยี Generative AI เข้ากับการส่งมอบซอฟต์แวร์และสื่อดิจิทัลระดับโปรดักชัน มีประสบการณ์จริงในการเป็น Product Lead พัฒนาและส่งมอบแพลตฟอร์มคลังม็อดเกมกว่า 100 เกม (nodnuattranslator.com) และดูแลคอมมูนิตี้ผู้ติดตามกว่า 7,000 คนบน Facebook มีทักษะเด่นด้านการจัดลำดับความสำคัญ (Prioritization), การบริหาร Scope งานแบบ MVP เพื่อรักษา Deadline, การประสานงานข้ามสายงาน และการสร้าง Workflow อัจฉริยะที่ลดเวลาและต้นทุนการผลิตได้อย่างมหาศาล
+        ผู้เชี่ยวชาญด้านการบริหารโครงการและวางระบบกระบวนการทำงาน (Operations Lead) ที่ผสานเทคโนโลยี Generative AI เข้ากับการส่งมอบซอฟต์แวร์และสื่อดิจิทัล มีประสบการณ์เป็น Product Lead พัฒนาและส่งมอบแพลตฟอร์มคลังม็อดเกมกว่า 100 เกม (nodnuattranslator.com) และดูแลคอมมูนิตี้ผู้ติดตามกว่า 7,000 คน มีทักษะเด่นด้านการจัดลำดับความสำคัญ (Prioritization), การบริหาร Scope งานแบบ MVP เพื่อรักษา Deadline, และการสร้าง Workflow อัจฉริยะที่ลดเวลาและต้นทุนได้อย่างมีนัยสำคัญ
       </div>
 
-      <h2 class="section-title">ประสบการณ์การทำงาน</h2>
+      <div class="section-title">ประสบการณ์การทำงาน</div>
 
-      <div class="experience-item" style="background: rgba(139, 92, 246, 0.1); padding: 10px 14px 10px 20px; border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.3);">
+      <!-- Item 1: Award -->
+      <div class="experience-item" style="background: rgba(139, 92, 246, 0.08); padding: 7px 10px; border-radius: 6px; border-left: 3px solid #FFD700;">
         <div class="exp-header">
-          <span class="exp-title" style="color: var(--accent-secondary);">🏆 รางวัลชนะเลิศ Grand Prix (Best AI Short Film)</span>
+          <span class="exp-title" style="color: #FFD700;">🏆 รางวัลชนะเลิศ Grand Prix (Best AI Short Film)</span>
           <span class="exp-date">ก.ค. 2569</span>
         </div>
-        <div class="exp-company" style="color: white;">Thailand International AI Film Festival (TIAIF 2026)</div>
-        <div style="font-size: 8.8pt; color: var(--text-muted); line-height: 1.5;">
-          คว้ารางวัลชนะเลิศสูงสุด Grand Prix จากผลงานภาพยนตร์สั้น AI เรื่อง <em>"The Stroke of Night"</em> (ร่วมสร้างภายใต้ Animation Renaissance) พิสูจน์ความเป็นเลิศในการบริหารและส่งมอบผลงานนวัตกรรม Generative AI ขั้นสูงภายใต้ข้อจำกัดด้านเวลาและการแข่งขันระดับนานาชาติ
+        <div class="exp-company" style="color: #cbd5e1; font-size: 7.8pt;">Thailand International AI Film Festival (TIAIF 2026)</div>
+        <div style="font-size: 7.6pt; color: #94a3b8; line-height: 1.35;">
+          คว้ารางวัลชนะเลิศสูงสุด Grand Prix จากผลงานภาพยนตร์สั้น AI เรื่อง <em>"The Stroke of Night"</em> (ร่วมสร้างภายใต้ Animation Renaissance) พิสูจน์ความเป็นเลิศในการบริหารและส่งมอบผลงานนวัตกรรม Generative AI ภายใต้ข้อจำกัดด้านเวลาและการแข่งขันระดับนานาชาติ
         </div>
       </div>
 
+      <!-- Item 2: NodNuat -->
       <div class="experience-item">
         <div class="exp-header">
           <span class="exp-title">Founder, Product Lead & Release Engineer</span>
@@ -150,6 +340,7 @@
         </ul>
       </div>
 
+      <!-- Item 3: Animation Renaissance -->
       <div class="experience-item">
         <div class="exp-header">
           <span class="exp-title">Operations Lead & Production Process Specialist</span>
@@ -164,6 +355,7 @@
         </ul>
       </div>
 
+      <!-- Item 4: AI Architecture & Web Apps -->
       <div class="experience-item">
         <div class="exp-header">
           <span class="exp-title">AI-Augmented Product & Systems Architect</span>
@@ -176,12 +368,13 @@
         </ul>
       </div>
 
+      <!-- Footer CTA -->
       <a href="https://danaiwitk-portfolio.vercel.app/" class="cta-banner">
         <div class="cta-banner-text">
           <h3>เปิดดูพอร์ตโฟลิโอแบบออนไลน์ (Interactive Portfolio)</h3>
           <p>คลิกเพื่อรับชมระบบเว็บแอปพลิเคชันจริง, แกลเลอรีผลงาน และโปรเจกต์ฉบับสมบูรณ์</p>
         </div>
-        <div class="cta-banner-link">คลิกที่นี่ -></div>
+        <div class="cta-banner-link">เปิดดูผลงาน -></div>
       </a>
 
     </div>

@@ -10,38 +10,234 @@
   <style>
     body, html {
       font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
-    .job-title {
-      font-size: 10pt;
-      letter-spacing: 0.3px;
-      color: var(--accent-secondary);
-      font-weight: 600;
-    }
-    .summary {
-      line-height: 1.55;
-      font-size: 9pt;
-      margin-bottom: 12px;
-    }
-    .exp-bullets li, .skill-list li {
-      line-height: 1.45;
-      font-size: 8.8pt;
-    }
-    .experience-item {
-      margin-bottom: 11px;
-    }
-    .exp-title {
-      font-size: 10pt;
-      font-weight: 700;
-    }
-    .exp-company {
-      font-size: 9pt;
-      margin-bottom: 4px;
+    .page {
+      width: 210mm;
+      height: 297mm;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      background: var(--bg-dark);
     }
     .sidebar {
-      padding: 30px 20px;
+      width: 31%;
+      padding: 24px 18px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-right: 1px solid var(--bg-panel-border);
     }
+    .profile-section {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .profile-img-wrap {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 2px solid var(--accent-primary);
+      overflow: hidden;
+      padding: 2px;
+    }
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .contact-info {
+      margin-bottom: 14px;
+    }
+    .contact-item {
+      font-size: 7.8pt;
+      margin-bottom: 5px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      word-break: break-all;
+    }
+    .contact-item .icon {
+      color: var(--accent-secondary);
+      font-weight: 600;
+      min-width: 48px;
+      font-size: 7.8pt;
+    }
+    .sidebar-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--accent-secondary);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      margin-top: 6px;
+    }
+    .sidebar-group-title {
+      color: var(--accent-secondary);
+      font-size: 8.2pt;
+      font-weight: 600;
+      margin-top: 6px;
+      margin-bottom: 3px;
+    }
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 8px 0;
+    }
+    .skill-list li {
+      font-size: 7.6pt;
+      color: #94a3b8;
+      line-height: 1.35;
+      margin-bottom: 3px;
+      position: relative;
+      padding-left: 10px;
+    }
+    .skill-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+    }
+    .education-box {
+      margin-top: auto;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+    .education-degree {
+      font-size: 8.2pt;
+      color: #fff;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .education-school {
+      font-size: 7.6pt;
+      color: #94a3b8;
+      margin-top: 2px;
+    }
+
+    /* Main Content */
     .main-content {
-      padding: 30px 25px;
+      width: 69%;
+      padding: 24px 24px 20px 24px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .header-title {
+      margin-bottom: 8px;
+    }
+    .name {
+      font-size: 19pt;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      line-height: 1.15;
+    }
+    .job-title {
+      font-size: 9.5pt;
+      color: var(--accent-secondary);
+      font-weight: 600;
+      margin-top: 3px;
+      letter-spacing: 0.2px;
+    }
+    .summary {
+      font-size: 8.2pt;
+      color: #cbd5e1;
+      line-height: 1.45;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid var(--accent-secondary);
+      padding: 6px 10px;
+      border-radius: 0 6px 6px 0;
+    }
+    .section-title {
+      font-size: 10.5pt;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 3px;
+      margin: 0 0 8px 0;
+    }
+    .experience-item {
+      margin-bottom: 8px;
+      position: relative;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .exp-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .exp-date {
+      font-size: 7.6pt;
+      color: #94a3b8;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .exp-company {
+      font-size: 8pt;
+      color: var(--accent-secondary);
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+    .exp-bullets {
+      margin: 0;
+      padding-left: 14px;
+    }
+    .exp-bullets li {
+      font-size: 7.8pt;
+      color: #94a3b8;
+      line-height: 1.35;
+      margin-bottom: 2.5px;
+    }
+    .exp-bullets li strong {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .cta-banner {
+      margin-top: auto;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.15));
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      border-radius: 8px;
+      padding: 6px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+    }
+    .cta-banner-text h3 {
+      font-size: 8.2pt;
+      color: #fff;
+      margin: 0;
+      font-weight: 600;
+    }
+    .cta-banner-text p {
+      font-size: 7.2pt;
+      color: #94a3b8;
+      margin: 1px 0 0 0;
+    }
+    .cta-banner-link {
+      font-size: 7.8pt;
+      color: var(--accent-secondary);
+      font-weight: 600;
+      white-space: nowrap;
+      margin-left: 10px;
     }
   </style>
 </head>
@@ -57,27 +253,17 @@
       </div>
 
       <div class="contact-info">
-        <div class="contact-item">
-          <span class="icon">Email:</span> danaiwit.dwb@gmail.com
-        </div>
-        <div class="contact-item">
-          <span class="icon">Tel:</span> 083-5795-559
-        </div>
-        <div class="contact-item">
-          <span class="icon">LINE:</span> dwb.ani
-        </div>
-        <div class="contact-item">
-          <span class="icon">GitHub:</span> github.com/memolyviza2012-max
-        </div>
-        <div class="contact-item">
-          <span class="icon">Portfolio:</span> danaiwitk-portfolio.vercel.app
-        </div>
+        <div class="contact-item"><span class="icon">Email:</span> danaiwit.dwb@gmail.com</div>
+        <div class="contact-item"><span class="icon">Tel:</span> 083-5795-559</div>
+        <div class="contact-item"><span class="icon">LINE:</span> dwb.ani</div>
+        <div class="contact-item"><span class="icon">GitHub:</span> github.com/memolyviza2012-max</div>
+        <div class="contact-item"><span class="icon">Portfolio:</span> danaiwitk-portfolio.vercel.app</div>
       </div>
 
       <div class="sidebar-title">Core Competencies</div>
       
-      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 4px;">Project & Product Management</h4>
-      <ul class="skill-list" style="margin-bottom: 10px;">
+      <div class="sidebar-group-title">Project & Product Management</div>
+      <ul class="skill-list">
         <li>Agile & Kanban (Trello, Sheets, LINE)</li>
         <li>Scope Management & MVP Scoping</li>
         <li>User Stories & Requirement Definition</li>
@@ -85,32 +271,34 @@
         <li>Value-Driven Milestone Prioritization</li>
       </ul>
 
-      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 4px;">AI-Augmented Workflows</h4>
-      <ul class="skill-list" style="margin-bottom: 10px;">
+      <div class="sidebar-group-title">AI-Augmented Workflows</div>
+      <ul class="skill-list">
         <li>Advanced Prompt & Skill Engineering</li>
         <li>AI Pipelines (Visual, Audio & Code)</li>
         <li>Rapid Prototype & Demo Generation</li>
         <li>Distributed LAN Multi-PC AI Cluster</li>
       </ul>
 
-      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 4px;">Technical Systems Literacy</h4>
-      <ul class="skill-list" style="margin-bottom: 10px;">
+      <div class="sidebar-group-title">Technical Systems Literacy</div>
+      <ul class="skill-list">
         <li>Web Architecture (React, REST APIs)</li>
         <li>Cloud Platforms (Cloudflare, Supabase, Firebase)</li>
         <li>High-Speed Private Cloud NAS (SMB)</li>
         <li>Release Engineering (Inno Setup, Git)</li>
       </ul>
 
-      <h4 style="color: var(--accent-secondary); font-size: 9pt; margin-bottom: 12px;">Studio Operations & Compliance</h4>
-      <ul class="skill-list" style="margin-bottom: 12px;">
+      <div class="sidebar-group-title">Studio Operations & Compliance</div>
+      <ul class="skill-list">
         <li>Budgeting & High-End IT Procurement</li>
         <li>Accounting Docs & FX Compliance (USD/THB)</li>
         <li>Cross-Functional Collaboration</li>
       </ul>
 
-      <div class="sidebar-title" style="margin-top: 6px;">Education</div>
-      <div style="font-size: 9pt; color: white; font-weight: 600;">B.Sc. in Animation</div>
-      <div style="font-size: 8pt; color: var(--text-muted);">Chiang Mai University (Dec 2015)</div>
+      <div class="education-box">
+        <div class="sidebar-title" style="margin-top: 0; padding-bottom: 2px;">Education</div>
+        <div class="education-degree">B.Sc. in Animation</div>
+        <div class="education-school">Chiang Mai University (Dec 2015)</div>
+      </div>
     </div>
 
     <!-- Main Content -->
@@ -124,19 +312,21 @@
         Technical Project Manager and Operations Lead skilled in integrating Generative AI to accelerate delivery across production software and digital media. Proven track record as Product Lead delivering a 100-game localized software catalog on nodnuattranslator.com and nurturing an engaged community of 7,000+ followers on Facebook. Adept at data-driven prioritization, pragmatic MVP scope control under tight deadlines, cross-functional facilitation, and architecting smart automated workflows that drastically reduce production lead time and costs.
       </div>
 
-      <h2 class="section-title">Professional Experience</h2>
+      <div class="section-title">Professional Experience</div>
 
-      <div class="experience-item" style="background: rgba(139, 92, 246, 0.1); padding: 10px 14px 10px 20px; border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.3);">
+      <!-- Item 1: Award -->
+      <div class="experience-item" style="background: rgba(139, 92, 246, 0.08); padding: 7px 10px; border-radius: 6px; border-left: 3px solid #FFD700;">
         <div class="exp-header">
-          <span class="exp-title" style="color: var(--accent-secondary);">🏆 Grand Prix Winner (Best AI Short Film)</span>
+          <span class="exp-title" style="color: #FFD700;">🏆 Grand Prix Winner (Best AI Short Film)</span>
           <span class="exp-date">July 2026</span>
         </div>
-        <div class="exp-company" style="color: white;">Thailand International AI Film Festival (TIAIF 2026)</div>
-        <div style="font-size: 8.8pt; color: var(--text-muted); line-height: 1.5;">
+        <div class="exp-company" style="color: #cbd5e1; font-size: 7.8pt;">Thailand International AI Film Festival (TIAIF 2026)</div>
+        <div style="font-size: 7.6pt; color: #94a3b8; line-height: 1.35;">
           Awarded top Grand Prix honor for the AI short film <em>"The Stroke of Night"</em> (co-produced with Animation Renaissance), demonstrating world-class mastery in managing end-to-end generative AI pipelines, rapid prototyping, and storytelling under strict competition deadlines.
         </div>
       </div>
 
+      <!-- Item 2: NodNuat -->
       <div class="experience-item">
         <div class="exp-header">
           <span class="exp-title">Founder, Product Lead & Release Engineer</span>
@@ -150,6 +340,7 @@
         </ul>
       </div>
 
+      <!-- Item 3: Animation Renaissance -->
       <div class="experience-item">
         <div class="exp-header">
           <span class="exp-title">Operations Lead & Production Process Specialist</span>
@@ -164,6 +355,7 @@
         </ul>
       </div>
 
+      <!-- Item 4: AI Architecture & Web Apps -->
       <div class="experience-item">
         <div class="exp-header">
           <span class="exp-title">AI-Augmented Product & Systems Architect</span>
@@ -176,12 +368,13 @@
         </ul>
       </div>
 
+      <!-- Footer CTA -->
       <a href="https://danaiwitk-portfolio.vercel.app/" class="cta-banner">
         <div class="cta-banner-text">
           <h3>View Interactive Portfolio</h3>
           <p>Click to explore live production web apps, project case studies, and complete showcases.</p>
         </div>
-        <div class="cta-banner-link">Click Here -></div>
+        <div class="cta-banner-link">Explore Portfolio -></div>
       </a>
 
     </div>
