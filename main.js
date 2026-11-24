@@ -265,8 +265,24 @@ projectCards.forEach(card => {
     modalDesc.innerHTML = descHTML;
     modalTags.innerHTML = tagsHTML;
     const videoUrlStr = card.getAttribute('data-video');
-    
-    if (videoUrlStr && modalVideo) {
+    let localVideo;
+
+    if (card.dataset.localVideo && modalVideo) {
+      localVideo = document.createElement('video');
+      localVideo.controls = true;
+      localVideo.playsInline = true;
+      localVideo.preload = 'metadata';
+      localVideo.src = card.dataset.localVideo;
+      localVideo.poster = card.dataset.videoPoster;
+      const captions = document.createElement('track');
+      captions.kind = 'captions';
+      captions.srclang = 'en';
+      captions.label = 'English';
+      captions.src = card.dataset.videoCaptions;
+      localVideo.append(captions);
+      modalVideo.replaceChildren(localVideo);
+      modalVideo.style.display = 'block';
+    } else if (videoUrlStr && modalVideo) {
       const videoUrls = videoUrlStr.split(',');
       modalVideo.innerHTML = '';
       videoUrls.forEach(url => {
@@ -280,6 +296,11 @@ projectCards.forEach(card => {
 
     // Show modal
     showModal(card.querySelector('.project-preview') || document.activeElement);
+    if (localVideo && e.target.closest('.project-preview')) {
+      localVideo.play().catch(() => {
+        // Keep native controls available if the browser blocks playback.
+      });
+    }
   });
 });
 

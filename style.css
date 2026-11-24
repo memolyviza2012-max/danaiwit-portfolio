@@ -948,6 +948,15 @@ span {
   background: #17201f;
 }
 
+.modal-video-container video {
+  display: block;
+  width: min(100%, 36vh);
+  height: auto;
+  margin: 16px auto 0;
+  border-radius: 12px;
+  background: #000;
+}
+
 .work-previews-portrait figure {
   background: #101a1b;
 }

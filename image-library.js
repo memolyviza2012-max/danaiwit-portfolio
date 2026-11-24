@@ -117,9 +117,9 @@ function buildCollections() {
     ['ลำโพง · ภาพ Clay', 'Speaker · Clay render'],
   ], 'study', 'modeling');
 
-  const lokson = entries('#lokson-mon', [
-    ['โลกซ้อน · ปกม่อนพระยาแช่', 'LOKSON · Mon Phraya Chae cover'],
-    ['โลกซ้อน · เฟรมจากคลิป', 'LOKSON · Published short frame'],
+  const lokson = entries('#lokson-wat-wiang', [
+    ['โลกซ้อน · ปกวัดเวียง', 'LOKSON · Wat Wiang cover'],
+    ['โลกซ้อน · เฟรมจากวัดเวียง', 'LOKSON · Wat Wiang short frame'],
   ], 'film', 'film');
 
   const film = imagesFrom('#ai-work .project-card').map((url, index) => ({
