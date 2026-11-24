@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Danaiwit Kanthawong (Wit) - Technical Project Manager, 3D Modeler & AI Systems Integrator" />
+    <meta name="description" content="Portfolio of Danaiwit Kanthawong (Wit) - Blender hard-surface modeling, medical equipment models, and AI-assisted image and video production" />
     <title>Danaiwit Kanthawong (ดนัยวิทย์ กันทวงค์) | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,15 @@
         font-family: 'Outfit', 'Prompt', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
     </style>
+    <script>
+      try {
+        if (localStorage.getItem('user_lang_pref') === 'th') {
+          document.documentElement.lang = 'th';
+        }
+      } catch {
+        // The document defaults to English when storage is unavailable.
+      }
+    </script>
     <!-- Vercel Web Analytics -->
     <script defer src="/_vercel/insights/script.js"></script>
   </head>
@@ -21,78 +30,524 @@
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
       <div class="nav-content">
-        <a href="#" class="logo">Wit<span>.</span></a>
+        <a href="#home" class="logo">Wit<span>.</span></a>
         <ul class="nav-links">
-          <li><a href="#home"><span class="lang-th">หน้าแรก</span><span class="lang-en">Home</span></a></li>
-          <li><a href="#about"><span class="lang-th">เกี่ยวกับผม</span><span class="lang-en">About</span></a></li>
-          <li><a href="#experience"><span class="lang-th">ประสบการณ์</span><span class="lang-en">Experience</span></a></li>
-          <li><a href="#projects"><span class="lang-th">ผลงานเด่น</span><span class="lang-en">Projects</span></a></li>
+          <li class="nav-secondary"><a href="#home"><span class="lang-th">หน้าแรก</span><span class="lang-en">Home</span></a></li>
+          <li><a href="#projects"><span class="lang-th">ผลงานเด่น</span><span class="lang-en">Work</span></a></li>
+          <li><a href="#asset-library"><span class="lang-th">คลังภาพ</span><span class="lang-en">Library</span></a></li>
+          <li class="nav-secondary"><a href="#about"><span class="lang-th">เกี่ยวกับผม</span><span class="lang-en">About</span></a></li>
+          <li class="nav-secondary"><a href="#experience"><span class="lang-th">ประสบการณ์</span><span class="lang-en">Experience</span></a></li>
           <li><a href="#contact"><span class="lang-th">ติดต่อ</span><span class="lang-en">Contact</span></a></li>
         </ul>
 
         <!-- Language Switcher -->
         <div class="lang-switch-container">
-          <button id="lang-btn-th" class="lang-btn active" type="button" title="เปลี่ยนเป็นภาษาไทย">TH</button>
+          <button id="lang-btn-th" class="lang-btn" type="button" title="เปลี่ยนเป็นภาษาไทย">TH</button>
           <span class="lang-separator">/</span>
           <button id="lang-btn-en" class="lang-btn" type="button" title="Switch to English">EN</button>
         </div>
 
-        <a href="https://github.com/memolyviza2012-max" target="_blank" class="github-card">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
-          <span>GitHub</span>
-        </a>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero" style="position: relative; overflow: hidden;">
-      <!-- Video Background -->
-      <video class="hero-bg-video" autoplay loop muted playsinline>
-        <source src="/0815-1.mp4" type="video/mp4">
-      </video>
-      <!-- Dark Overlay -->
-      <div class="hero-bg-overlay"></div>
-
-      <div class="hero-inner" style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 20px;">
-        <div class="hero-content fade-in">
-          <h2 class="greeting">
-            <span class="lang-th">สวัสดีครับ ผมวิทย์</span>
-            <span class="lang-en">Hello, I'm Wit</span>
-          </h2>
-          <h1 class="name">
-            <span class="lang-th">ดนัยวิทย์ กันทวงค์</span>
-            <span class="lang-en">Danaiwit Kanthawong</span>
+    <section id="home" class="hero" aria-labelledby="portfolio-title">
+      <video class="hero-background" aria-hidden="true" muted loop playsinline preload="none" data-src="/work-gallery/fpv-background-loop.mp4"></video>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-identity">
+            <img src="/profile-freelance.webp" alt="" width="64" height="64">
+            <p>
+              <span class="lang-th">ดนัยวิทย์ กันทวงค์</span>
+              <span class="lang-en">Danaiwit Kanthawong</span>
+            </p>
+          </div>
+          <h1 class="name" id="portfolio-title">
+            <span class="lang-th">โมเดล 3D เครื่องมือแพทย์</span>
+            <span class="lang-en">Medical 3D Modeling</span>
           </h1>
+          <p class="hero-specialty">
+            <span class="lang-th">หุ่นยนต์ผ่าตัดและโมเดล Hard-Surface ด้วย Blender</span>
+            <span class="lang-en">Surgical robotics and Blender hard-surface modeling</span>
+          </p>
           <p class="tagline">
-            <span class="lang-th">Technical Project Manager • Senior 3D Modeler • AI System Integrator</span>
-            <span class="lang-en">Technical Project Manager • Senior 3D Modeler • AI System Integrator</span>
+            <span class="lang-th">รับขึ้นโมเดลและทำวัสดุสำหรับอุปกรณ์แพทย์ หุ่นยนต์ผ่าตัด และชิ้นส่วนกลไก รวมถึงผลิตภาพและวิดีโอโดยใช้ AI ช่วย</span>
+            <span class="lang-en">I model and texture medical equipment, surgical robots, and mechanical assemblies. I also use AI to develop imagery and video for visual storytelling.</span>
           </p>
           <div class="cta-group">
             <a href="#projects" class="btn btn-primary">
-              <span class="lang-th">ชมผลงานทั้งหมด</span>
-              <span class="lang-en">View My Work</span>
-            </a>
-            <a href="/Danaiwit_Resume_TH.pdf" target="_blank" class="btn btn-secondary" title="เรซูเม่ฉบับภาษาไทย (PDF)">
-              📄 เรซูเม่ (TH)
-            </a>
-            <a href="/Danaiwit_Resume.pdf" target="_blank" class="btn btn-secondary" title="English Resume PDF">
-              📄 Resume (EN)
+              <span class="lang-th">ดูผลงาน</span>
+              <span class="lang-en">View selected work</span>
             </a>
             <a href="#contact" class="btn btn-secondary">
-              <span class="lang-th">ติดต่อผม</span>
-              <span class="lang-en">Contact Me</span>
+              <span class="lang-th">ติดต่อเรื่องงาน</span>
+              <span class="lang-en">Discuss a project</span>
             </a>
           </div>
         </div>
-        <div class="hero-graphic fade-in-delayed">
-          <div class="profile-img-container">
-            <img src="/profile.jpg" alt="Danaiwit Kanthawong" class="profile-img">
+        <div class="hero-stage">
+          <div class="hero-art" role="region" aria-labelledby="hero-gallery-label">
+            <div id="hero-gallery-label" class="visually-hidden"><span class="lang-th">ภาพผลงานโมเดลเครื่องมือแพทย์</span><span class="lang-en">Medical modeling gallery</span></div>
+            <div class="hero-slides" id="hero-slides" tabindex="0">
+              <figure class="hero-slide">
+                <img src="/intuitive/Screenshot%202026-07-22%20013253.png" alt="" width="967" height="1011" fetchpriority="high">
+                <figcaption>
+                  <a href="#library-medical-presentation" data-open-library="medical" data-library-query="Surgical robot presentation">
+                    <span><span class="lang-th">แขนกลผ่าตัด da Vinci</span><span class="lang-en">da Vinci surgical arm</span></span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="hero-slide">
+                <img src="/intuitive/Screenshot%202026-07-22%20012536.png" alt="" width="957" height="609" loading="lazy">
+                <figcaption>
+                  <a href="#library-medical-arm" data-open-library="medical" data-library-query="Surgical arm detail">
+                    <span><span class="lang-th">รายละเอียดข้อต่อและหัวจับ</span><span class="lang-en">Joint and gripper details</span></span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="hero-slide">
+                <img src="/intuitive/Screenshot%202026-07-22%20012552.png" alt="" width="1555" height="1255" loading="lazy">
+                <figcaption>
+                  <a href="#library-medical-viewport" data-open-library="medical" data-library-query="Surgical robot in Blender">
+                    <span><span class="lang-th">หุ่นยนต์ผ่าตัดใน Blender</span><span class="lang-en">Surgical robot in Blender</span></span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="hero-slide">
+                <img src="/intuitive/Screenshot%202026-07-22%20012725.png" alt="" width="1582" height="1251" loading="lazy">
+                <figcaption>
+                  <a href="#library-medical-console" data-open-library="medical" data-library-query="Control console wireframe">
+                    <span><span class="lang-th">เส้นโครงชุดควบคุม</span><span class="lang-en">Control console wireframe</span></span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="hero-slide-progress" aria-hidden="true" hidden>
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-          <!-- CSS Abstract Shape -->
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
+          <div class="hero-media-links">
+            <a href="https://www.youtube.com/watch?v=uAdYiO5Vn78" target="_blank" rel="noopener">
+              <span class="lang-th">ดู SimNow Da Vinci บน YouTube ↗</span><span class="lang-en">Watch SimNow Da Vinci on YouTube ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Freelance Portfolio -->
+    <section id="projects" class="projects section">
+      <div class="section-header">
+        <h2>
+          <span class="lang-th">ผลงานคัดสรร</span>
+          <span class="lang-en">Selected Work</span>
+        </h2>
+        <div class="line"></div>
+      </div>
+      <div class="work-browse">
+        <div class="work-filters" role="group" aria-labelledby="work-filter-label">
+          <span id="work-filter-label" class="visually-hidden"><span class="lang-th">กรองตามประเภทผลงาน</span><span class="lang-en">Filter work by category</span></span>
+          <button type="button" data-work-filter="all" aria-controls="work-grid" aria-pressed="true"><span class="lang-th">ทั้งหมด</span><span class="lang-en">All work</span></button>
+          <button type="button" data-work-filter="medical" aria-controls="work-grid" aria-pressed="false"><span class="lang-th">เครื่องมือแพทย์</span><span class="lang-en">Medical</span></button>
+          <button type="button" data-work-filter="hard-surface" aria-controls="work-grid" aria-pressed="false"><span class="lang-th">Hard-Surface</span><span class="lang-en">Hard-Surface</span></button>
+          <button type="button" data-work-filter="ai-film" aria-controls="work-grid" aria-pressed="false"><span class="lang-th">วิดีโอ AI</span><span class="lang-en">AI film</span></button>
+        </div>
+        <div class="work-browse-meta">
+          <p class="work-count" role="status"></p>
+          <a href="#asset-library"><span class="lang-th">เปิดคลังภาพ ↓</span><span class="lang-en">Browse image library ↓</span></a>
+        </div>
+      </div>
+      <div class="project-grid freelance-grid" id="work-grid">
+        <article class="project-card medical-feature" id="medical-modeling" data-work-category="medical" data-video="https://www.youtube.com/embed/uAdYiO5Vn78" data-images="/intuitive/Screenshot%202026-07-22%20012536.png,/intuitive/Screenshot%202026-07-22%20012552.png,/intuitive/Screenshot%202026-07-22%20012725.png,/intuitive/Screenshot%202026-07-22%20013056.png,/intuitive/Screenshot%202026-07-22%20013143.png,/intuitive/Screenshot%202026-07-22%20013253.png">
+          <div class="medical-studies">
+            <figure>
+              <img src="/intuitive/Screenshot%202026-07-22%20012552.png" alt="" width="1555" height="1255" loading="lazy">
+              <figcaption>
+                <span class="lang-th">โมเดลใน Blender</span>
+                <span class="lang-en">Blender viewport</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="/intuitive/Screenshot%202026-07-22%20012725.png" alt="" width="1582" height="1251" loading="lazy">
+              <figcaption>
+                <span class="lang-th">โครงสร้าง Wireframe</span>
+                <span class="lang-en">Wireframe</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="project-info">
+            <h3>
+              <span class="lang-th">โมเดลเครื่องมือแพทย์และหุ่นยนต์ผ่าตัด</span>
+              <span class="lang-en">Medical Equipment &amp; Surgical Robot Models</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th">ผมขึ้นโมเดลและทำวัสดุของอุปกรณ์และชิ้นส่วนหุ่นยนต์ผ่าตัดใน Blender สำหรับงานจำลอง แกลเลอรีรวมภาพโมเดล มุมรายละเอียด และโครงสร้าง Wireframe</p>
+              <p class="lang-en">I modeled and textured medical equipment and surgical robot components for simulation in Blender. The gallery shows the models, close-up views, and wireframes.</p>
+            </div>
+            <div class="tags"><span>Blender</span><span>Medical Simulation</span></div>
+            <div class="project-actions">
+              <a class="btn btn-secondary" href="#library-medical" data-open-library="medical"><span class="lang-th">ดูคลังเครื่องมือแพทย์</span><span class="lang-en">Browse medical images</span></a>
+              <button type="button" class="project-preview project-detail-link" aria-haspopup="dialog" aria-controls="project-modal">
+              <span class="lang-th">รายละเอียดโปรเจกต์</span><span class="lang-en">Project details</span>
+            </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" id="hard-surface" data-work-category="hard-surface" data-images="/drones/51_Nazgul XL5.jpg,/drones/13_Acro Frame Assembly.jpg,/drones/01_Aether_5in.jpg,/drones/47_Ossa Frame and 3D.jpg,/drones/63_QAV-s-Whole.jpg,/drones/91_FoxCrookedV4.jpg,/drones/02_ghost.jpg,/drones/03_DRP MiB 5.jpg,/drones/04_chameleon.JPG,/drones/05_Cavity_Dual_Fin.jpg,/drones/06_oblivion.jpg,/drones/07_dreadnought.jpg,/drones/09_neato_fastback.jpg,/drones/100_SF35S.jpg,/drones/101_DinDrones OZR-5X - 5.jpg,/drones/102_Air65-Freestyle.jpg,/drones/102_Air65-Racing.jpg,/drones/103_Hummingbird RS.jpg,/drones/104_BMT_veloci.jpg,/drones/105_BabyFoxForVD.jpg,/drones/10_KAREAREA TALON_f_f.jpg,/drones/12_CarbiX Zero 5 Racer.jpg,/drones/14_SL5.jpg,/drones/15_Atto.jpg,/drones/16_Velocity.jpg,/drones/17_SOURCE X.jpg,/drones/18_Ostrich Air O1.jpg,/drones/19_CANNONBALL 800 NO BRACES.jpg,/drones/20_Fwd broadsword.jpg,/drones/21_SuperSlamNasty 5 Inch.jpg,/drones/22_Thor-X.jpg,/drones/23_carolina_xc_3d 892mm.jpg,/drones/24_iXC13 X-CLASS 850mm.jpg,/drones/25_Beta75 Pro 2.jpg,/drones/26_Rooster.JPG,/drones/27_Tinyhawk S.jpg,/drones/28_Brushless Whoop.jpg,/drones/29_Yakuza Fujin.jpg,/drones/30_Singularitum.jpg,/drones/31_Mobula6.jpg,/drones/32_Meteor65 Brushless Whoop Quadcopter.jpg,/drones/33_beebrain.jpg,/drones/34_AcroBee Frame.jpg,/drones/35_ASM-BETAFPV HX100SE.jpg,/drones/36_Diatone GTB339.jpg,/drones/37_ASM-BETAFPV HX115-1.jpg,/drones/38_R3DWhoop ZeroGrav full kit.jpg,/drones/39_TWIG XL 3 FPV Toothpick Quad.jpg,/drones/40_Solleva v72.jpg,/drones/41_Switchback.jpg,/drones/42_Lethal_Conception.jpg,/drones/43_JS-1.jpg,/drones/44_D-Rock.jpg,/drones/45_tazmanian.jpg,/drones/46_combatdrone_arctic.jpg,/drones/46_combatdrone_autumn.jpg,/drones/46_combatdrone_concrete_jungle.jpg,/drones/46_combatdrone_desert.jpg,/drones/48_MoonGoat.jpg,/drones/49_Shocker_Freestyle_tank.jpg,/drones/50_Mad lite.jpg,/drones/52_Beta_65X.jpg,/drones/53_junior_racer.jpg,/drones/54_ROMA F5.jpg,/drones/55_Beta95x_v3.jpg,/drones/56_PNTR.jpg,/drones/57_DJI.jpg,/drones/58_SkyX Killer .V1.0.jpg,/drones/59_Nanohawk.jpg,/drones/60_Babyhawk II HD.jpg,/drones/61_Tinyhawk 2.jpg,/drones/62_Badger.jpg,/drones/64_Chief.jpg,/drones/65_TBS Source One V4.jpg,/drones/66_Armattan Marmotte DJI Edition.jpg,/drones/67_Glide.jpg,/drones/68_Cidora SL5.jpg,/drones/69_AOS5V1.jpg,/drones/70_juicemode.jpg,/drones/71_flipmode.jpg,/drones/72_SniperX Light.jpg,/drones/73_TBS MAMBO.jpg,/drones/74_Fox_racing_v1.jpg,/drones/77_Switchback_Zero.jpg,/drones/78_MAD-open full v0.1.jpg,/drones/79_Source One.jpg,/drones/80_OpenRacer_Assembly.jpg,/drones/81_PB-Kauri-X-main.jpg,/drones/82_Practice.jpg,/drones/83_Spec7.jpg,/drones/84_Southeast Typhon V7 T700.jpg,/drones/85_Super-70.jpg,/drones/86_LSV2-Ultra.jpg,/drones/87_MidMount.jpg,/drones/88_HeavyMetal.jpg,/drones/89_SR5-Velocidrone.jpg,/drones/90_FoxCrookedV3.jpg,/drones/92_Racewhoop.jpg,/drones/93_Hummingbird V3.jpg,/drones/94_7wonders 3D.jpg,/drones/95_Mobula6 2024 1S.jpg,/drones/96_BETAFPV Aquila16.jpg,/drones/97_BETAFPV Cetus Pro.jpg,/drones/98_BETAFPV Cetus X.jpg,/drones/99_MGP_SpecQuad.jpg">
+          <div class="work-previews">
+            <figure>
+              <div class="work-thumb"><img src="/drones/51_Nazgul%20XL5.jpg" alt="" loading="lazy"></div>
+              <figcaption><span class="lang-th">โมเดลประกอบ</span><span class="lang-en">Assembled model</span></figcaption>
+            </figure>
+            <figure>
+              <div class="work-thumb"><img src="/drones/13_Acro%20Frame%20Assembly.jpg" alt="" loading="lazy"></div>
+              <figcaption><span class="lang-th">เฟรมและชิ้นส่วน</span><span class="lang-en">Frame assembly</span></figcaption>
+            </figure>
+          </div>
+          <div class="project-info">
+            <h3>
+              <span class="lang-th">โมเดลโดรน FPV และ Hard-Surface</span>
+              <span class="lang-en">FPV Drone &amp; Hard-Surface Modeling</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th">ตัวอย่างจากคอลเลกชันโดรนกว่า 105 แบบ ทั้งเฟรม แคนโนปี และชิ้นส่วนเชิงกล ขึ้นโมเดลและทำวัสดุด้วย Blender</p>
+              <p class="lang-en">Selected work from a collection of 105+ FPV drones, including frames, canopies, and mechanical components modeled and textured in Blender.</p>
+            </div>
+            <div class="tags"><span>Blender</span><span>Hard-Surface</span></div>
+            <div class="project-actions">
+              <a class="btn btn-secondary" href="#library-drones" data-open-library="drones"><span class="lang-th">ค้นภาพโดรน</span><span class="lang-en">Browse FPV images</span></a>
+              <button type="button" class="project-preview project-detail-link" aria-haspopup="dialog" aria-controls="project-modal">
+              <span class="lang-th">รายละเอียดโปรเจกต์</span><span class="lang-en">Project details</span>
+            </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" id="speaker-study" data-work-category="hard-surface" data-images="/work-gallery/speaker-render.webp,/work-gallery/speaker-components.webp,/work-gallery/speaker-clay.webp">
+          <div class="work-previews">
+            <figure>
+              <div class="work-thumb"><img src="/work-gallery/speaker-render.webp" alt="" loading="lazy"></div>
+              <figcaption><span class="lang-th">ภาพเรนเดอร์ใน Blender</span><span class="lang-en">Blender render</span></figcaption>
+            </figure>
+            <figure>
+              <div class="work-thumb"><img src="/work-gallery/speaker-components.webp" alt="" loading="lazy"></div>
+              <figcaption><span class="lang-th">ภาพแยกชิ้นส่วน</span><span class="lang-en">Exploded view</span></figcaption>
+            </figure>
+          </div>
+          <div class="project-info">
+            <h3><span class="lang-th">ลำโพงตั้งโต๊ะ · งานศึกษา Blender</span><span class="lang-en">Desktop Speaker · Blender Study</span></h3>
+            <div class="project-desc-content">
+              <p class="lang-th">งานศึกษาส่วนตัวที่สร้างโมเดลใน Blender โดยใช้ผู้ช่วย AI มีภาพเรนเดอร์ ภาพแยกหน้ากากกับตัวตู้ และภาพ Clay สำหรับดูรูปทรง</p>
+              <p class="lang-en">A personal Blender study built with an AI assistant. See the finished render, separated enclosure and grille, and a clay view of the geometry.</p>
+            </div>
+            <div class="tags"><span>Blender</span><span>Personal study</span></div>
+            <div class="project-actions">
+              <a class="btn btn-secondary" href="#library-speaker" data-open-library="other" data-library-query="Speaker"><span class="lang-th">ดูภาพลำโพง</span><span class="lang-en">Browse speaker images</span></a>
+              <button type="button" class="project-preview project-detail-link" aria-haspopup="dialog" aria-controls="project-modal">
+              <span class="lang-th">รายละเอียดโปรเจกต์</span><span class="lang-en">Project details</span>
+            </button>
+            </div>
+
+          </div>
+        </article>
+
+        <article class="project-card" id="ai-video" data-work-category="ai-film" data-video="https://www.youtube.com/embed/DedqmLRSGJA" data-images="/work-gallery/the-stroke-of-night-award-solo.webp,/work-gallery/the-stroke-of-night-award-selfie-v2.webp,/tiaif/Screenshot_20260803_190412_File_Manager_EDIT.jpg,/tiaif/759904220_122174220590980556_2846439814603043481_n.jpg">
+          <figure class="project-image">
+            <img src="/work-gallery/the-stroke-of-night-award-selfie-v2.webp" alt="" width="1200" height="750" loading="lazy">
+            <figcaption class="project-cover-caption">
+              <span class="lang-th">ภาพเซลฟี่จำลองด้วย AI</span><span class="lang-en">AI-recreated selfie</span>
+            </figcaption>
+          </figure>
+          <div class="project-info">
+            <h3>
+              <span class="lang-th">วิดีโอ AI · The Stroke of Night</span>
+              <span class="lang-en">AI Video · The Stroke of Night</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th">ภาพยนตร์สั้นของ <strong>Animation Renaissance</strong> ผู้รับรางวัล Grand Prix Best AI Short Film จาก TIAIF 2026 เครดิตของผมในทีมคือ AI Video &amp; Image Generators</p>
+              <p class="lang-en">A short film by <strong>Animation Renaissance</strong>, recipient of the TIAIF 2026 Grand Prix Best AI Short Film award. My team credit was AI Video &amp; Image Generators.</p>
+            </div>
+            <div class="tags"><span>AI Short Film</span><span>TIAIF 2026</span></div>
+            <div class="project-actions">
+              <button type="button" class="btn btn-secondary project-preview" aria-haspopup="dialog" aria-controls="project-modal">
+              <span class="lang-th">ดูผลงานและเครดิต</span>
+              <span class="lang-en">View film and credits</span>
+            </button>
+              <a class="btn btn-secondary" href="#library-stroke" data-open-library="other" data-library-query="The Stroke of Night"><span class="lang-th">ดูโปสเตอร์และภาพทีม</span><span class="lang-en">Browse film images</span></a>
+            </div>
+            <div class="project-credits">
+              <a href="https://www.facebook.com/share/v/1CZSmf7Hn2/" target="_blank" rel="noopener" class="project-link">
+                <span class="lang-th">ประกาศรางวัล ↗</span><span class="lang-en">Award announcement ↗</span>
+              </a>
+              <a href="/tiaif/Certificate_The%20Stroke%20Of%20Night.pdf" target="_blank" rel="noopener" class="project-link">
+                <span class="lang-th">ใบประกาศ (PDF) ↗</span><span class="lang-en">Certificate (PDF) ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" id="lokson-mon" data-work-category="ai-film" data-images="/work-gallery/lokson-mon-cover.webp,/work-gallery/lokson-mon-frame.webp">
+          <div class="work-previews work-previews-portrait">
+            <figure>
+              <div class="work-thumb"><img src="/work-gallery/lokson-mon-cover.webp" alt="" loading="lazy"></div>
+              <figcaption><span class="lang-th">ปกคลิปที่เผยแพร่</span><span class="lang-en">Published cover</span></figcaption>
+            </figure>
+            <figure>
+              <div class="work-thumb"><img src="/work-gallery/lokson-mon-frame.webp" alt="" loading="lazy"></div>
+              <figcaption><span class="lang-th">เฟรมจากคลิปเผยแพร่</span><span class="lang-en">Frame from the published short</span></figcaption>
+            </figure>
+          </div>
+          <div class="project-info">
+            <h3><span class="lang-th">โลกซ้อน · ม่อนพระยาแช่</span><span class="lang-en">LOKSON · Mon Phraya Chae</span></h3>
+            <div class="project-desc-content">
+              <p class="lang-th">ตัวอย่างงานเล่าเรื่องตำนานลำปางจากช่องโลกซ้อน ใช้ AI ช่วยผลิตภาพและการเคลื่อนไหว แล้วประกอบกับเสียงบรรยาย เสียงประกอบ และซับไทย</p>
+              <p class="lang-en">A published LOKSON short about a Lampang legend. AI-assisted imagery and motion are combined with narration, sound, and Thai captions.</p>
+            </div>
+            <div class="tags"><span>AI-assisted storytelling</span><span>Published short</span></div>
+            <div class="project-actions">
+              <a class="btn btn-secondary" href="#library-lokson" data-open-library="other" data-library-query="LOKSON"><span class="lang-th">ดูปกและภาพจากคลิป</span><span class="lang-en">Browse cover and still</span></a>
+              <button type="button" class="project-preview project-detail-link" aria-haspopup="dialog" aria-controls="project-modal">
+              <span class="lang-th">รายละเอียดโปรเจกต์</span><span class="lang-en">Project details</span>
+            </button>
+            </div>
+            <div class="project-credits">
+              <a class="project-link" href="https://www.youtube.com/shorts/LGmQY272ldg" target="_blank" rel="noopener"><span class="lang-th">ชมคลิปบน YouTube ↗</span><span class="lang-en">Watch on YouTube ↗</span></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="asset-library" class="section asset-library" aria-labelledby="library-title">
+      <span class="library-anchor" id="library-medical-presentation" aria-hidden="true"></span>
+      <span class="library-anchor" id="library-medical-arm" aria-hidden="true"></span>
+      <span class="library-anchor" id="library-medical-viewport" aria-hidden="true"></span>
+      <span class="library-anchor" id="library-medical-console" aria-hidden="true"></span>
+      <span class="library-anchor" id="library-medical" aria-hidden="true"></span>
+      <span class="library-anchor" id="library-drones" aria-hidden="true"></span>
+      <span class="library-anchor" id="library-speaker" aria-hidden="true"></span>
+      <span class="library-anchor" id="library-stroke" aria-hidden="true"></span>
+      <span class="library-anchor" id="library-lokson" aria-hidden="true"></span>
+      <div class="section-header">
+        <h2 id="library-title" tabindex="-1"><span class="lang-th">คลังภาพผลงาน</span><span class="lang-en">Work Image Library</span></h2>
+        <p><span class="lang-th">เลือกคลัง ค้นชื่อ แล้วแตะภาพเพื่อดูเต็มจอ</span><span class="lang-en">Choose a collection, search by name, and open any image full screen.</span></p>
+      </div>
+      <div class="library-controls">
+        <div class="work-filters library-collections" role="group" aria-labelledby="library-collections-label">
+          <span id="library-collections-label" class="visually-hidden"><span class="lang-th">เลือกคลังภาพ</span><span class="lang-en">Choose a collection</span></span>
+          <button type="button" data-library-collection="medical" aria-controls="library-results" aria-pressed="true"><span class="lang-th">เครื่องมือแพทย์</span><span class="lang-en">Medical</span></button>
+          <button type="button" data-library-collection="drones" aria-controls="library-results" aria-pressed="false"><span class="lang-th">โดรน FPV</span><span class="lang-en">FPV Drones</span></button>
+          <button type="button" data-library-collection="other" aria-controls="library-results" aria-pressed="false"><span class="lang-th">ผลงานอื่น ๆ</span><span class="lang-en">Other Work</span></button>
+        </div>
+        <div class="library-fields">
+          <label>
+            <span class="lang-th">ค้นหาภาพ</span><span class="lang-en">Search images</span>
+            <input id="library-search" type="search" autocomplete="off" aria-controls="library-results">
+          </label>
+          <label id="library-category-field">
+            <span class="lang-th">ตัวกรองเพิ่มเติม</span><span class="lang-en">More filters</span>
+            <select id="library-category" aria-controls="library-results"></select>
+          </label>
+        </div>
+        <div id="library-quick-filters" class="work-filters library-quick-filters" role="group" aria-labelledby="library-quick-label"></div>
+        <span id="library-quick-label" class="visually-hidden"><span class="lang-th">ตัวกรองภาพด่วน</span><span class="lang-en">Quick image filters</span></span>
+      </div>
+      <div class="library-summary">
+        <p id="library-status" class="library-status" role="status"></p>
+        <button type="button" id="library-clear" class="library-clear" hidden><span class="lang-th">ล้างตัวกรอง</span><span class="lang-en">Clear filters</span></button>
+      </div>
+      <ul id="library-results" class="library-grid"></ul>
+      <nav id="library-pagination" class="library-pagination" aria-label="Image library pages" hidden>
+        <button type="button" class="btn btn-secondary" data-library-step="-1"><span class="lang-th">ก่อนหน้า</span><span class="lang-en">Previous</span></button>
+        <span id="library-page"></span>
+        <button type="button" class="btn btn-secondary" data-library-step="1"><span class="lang-th">ถัดไป</span><span class="lang-en">Next</span></button>
+      </nav>
+      <div class="work-contact">
+        <a href="#contact" class="btn btn-primary">
+          <span class="lang-th">ติดต่อเรื่องงาน</span>
+          <span class="lang-en">Discuss a project</span>
+        </a>
+        <a href="#process" class="btn btn-secondary">
+          <span class="lang-th">ดูขั้นตอนและตัวอย่างส่งมอบ</span>
+          <span class="lang-en">Process and sample deliverables</span>
+        </a>
+        <a href="#ai-work" class="btn btn-secondary">
+          <span class="lang-th">ดูงานภาพและวิดีโอ AI</span>
+          <span class="lang-en">More AI-assisted work</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- AI-Assisted Production -->
+    <section id="ai-work" class="projects section" aria-labelledby="ai-work-title">
+      <div class="section-header">
+        <h2 id="ai-work-title">
+          <span class="lang-th">งานภาพและวิดีโอ AI</span>
+          <span class="lang-en">AI-Assisted Production</span>
+        </h2>
+      </div>
+      <div class="project-grid">
+        <!-- AI production studies -->
+        <div class="project-card featured-project" data-video="https://www.youtube.com/embed/9GVlo6pFsmc,https://www.youtube.com/embed/jsNJf28ACsY,https://www.youtube.com/embed/8FCUfRRy2Io,https://www.youtube.com/embed/V5UfAy9WPaQ" data-images="/aifilms/Screenshot%202026-08-14%20225600.jpg,/aifilms/Screenshot%202026-08-14%20225610.jpg,/aifilms/Screenshot%202026-08-14%20225730.jpg,/aifilms/Screenshot%202026-08-14%20225743.jpg,/aifilms/Screenshot%202026-08-14%20225857.jpg,/aifilms/Screenshot%202026-08-14%20225944.jpg,/aifilms/Screenshot%202026-08-14%20225958.jpg">
+          <div class="project-image" style="background: url('/aifilms/Screenshot%202026-08-14%20225743.jpg') center/cover no-repeat;"></div>
+          <div class="project-info">
+            <h3>
+              <span class="lang-th">การผลิตภาพยนตร์ AI และเบื้องหลังงานสร้าง</span>
+              <span class="lang-en">AI Film Production & Behind the Scenes</span>
+            </h3>
+            <div class="project-desc-content">
+              <p class="lang-th">ตัวอย่างการศึกษางานภาพยนตร์ที่ใช้ AI ช่วยผลิต ตั้งแต่ทดลองแนวภาพไปจนถึงตัดต่อและเล่าเรื่อง พร้อมภาพกระบวนการและคลิปประกอบ</p>
+              <p class="lang-en">Selected studies in AI-assisted filmmaking, from visual experimentation to editing and storytelling. The gallery includes process stills and supporting clips.</p>
+            </div>
+            <div class="tags">
+              <span>AI Film</span><span>Video Editing</span><span>Behind the Scenes</span>
+            </div>
+            <button type="button" class="btn btn-secondary project-preview" aria-haspopup="dialog" aria-controls="project-modal">
+              <span class="lang-th">ดูภาพเบื้องหลังและวิดีโอ</span>
+              <span class="lang-en">View stills and video</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="concepts" class="section concept-section" aria-labelledby="concept-title">
+      <div class="section-header">
+        <h2 id="concept-title"><span class="lang-th">ภาพแนวคิดจาก AI</span><span class="lang-en">AI Visual Concepts</span></h2>
+        <p><span class="lang-th">ภาพสร้างด้วย AI สำหรับสำรวจแสง วัสดุ และบรรยากาศ</span><span class="lang-en">AI-generated studies exploring lighting, materials, and atmosphere.</span></p>
+      </div>
+      <div class="concept-grid">
+        <figure>
+          <a href="/work-gallery/industrial-camera-ai.webp" target="_blank" rel="noopener" aria-labelledby="concept-industrial-camera-ai">
+            <img src="/work-gallery/industrial-camera-ai.webp" alt="" width="1200" height="800" loading="lazy">
+          </a>
+          <figcaption>
+            <p class="concept-label"><span class="lang-th">ภาพแนวคิด AI</span><span class="lang-en">AI-generated concept</span></p>
+            <h3 id="concept-industrial-camera-ai"><span class="lang-th">กล้องตรวจสอบอุตสาหกรรม</span><span class="lang-en">Industrial Inspection Camera</span></h3>
+            <p><span class="lang-th">ทดลองวัสดุโลหะ รายละเอียดตัวเรือน และแสงแบบภาพสินค้า</span><span class="lang-en">A product-visual study in machined surfaces, housing details, and studio lighting.</span></p>
+          </figcaption>
+        </figure>
+        <figure>
+          <a href="/work-gallery/coastal-station-ai.webp" target="_blank" rel="noopener" aria-labelledby="concept-coastal-station-ai">
+            <img src="/work-gallery/coastal-station-ai.webp" alt="" width="1200" height="800" loading="lazy">
+          </a>
+          <figcaption>
+            <p class="concept-label"><span class="lang-th">ภาพแนวคิด AI</span><span class="lang-en">AI-generated concept</span></p>
+            <h3 id="concept-coastal-station-ai"><span class="lang-th">สถานีสังเกตการณ์ริมทะเล</span><span class="lang-en">Coastal Observatory</span></h3>
+            <p><span class="lang-th">ทดลองโทนภาพกลางฝนและแสงช่วงหัวค่ำสำหรับงานเล่าเรื่อง</span><span class="lang-en">A cinematic lighting and atmosphere study for a rainy blue-hour scene.</span></p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="process" class="process section" aria-labelledby="process-title">
+      <div class="section-header">
+        <h2 id="process-title"><span class="lang-th">ขั้นตอนทำงาน</span><span class="lang-en">How I work</span></h2>
+        <p class="process-intro"><span class="lang-th">ตรวจงานได้เป็นช่วง ตั้งแต่คุยบรีฟจนถึงรับไฟล์ที่ทีมใช้ต่อได้</span><span class="lang-en">Review the work at each stage, from the first brief to the files your team can use.</span></p>
+      </div>
+      <ol class="process-stages">
+        <li>
+          <h3><span class="lang-th">กำหนดขอบเขต</span><span class="lang-en">Define the scope</span></h3>
+          <p><span class="lang-th">คุยกันเรื่องการใช้งาน ภาพอ้างอิง ขนาด จุดที่ต้องแยกชิ้น และรูปแบบไฟล์ที่ทีมปลายทางต้องใช้</span><span class="lang-en">Agree on the use case, references, scale, which parts move or need to be separate, and required file formats.</span></p>
+        </li>
+        <li>
+          <h3><span class="lang-th">ตรวจโมเดลร่าง</span><span class="lang-en">Review the blockout</span></h3>
+          <p><span class="lang-th">ส่งภาพมุมหลักเพื่อตรวจสัดส่วนและตำแหน่งชิ้นส่วนก่อนลงรายละเอียด พร้อมระบุจุดที่ต้องการความเห็น</span><span class="lang-en">Review key views, proportions, and part placement before detailing. Flag decisions that need your input.</span></p>
+        </li>
+        <li>
+          <h3><span class="lang-th">ลงรายละเอียดและวัสดุ</span><span class="lang-en">Model and texture</span></h3>
+          <p><span class="lang-th">เก็บรายละเอียดชิ้นส่วน ตรวจ Wireframe และ UV ตามขอบเขตงาน แล้วส่งภาพวัสดุให้ตรวจรอบสุดท้าย</span><span class="lang-en">Refine the model, check topology and UVs where scoped, and share material previews for final review.</span></p>
+        </li>
+        <li>
+          <h3><span class="lang-th">ตรวจไฟล์และส่งมอบ</span><span class="lang-en">Validate and hand off</span></h3>
+          <p><span class="lang-th">ตรวจหน่วยและจุดหมุนของชิ้นส่วน แล้วส่งไฟล์ต้นฉบับ ไฟล์ Export และรายการไฟล์ตามที่ตกลง</span><span class="lang-en">Check units and part pivots, then deliver the agreed source files, exports, and a file inventory.</span></p>
+        </li>
+      </ol>
+      <div class="handoff">
+        <h3><span class="lang-th">ตัวอย่างเอกสารงาน 3D</span><span class="lang-en">Sample project documents</span></h3>
+        <p class="process-intro"><span class="lang-th">ตัวอย่างจำลองสำหรับใช้คุยขอบเขตงานและตรวจการส่งมอบ</span><span class="lang-en">Illustrative templates for discussing scope, review, and delivery.</span></p>
+        <div class="handoff-documents">
+          <details>
+            <summary>
+              <span class="document-title"><span class="lang-th">บรีฟโมเดลเครื่องมือแพทย์</span><span class="lang-en">Medical modeling brief</span></span>
+              <span class="document-description"><span class="lang-th">ตัวอย่างบรีฟสำหรับโมเดลประกอบงานจำลอง</span><span class="lang-en">Example scope for a model used in a simulation.</span></span>
+            </summary>
+            <dl>
+              <div>
+                <dt><span class="lang-th">โจทย์</span><span class="lang-en">Objective</span></dt>
+                <dd><span class="lang-th">ขึ้นโมเดลแขนหุ่นยนต์จากภาพอ้างอิง ให้ฐาน ข้อต่อ และหัวจับเป็นวัตถุแยก</span><span class="lang-en">Model a surgical robot arm from references, with the base, joints, and tool head as separate objects.</span></dd>
+              </div>
+              <div>
+                <dt><span class="lang-th">ข้อมูลที่ต้องใช้</span><span class="lang-en">Inputs</span></dt>
+                <dd><span class="lang-th">ภาพหลายมุม ขนาดจริงอย่างน้อยหนึ่งจุด และข้อต่อที่ต้องตั้ง Pivot</span><span class="lang-en">Multiple reference views, at least one confirmed dimension, and the joints that need defined pivots.</span></dd>
+              </div>
+              <div>
+                <dt><span class="lang-th">จุดตรวจรับ</span><span class="lang-en">Review criteria</span></dt>
+                <dd><span class="lang-th">ตรวจสัดส่วน ชื่อชิ้นส่วน ตำแหน่ง Pivot และมุมสำคัญตามภาพอ้างอิง</span><span class="lang-en">Review proportions, part names, pivot placement, and key views against the references.</span></dd>
+              </div>
+              <div>
+                <dt><span class="lang-th">ขอบเขตตัวอย่าง</span><span class="lang-en">Example scope</span></dt>
+                <dd><span class="lang-th">ขึ้นโมเดลและทำวัสดุสำหรับงานจำลอง โดยกำหนดการ Rig และการเชื่อมต่อเอนจินแยกตามบรีฟ</span><span class="lang-en">Modeling and materials for simulation. Rigging and engine integration are scoped separately.</span></dd>
+              </div>
+            </dl>
+          </details>
+          <details>
+            <summary>
+              <span class="document-title"><span class="lang-th">ใบตรวจโมเดล Hard-Surface</span><span class="lang-en">Hard-surface review sheet</span></span>
+              <span class="document-description"><span class="lang-th">ตัวอย่างรายการตรวจสำหรับชิ้นส่วนหรือชุดประกอบ</span><span class="lang-en">Example review criteria for a part or assembly.</span></span>
+            </summary>
+            <dl>
+              <div>
+                <dt><span class="lang-th">รูปทรง</span><span class="lang-en">Silhouette</span></dt>
+                <dd><span class="lang-th">เทียบด้านหน้า ด้านข้าง และมุมสามส่วน พร้อมภาพระยะใกล้จุดประกอบ</span><span class="lang-en">Compare front, side, and three-quarter views, with close-ups of assembly interfaces.</span></dd>
+              </div>
+              <div>
+                <dt><span class="lang-th">โครงสร้าง</span><span class="lang-en">Geometry</span></dt>
+                <dd><span class="lang-th">ตรวจรอยต่อ การซ้อนทะลุที่มองเห็น และรูปทรงหลังใช้ Modifier</span><span class="lang-en">Check seams, visible intersections, and the evaluated mesh after modifiers.</span></dd>
+              </div>
+              <div>
+                <dt><span class="lang-th">วัสดุ</span><span class="lang-en">Materials</span></dt>
+                <dd><span class="lang-th">ตรวจความต่างของพื้นผิวและวัสดุในแสงกลาง พร้อมเช็ก UV และ Texture หากอยู่ในขอบเขต</span><span class="lang-en">Review material separation under neutral lighting, and verify UVs and textures if scoped.</span></dd>
+              </div>
+              <div>
+                <dt><span class="lang-th">ไฟล์ปลายทาง</span><span class="lang-en">Export</span></dt>
+                <dd><span class="lang-th">เปิดไฟล์ Export กลับมาตรวจตำแหน่ง หน่วย และการแยกชิ้นส่วนอีกครั้ง</span><span class="lang-en">Reopen the export to check orientation, units, and part separation.</span></dd>
+              </div>
+            </dl>
+          </details>
+          <details>
+            <summary>
+              <span class="document-title"><span class="lang-th">ตัวอย่างรายการไฟล์ส่งมอบ</span><span class="lang-en">Sample handoff manifest</span></span>
+              <span class="document-description"><span class="lang-th">ตัวอย่างโครงสร้างไฟล์สำหรับส่งต่อให้ทีมผลิต</span><span class="lang-en">Example folder layout for production handoff.</span></span>
+            </summary>
+            <dl>
+              <div>
+                <dt><span class="lang-th">ไฟล์ต้นฉบับ</span><span class="lang-en">Source</span></dt>
+                <dd><span class="lang-th">source/assembly.blend เก็บกลุ่มวัตถุ วัสดุ และชิ้นส่วนที่แก้ไขต่อได้</span><span class="lang-en">source/assembly.blend contains organized objects, materials, and editable parts.</span></dd>
+              </div>
+              <div>
+                <dt><span class="lang-th">ไฟล์ Export</span><span class="lang-en">Exports</span></dt>
+                <dd><span class="lang-th">exports/assembly.fbx หรือ .glb ตามที่ตกลงกับทีมปลายทาง</span><span class="lang-en">exports/assembly.fbx or .glb, depending on what the receiving team needs.</span></dd>
+              </div>
+              <div>
+                <dt><span class="lang-th">ไฟล์ประกอบ</span><span class="lang-en">Supporting files</span></dt>
+                <dd><span class="lang-th">textures/ และ previews/ รวมไฟล์วัสดุและภาพสำหรับตรวจเมื่ออยู่ในขอบเขตงาน</span><span class="lang-en">textures/ and previews/ include material maps and reference renders where agreed.</span></dd>
+              </div>
+              <div>
+                <dt><span class="lang-th">บันทึกการส่งมอบ</span><span class="lang-en">Handoff notes</span></dt>
+                <dd><span class="lang-th">README ระบุเวอร์ชัน หน่วย แกน รูปแบบไฟล์ และรายการที่ทีมต้องตรวจหลังนำเข้า</span><span class="lang-en">The README records version, units, axes, formats, and the checks to make after import.</span></dd>
+              </div>
+            </dl>
+          </details>
         </div>
       </div>
     </section>
@@ -108,16 +563,17 @@
       </div>
       <div class="about-content reveal">
         <div class="about-text">
+          <img class="about-portrait" src="/profile-freelance.webp" alt="" width="140" height="140" loading="lazy">
           <!-- Thai Version -->
           <div class="lang-th">
             <p>ผมจบ<strong>วิทยาศาสตรบัณฑิต (แอนิเมชัน) จากมหาวิทยาลัยเชียงใหม่ ปี 2558</strong> ทำงานด้าน <strong>3D Modeling และ Texturing</strong> โดยใช้ <strong>Blender สำหรับงาน Hard-Surface</strong> ผลงานที่แสดงประกอบด้วยโดรน FPV ชิ้นส่วนเชิงกล และโมเดลอุปกรณ์ทางการแพทย์</p>
-            <p>นอกเหนือจากงาน 3D ผมดูแล<strong>กระบวนการผลิตและระบบไอที</strong> ควบคู่กับบทบาท <strong>Technical Project Manager และ AI System Integrator</strong> เน้นกำหนดขอบเขตแบบ MVP จัดลำดับงาน ทดสอบและส่งมอบ รวมถึงใช้ AI ช่วยทำต้นแบบและระบบอัตโนมัติสำหรับเว็บ งานแปลเกม และสื่อดิจิทัล</p>
+            <p>สำหรับงานภาพและวิดีโอ ผมใช้ AI ช่วยทดลองแนวภาพ พัฒนาช็อต และประกอบเข้ากับงานตัดต่อ ในเรื่อง <em>The Stroke of Night</em> ผมมีเครดิตอยู่ในทีม <strong>AI Video &amp; Image Generators</strong> ของ Animation Renaissance</p>
             <p>งานสื่อของผมครอบคลุม<strong>การถ่ายภาพ บันทึกวิดีโอ รีทัช และตัดต่อ</strong> รวมถึงการบันทึกบรรยากาศและกิจกรรมของสตูดิโอ Animation Renaissance</p>
           </div>
           <!-- English Version -->
           <div class="lang-en">
             <p>I earned a <strong>B.Sc. in Animation from Chiang Mai University in 2015</strong>. I work in <strong>3D modeling and texturing</strong>, using <strong>Blender for hard-surface projects</strong>. The selected work includes FPV drones, mechanical components, and medical equipment models.</p>
-            <p>Alongside 3D work, I support <strong>production processes and IT systems</strong> as a <strong>Technical Project Manager and AI System Integrator</strong>. My focus is MVP scoping, prioritization, testing, and delivery, using AI to support prototypes and automation for web applications, game localization, and digital media.</p>
+            <p>I use AI to explore visual directions and develop shots for image and video projects. My team credit on <em>The Stroke of Night</em> at Animation Renaissance was <strong>AI Video &amp; Image Generators</strong>.</p>
             <p>My media work covers <strong>photography, video recording, retouching, and editing</strong>, including documenting the atmosphere and activities of Animation Renaissance studio.</p>
           </div>
         </div>
@@ -139,33 +595,33 @@
               </p>
             </div>
             <div class="stat-card" style="padding: 20px; text-align: left;">
-              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">
-                <span class="lang-th">Technical PM & Web</span>
-                <span class="lang-en">Technical PM & Web</span>
+              <h3 style="font-size: 1.1rem; margin-bottom: 8px;">
+                <span class="lang-th">งานภาพและวิดีโอที่ใช้ AI</span>
+                <span class="lang-en">AI-Assisted Image &amp; Video</span>
               </h3>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">
-                <span class="lang-th">บริหารโครงการซอฟต์แวร์, Agile & Kanban, การวาง Scope แบบ MVP, React 19/18, Cloudflare Pages, Supabase, Firebase</span>
-                <span class="lang-en">Software Project Management, Agile & Kanban, MVP Scoping, React 19/18, Cloudflare Pages, Supabase, Firebase</span>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                <span class="lang-th">ทดลองสไตล์ภาพ วางช็อต และพัฒนาภาพกับคลิปสำหรับงานเล่าเรื่อง</span>
+                <span class="lang-en">Visual exploration, shot development, and image and video generation for storytelling</span>
               </p>
             </div>
             <div class="stat-card" style="padding: 20px; text-align: left;">
-              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">
-                <span class="lang-th">ระบบเครือข่ายและไอที</span>
-                <span class="lang-en">IT & Network Systems</span>
+              <h3 style="font-size: 1.1rem; margin-bottom: 8px;">
+                <span class="lang-th">ตัดต่อและงานสื่อ</span>
+                <span class="lang-en">Editing &amp; Studio Media</span>
               </h3>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">
-                <span class="lang-th">การวางแผนทรัพยากรไอที, Ugreen & Synology NAS Storage ความเร็วสูง, คลัสเตอร์ประมวลผล AI LAN, OpenSSH</span>
-                <span class="lang-en">IT Infrastructure Planning, Ugreen & Synology NAS Storage, Multi-PC LAN AI Clustering, OpenSSH Remote Compute</span>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                <span class="lang-th">ตัดต่อวิดีโอ ถ่ายภาพ รีทัช และบันทึกเบื้องหลังการผลิต</span>
+                <span class="lang-en">Video editing, photography, retouching, and behind-the-scenes production</span>
               </p>
             </div>
             <div class="stat-card" style="padding: 20px; text-align: left;">
-              <h3 style="font-size: 1.1rem; margin-bottom: 8px; background: none; -webkit-text-fill-color: var(--text-primary);">
-                <span class="lang-th">AI & Workflow Automation</span>
-                <span class="lang-en">AI & Workflow Automation</span>
+              <h3 style="font-size: 1.1rem; margin-bottom: 8px;">
+                <span class="lang-th">ตรวจงานและส่งมอบ</span>
+                <span class="lang-en">Review &amp; Handoff</span>
               </h3>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: normal;">
-                <span class="lang-th">Prompt & Skill Engineering, ออกแบบระบบอัตโนมัติด้วย Python, ไปป์ไลน์ภาพ-เสียง-วิดีโอ (TTS, ComfyUI, FFmpeg)</span>
-                <span class="lang-en">Prompt & Skill Engineering, Python Automation, Media Generation Pipelines (TTS, ComfyUI, FFmpeg)</span>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                <span class="lang-th">กำหนดบรีฟ ตรวจโมเดลเป็นรอบ และจัดไฟล์ให้ทีมใช้งานต่อได้</span>
+                <span class="lang-en">Scoping, milestone reviews, and organized source files and exports</span>
               </p>
             </div>
           </div>
@@ -200,57 +656,6 @@
           </div>
         </div>
 
-        <!-- Experience Item: Technical PM & Web Systems Architect -->
-        <div class="timeline-item">
-          <div class="timeline-dot" style="background: linear-gradient(135deg, #06b6d4, #3b82f6); box-shadow: 0 0 10px rgba(6, 182, 212, 0.6);"></div>
-          <div class="timeline-content" style="border-left: 3px solid #06b6d4;">
-            <h3>
-              <span class="lang-th">Technical Project Lead & Web Systems Architect</span>
-              <span class="lang-en">Technical Project Lead & Web Systems Architect</span>
-            </h3>
-            <h4 class="company">Home Dashboard & Distributed Studio Ecosystem</h4>
-            <p class="date"><span class="lang-th">2567 - ปัจจุบัน</span><span class="lang-en">2024 - Present</span></p>
-            <div class="experience-details-wrap">
-              <ul class="experience-details lang-th">
-                <li>ออกแบบและส่งมอบเว็บแอปพลิเคชันระดับโปรดักชัน: <strong>TStudio Web</strong> (ระบบแปลเกมภาษาไทยแบบเรียลไทม์ Multi-user บน Cloudflare Pages & Supabase), <strong>TimeTracker</strong> (ระบบบริหารเวลา วิเคราะห์การเงิน และออกใบแจ้งหนี้ด้วย React 19 & Firebase) และ <strong>NodNuat Platform</strong> (www.nodnuattranslator.com)</li>
-                <li>วางสถาปัตยกรรมคลัสเตอร์ประมวลผล AI ข้ามเครื่องคอมพิวเตอร์ผ่าน LAN/OpenSSH, ระบบไปป์ไลน์สร้างสื่ออัตโนมัติ (TTS, ComfyUI, FFmpeg) และระบบ Private Cloud Storage ความเร็วสูงด้วย Ugreen และ Synology NAS</li>
-              </ul>
-              <ul class="experience-details lang-en">
-                <li>Architected and launched full-stack production web applications: <strong>TStudio Web</strong> (Real-time collaborative game localization platform on Cloudflare Pages & Supabase), <strong>TimeTracker</strong> (React 19, Firebase Firestore, Financial Analytics & Invoicing), and <strong>NodNuat Mod Showcase Platform</strong> (www.nodnuattranslator.com).</li>
-                <li>Set up multi-workstation AI processing over LAN/OpenSSH, Ugreen/Synology NAS storage, and automated media pipelines using TTS, ComfyUI, and FFmpeg.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience Item: NodNuat Translator -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>
-              <span class="lang-th">Founder, Product Lead & Release Engineer</span>
-              <span class="lang-en">Founder, Product Lead & Release Engineer</span>
-            </h3>
-            <h4 class="company">
-              <span class="lang-th">เพจ หน๊ด หนวด Translator (ผู้ติดตาม 6,800+ คน | คลังม็อดทางการ 100 เกม)</span>
-              <span class="lang-en">NodNuat Translator Community (6,800+ Followers | 100-Game Catalog)</span>
-            </h4>
-            <p class="date"><span class="lang-th">2565 - ปัจจุบัน</span><span class="lang-en">2022 - Present</span></p>
-            <div class="experience-details-wrap">
-              <ul class="experience-details lang-th">
-                <li>ก่อตั้งและบริหารแพลตฟอร์มม็อดภาษาไทยกว่า 100 เกมบน <strong>www.nodnuattranslator.com</strong> พร้อมดูแลคอมมูนิตี้ผู้ติดตามกว่า 6,800 คน</li>
-                <li>วางแผน คัดเลือก และจัดลำดับความสำคัญของโปรเจกต์จากความต้องการของผู้เล่นและการวิเคราะห์ความเป็นไปได้ทางเทคนิค (Feasibility)</li>
-                <li>รับฟังปัญหาและฟีดแบ็กจากผู้เล่น ดำเนินการตรวจสอบ ส่งมอบตัวทดสอบให้ผู้ใช้ตรวจรับงาน (UAT) ก่อนออกแพตช์และเขียน Release Notes ชี้แจงอย่างสม่ำเสมอ</li>
-              </ul>
-              <ul class="experience-details lang-en">
-                <li>Founded and scaled a thriving Thai game localization community with over 6,800+ followers and official platform at <strong>www.nodnuattranslator.com</strong> featuring over 100 localized PC game titles.</li>
-                <li>Prioritized the project roadmap based on player needs and technical feasibility.</li>
-                <li>Handled end-user bug reports, conducted root-cause analysis, distributed release candidates for user validation (UAT), and published regular changelog release notes.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         <!-- Experience Item: Manager & Operations Lead -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
@@ -265,13 +670,11 @@
               <ul class="experience-details lang-th">
                 <li><strong>พัฒนากระบวนการทำงานร่วมกับ PM:</strong> ทำงานร่วมกับผู้จัดการโครงการ (PM) และทีมครีเอทีฟ ในการออกแบบและปรับปรุง Pipeline งานผลิต ช่วยให้ทีมส่งมอบงาน 3D และสื่อวิดีโอได้รวดเร็วขึ้น</li>
                 <li><strong>บริหารขอบเขตงานภายใต้แรงกดดัน (Scope & Timeline):</strong> แก้ปัญหาเฉพาะหน้าเมื่อเผชิญกำหนดส่งที่กระชั้นชิด โดยจัดลำดับฟังก์ชันแบบ MVP เพื่อให้ส่งมอบงานหลักได้ทันเวลา</li>
-                <li><strong>บริหารจัดการเอกสารและความสอดคล้องทางกฎหมาย:</strong> รวบรวมเอกสารการเงิน ธุรกรรมต่างประเทศ (USD/THB) และประสานงานกับผู้ตรวจสอบบัญชีภายนอกเพื่อความถูกต้องตามระเบียบ</li>
                 <li><strong>จัดสรรทรัพยากรไอทีและสื่อองค์กร:</strong> วางแผนและจัดสรรทรัพยากรระบบคอมพิวเตอร์สมรรถนะสูง พร้อมควบคุมการผลิตสื่อภาพลักษณ์องค์กร</li>
               </ul>
               <ul class="experience-details lang-en">
                 <li><strong>Process Improvement with PM:</strong> Partnered with Project Managers and creative leads to design and optimize studio production pipelines, accelerating turnaround for 3D and digital video deliverables.</li>
                 <li><strong>Scope & Timeline Management:</strong> Resolved crunch time bottlenecks by defining MVP deliverables, deferring non-essential features, and maintaining on-time client handovers without sacrificing quality.</li>
-                <li><strong>Financial & Resource Planning:</strong> Prepared financial documents and international transaction records (USD/THB), coordinating with external auditors.</li>
                 <li><strong>IT Infrastructure & Procurement:</strong> Planned studio computing resources and supported the production of studio media.</li>
               </ul>
             </div>
@@ -349,193 +752,6 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-      <div class="section-header reveal">
-        <h2>
-          <span class="lang-th">ผลงาน <span>ไฮไลท์</span></span>
-          <span class="lang-en">Highlight <span>Projects</span></span>
-        </h2>
-        <div class="line"></div>
-      </div>
-      <div class="project-grid reveal">
-        
-        <!-- Featured Project 1: TIAIF -->
-        <div class="project-card featured-project" data-video="https://www.youtube.com/embed/DedqmLRSGJA" data-images="/tiaif/20260803_145547(0).jpg,/tiaif/20260803_145717.jpg,/tiaif/Screenshot_20260803_190412_File_Manager_EDIT.jpg,/tiaif/759904220_122174220590980556_2846439814603043481_n.jpg">
-          <div class="project-image" style="background: url('/tiaif/20260803_145717.jpg') center/cover no-repeat; position: relative;">
-             <div class="award-badge"><span class="lang-th">🏆 ผลงานสตูดิโอ: Grand Prix</span><span class="lang-en">🏆 Studio Work: Grand Prix</span></div>
-          </div>
-          <div class="project-info">
-            <h3>
-              <span class="lang-th">Grand Prix ภาพยนตร์สั้น AI ยอดเยี่ยม (TIAIF 2026)</span>
-              <span class="lang-en">Grand Prix Best AI Short Film (TIAIF 2026)</span>
-            </h3>
-            <div class="project-desc-content">
-              <p class="lang-th"><strong>ภาพยนตร์สั้น AI: "The Stroke of Night"</strong><br>ผลงานของสตูดิโอ Animation Renaissance ซึ่งใบประกาศระบุว่าได้รับรางวัล Grand Prix Best AI Short Film ในงาน TIAIF เครดิตทีมระบุชื่อผมในกลุ่ม AI Video & Image Generators</p>
-              <p class="lang-en"><strong>AI Short Film: "The Stroke of Night"</strong><br>A work from Animation Renaissance studio. The certificate names the studio as the recipient of the TIAIF Grand Prix Best AI Short Film award. The team credits list me under AI Video & Image Generators.</p>
-            </div>
-            <div class="tags">
-              <span>AI Short Film</span><span>Grand Prix</span><span>TIAIF 2026</span>
-            </div>
-            <a href="https://www.facebook.com/share/v/1CZSmf7Hn2/" target="_blank" class="project-link">
-              <span class="lang-th">ประกาศรางวัล ↗</span>
-              <span class="lang-en">Award Announcement ↗</span>
-            </a>
-            <a href="/tiaif/Certificate_The%20Stroke%20Of%20Night.pdf" target="_blank" class="project-link">
-              <span class="lang-th">ใบประกาศนียบัตร (PDF) ↗</span>
-              <span class="lang-en">Official Certificate (PDF) ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Featured Project 2: 3D Drone & Quads Topology Showcase -->
-        <div class="project-card featured-project" data-images="/drones/01_Aether_5in.jpg,/drones/02_ghost.jpg,/drones/03_DRP MiB 5.jpg,/drones/04_chameleon.JPG,/drones/05_Cavity_Dual_Fin.jpg,/drones/06_oblivion.jpg,/drones/07_dreadnought.jpg,/drones/09_neato_fastback.jpg,/drones/100_SF35S.jpg,/drones/101_DinDrones OZR-5X - 5.jpg,/drones/102_Air65-Freestyle.jpg,/drones/102_Air65-Racing.jpg,/drones/103_Hummingbird RS.jpg,/drones/104_BMT_veloci.jpg,/drones/105_BabyFoxForVD.jpg,/drones/10_KAREAREA TALON_f_f.jpg,/drones/12_CarbiX Zero 5 Racer.jpg,/drones/13_Acro Frame Assembly.jpg,/drones/14_SL5.jpg,/drones/15_Atto.jpg,/drones/16_Velocity.jpg,/drones/17_SOURCE X.jpg,/drones/18_Ostrich Air O1.jpg,/drones/19_CANNONBALL 800 NO BRACES.jpg,/drones/20_Fwd broadsword.jpg,/drones/21_SuperSlamNasty 5 Inch.jpg,/drones/22_Thor-X.jpg,/drones/23_carolina_xc_3d 892mm.jpg,/drones/24_iXC13 X-CLASS 850mm.jpg,/drones/25_Beta75 Pro 2.jpg,/drones/26_Rooster.JPG,/drones/27_Tinyhawk S.jpg,/drones/28_Brushless Whoop.jpg,/drones/29_Yakuza Fujin.jpg,/drones/30_Singularitum.jpg,/drones/31_Mobula6.jpg,/drones/32_Meteor65 Brushless Whoop Quadcopter.jpg,/drones/33_beebrain.jpg,/drones/34_AcroBee Frame.jpg,/drones/35_ASM-BETAFPV HX100SE.jpg,/drones/36_Diatone GTB339.jpg,/drones/37_ASM-BETAFPV HX115-1.jpg,/drones/38_R3DWhoop ZeroGrav full kit.jpg,/drones/39_TWIG XL 3 FPV Toothpick Quad.jpg,/drones/40_Solleva v72.jpg,/drones/41_Switchback.jpg,/drones/42_Lethal_Conception.jpg,/drones/43_JS-1.jpg,/drones/44_D-Rock.jpg,/drones/45_tazmanian.jpg,/drones/46_combatdrone_arctic.jpg,/drones/46_combatdrone_autumn.jpg,/drones/46_combatdrone_concrete_jungle.jpg,/drones/46_combatdrone_desert.jpg,/drones/47_Ossa Frame and 3D.jpg,/drones/48_MoonGoat.jpg,/drones/49_Shocker_Freestyle_tank.jpg,/drones/50_Mad lite.jpg,/drones/51_Nazgul XL5.jpg,/drones/52_Beta_65X.jpg,/drones/53_junior_racer.jpg,/drones/54_ROMA F5.jpg,/drones/55_Beta95x_v3.jpg,/drones/56_PNTR.jpg,/drones/57_DJI.jpg,/drones/58_SkyX Killer .V1.0.jpg,/drones/59_Nanohawk.jpg,/drones/60_Babyhawk II HD.jpg,/drones/61_Tinyhawk 2.jpg,/drones/62_Badger.jpg,/drones/63_QAV-s-Whole.jpg,/drones/64_Chief.jpg,/drones/65_TBS Source One V4.jpg,/drones/66_Armattan Marmotte DJI Edition.jpg,/drones/67_Glide.jpg,/drones/68_Cidora SL5.jpg,/drones/69_AOS5V1.jpg,/drones/70_juicemode.jpg,/drones/71_flipmode.jpg,/drones/72_SniperX Light.jpg,/drones/73_TBS MAMBO.jpg,/drones/74_Fox_racing_v1.jpg,/drones/77_Switchback_Zero.jpg,/drones/78_MAD-open full v0.1.jpg,/drones/79_Source One.jpg,/drones/80_OpenRacer_Assembly.jpg,/drones/81_PB-Kauri-X-main.jpg,/drones/82_Practice.jpg,/drones/83_Spec7.jpg,/drones/84_Southeast Typhon V7 T700.jpg,/drones/85_Super-70.jpg,/drones/86_LSV2-Ultra.jpg,/drones/87_MidMount.jpg,/drones/88_HeavyMetal.jpg,/drones/89_SR5-Velocidrone.jpg,/drones/90_FoxCrookedV3.jpg,/drones/91_FoxCrookedV4.jpg,/drones/92_Racewhoop.jpg,/drones/93_Hummingbird V3.jpg,/drones/94_7wonders 3D.jpg,/drones/95_Mobula6 2024 1S.jpg,/drones/96_BETAFPV Aquila16.jpg,/drones/97_BETAFPV Cetus Pro.jpg,/drones/98_BETAFPV Cetus X.jpg,/drones/99_MGP_SpecQuad.jpg">
-          <div class="project-image" style="background: url('/drones/51_Nazgul XL5.jpg') center/cover no-repeat; position: relative;">
-            <div class="award-badge" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">🚁 105+ 3D Models</div>
-          </div>
-          <div class="project-info">
-            <h3>
-              <span class="lang-th">โมเดล 3D โดรนแข่ง FPV และงาน Hard-Surface</span>
-              <span class="lang-en">FPV Racing Drone & Quadcopter Hard-Surface Modeling</span>
-            </h3>
-            <div class="project-desc-content">
-              <p class="lang-th"><strong>คอลเลกชันโมเดลโดรน FPV และชิ้นส่วน Hard-Surface</strong><br>ตัวอย่างผลงานจากคอลเลกชันโดรน 105+ แบบ ครอบคลุมเฟรม แคนโนปี ใบพัด และส่วนประกอบเชิงกล แสดงการขึ้นรูปชิ้นส่วน การนำเสนอวัสดุ และรายละเอียดของโมเดล</p>
-              <p class="lang-en"><strong>FPV Drone & Hard-Surface Model Collection</strong><br>Selected work from a collection of 105+ drone models, covering frames, canopies, propellers, and mechanical assemblies. The gallery shows component modeling, material presentation, and model details.</p>
-            </div>
-            <div class="tags">
-              <span>3D Hard-Surface</span><span>3D Modeling</span><span>FPV Drones</span><span>105+ Models</span><span>Materials & Texturing</span>
-            </div>
-            <div class="view-gallery-hint" style="margin-top: 15px; color: var(--accent-secondary); font-size: 0.95rem; font-weight: 600;">
-              <span class="lang-th">📸 คลิกการ์ดเพื่อดูภาพตัวอย่างโมเดลโดรนแบบเต็มจอ ↗</span>
-              <span class="lang-en">📸 Click card to explore selected drone models in full gallery ↗</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Featured Project 3: TStudio Web -->
-        <div class="project-card featured-project" data-images="/tstudio-web-preview.png">
-          <div class="project-image" style="background: url('/tstudio-web-preview.png') center/cover no-repeat; position: relative;">
-            <div class="award-badge" style="background: linear-gradient(135deg, #06b6d4, #10b981);">🌐 Cloudflare Pages | Web App</div>
-          </div>
-          <div class="project-info">
-            <h3>
-              <span class="lang-th">TStudio Web: ระบบแปลเกมภาษาไทยแบบเรียลไทม์</span>
-              <span class="lang-en">TStudio Web: Real-Time Collaborative Game Localization Platform</span>
-            </h3>
-            <div class="project-desc-content">
-              <p class="lang-th"><strong>พื้นที่ทำงานแปลเกมบนคลาวด์สำหรับหลายผู้ใช้</strong><br>TStudio Web พัฒนาด้วย React, TypeScript และ Glide Data Grid เพื่อจัดการตารางข้อความแปล รองรับการทำงานร่วมกัน การตรวจทาน และการแชร์โปรเจกต์ โดยใช้ Cloudflare Pages, Supabase และ Firebase</p>
-              <p class="lang-en"><strong>Cloud-Based Game Localization Workspace for Multiple Users</strong><br>TStudio Web uses React, TypeScript, and Glide Data Grid to manage localization tables, collaborative work, review, and project sharing, with Cloudflare Pages, Supabase, and Firebase.</p>
-            </div>
-            <div class="tags">
-              <span>React 18</span><span>TypeScript</span><span>Glide Data Grid</span><span>Real-Time Collab</span><span>Cloudflare Pages</span><span>Supabase</span>
-            </div>
-            <a href="https://tstudioapp.pages.dev/" target="_blank" class="project-link">
-              <span class="lang-th">เปิดใช้งานเว็บแอปจริง (tstudioapp.pages.dev) ↗</span>
-              <span class="lang-en">Visit Live WebApp ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Featured Project 4: TimeTracker -->
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #1e1b4b, #312e81); position: relative; display: flex; align-items: center; justify-content: center;">
-            <div style="font-size: 3.5rem;">⏱️</div>
-            <div class="award-badge" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">💼 SaaS Web App</div>
-          </div>
-          <div class="project-info">
-            <h3>
-              <span class="lang-th">TimeTracker: เว็บแอปบริหารเวลาและออกใบแจ้งหนี้</span>
-              <span class="lang-en">TimeTracker: Freelance Productivity & Invoicing Web App</span>
-            </h3>
-            <div class="project-desc-content">
-              <p class="lang-th"><strong>ระบบติดตามเวลาทำงานบนคลาวด์ วิเคราะห์การเงิน และออกใบแจ้งหนี้อัตโนมัติ</strong><br>
-              เว็บแอปพลิเคชันสำหรับฟรีแลนซ์และสตูดิโอ พัฒนาด้วย React 19 และ Firebase Firestore ประกอบด้วยระบบจับเวลางานแบบเรียลไทม์, โครงสร้างโปรเจกต์และโปรเจกต์ย่อย (Sub-projects), แดชบอร์ดวิเคราะห์รายได้ด้วย Recharts, ระบบออกเอกสารใบแจ้งหนี้ (Invoice Engine) พร้อมสั่งพิมพ์เป็น PDF ทันที</p>
-              <p class="lang-en"><strong>Cloud-Synced Time Tracking, Financial Analytics & Automated Billing</strong><br>
-              A high-productivity web application built for freelancers and teams. Features real-time task timer, hierarchical project & sub-project breakdown, interactive revenue dashboards (Recharts), customizable Invoice generation with PDF print export, and real-time cloud persistence via Firebase Firestore.</p>
-            </div>
-            <div class="tags">
-              <span>React 19</span><span>Firebase Firestore</span><span>Recharts</span><span>Invoicing Engine</span><span>SaaS</span>
-            </div>
-            <a href="https://timetracker-a63cb.web.app/" target="_blank" class="project-link">
-              <span class="lang-th">เปิดใช้งานเว็บแอปจริง ↗</span>
-              <span class="lang-en">Visit Live App ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Featured Project 5: NodNuat Mod Showcase Platform -->
-        <div class="project-card" data-images="/nodnuat-page.png">
-          <div class="project-image" style="background: url('/nodnuat-page.png') center/cover no-repeat;"></div>
-          <div class="project-info">
-            <h3>
-              <span class="lang-th">แพลตฟอร์มคลังม็อดเกมและคอมมูนิตี้ หน๊ด หนวด Translator</span>
-              <span class="lang-en">NodNuat Mod Showcase Platform & Localization Engineering</span>
-            </h3>
-            <div class="project-desc-content">
-              <p class="lang-th"><strong>แพลตฟอร์มคลังม็อดภาษาไทยและคอมมูนิตี้ NodNuat Translator</strong><br>ก่อตั้งและดูแล www.nodnuattranslator.com สำหรับรวบรวมผลงานแปลเกมและคำแนะนำการติดตั้ง รับฟังปัญหาจากผู้เล่น จัดลำดับงาน ส่งเวอร์ชันทดสอบ และบันทึกการอัปเดต</p>
-              <p class="lang-en"><strong>NodNuat Translator: Thai Mod Catalog & Community</strong><br>Founded and maintain www.nodnuattranslator.com to share localization releases and installation guides. The work includes player feedback, prioritization, test releases, and update notes.</p>
-            </div>
-            <div class="tags">
-              <span>Community</span><span>Game Localization</span><span>Cloudflare Pages</span><span>Release Delivery</span><span>Inno Setup</span>
-            </div>
-            <a href="https://www.nodnuattranslator.com/" target="_blank" class="project-link">
-              <span class="lang-th">เข้าชมเว็บไซต์ทางการ (nodnuattranslator.com) ↗</span>
-              <span class="lang-en">Visit Web Platform (nodnuattranslator.com) ↗</span>
-            </a>
-            <a href="https://www.facebook.com/NodNuatTranslator/" target="_blank" class="project-link" style="margin-left: 15px;">
-              <span class="lang-th">เพจ Facebook ↗</span>
-              <span class="lang-en">Facebook Page ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Featured Project 6: Animation Renaissance -->
-        <div class="project-card" data-video="https://www.youtube.com/embed/JSWibqtSviA,https://www.youtube.com/embed/2O5n-d4I6xQ" data-images="/atmosphere/10-11-2022_PINO-NOOCH%20(2).jpg,/atmosphere/20220805_175427.jpg,/atmosphere/20240604_152528.jpg,/atmosphere/20250327_135209.jpg,/atmosphere/IMG_5887.jpg,/atmosphere/Marry%20Xmas_2021_92.jpg,/atmosphere/Marry%20Xmas_2022_331.jpg">
-          <div class="project-image" style="background: url('/atmosphere/IMG_5887.jpg') center/cover no-repeat;"></div>
-          <div class="project-info">
-            <h3>
-              <span class="lang-th">Animation Renaissance (บรรยากาศสตูดิโอและการถ่ายทำ)</span>
-              <span class="lang-en">Animation Renaissance (Company Atmosphere)</span>
-            </h3>
-            <div class="project-desc-content">
-              <p class="lang-th">ภาพถ่ายและวิดีโอบรรยากาศการทำงาน กิจกรรม และเบื้องหลังของ Animation Renaissance แสดงงานด้านการบันทึกภาพและการผลิตสื่อของสตูดิโอ</p>
-              <p class="lang-en">Photographs and videos documenting the work environment, activities, and behind-the-scenes moments at Animation Renaissance, showing studio photography and media production.</p>
-            </div>
-            <div class="tags">
-              <span>Company Culture</span><span>Teamwork</span><span>Creative Studio</span><span>Cinematography</span>
-            </div>
-            <a href="https://www.animationrenaissance.com/our-team" target="_blank" class="project-link">
-              <span class="lang-th">ทีมงานสตูดิโอ ↗</span>
-              <span class="lang-en">Studio Team ↗</span>
-            </a>
-            <a href="https://drive.google.com/drive/folders/1sgHL4Fa4jql4UrEHEjPkEPlmVEylAf8Z?usp=sharing" target="_blank" class="project-link" style="margin-left: 15px;">
-              <span class="lang-th">คลังภาพถ่าย (Google Drive) ↗</span>
-              <span class="lang-en">Photo Archive (Google Drive) ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Featured Project 7: AI Films BTS -->
-        <div class="project-card" data-video="https://www.youtube.com/embed/9GVlo6pFsmc,https://www.youtube.com/embed/jsNJf28ACsY,https://www.youtube.com/embed/8FCUfRRy2Io,https://www.youtube.com/embed/V5UfAy9WPaQ" data-images="/aifilms/Screenshot%202026-08-14%20225600.jpg,/aifilms/Screenshot%202026-08-14%20225610.jpg,/aifilms/Screenshot%202026-08-14%20225730.jpg,/aifilms/Screenshot%202026-08-14%20225743.jpg,/aifilms/Screenshot%202026-08-14%20225857.jpg,/aifilms/Screenshot%202026-08-14%20225944.jpg,/aifilms/Screenshot%202026-08-14%20225958.jpg">
-          <div class="project-image" style="background: url('/aifilms/Screenshot%202026-08-14%20225743.jpg') center/cover no-repeat;"></div>
-          <div class="project-info">
-            <h3>
-              <span class="lang-th">การผลิตภาพยนตร์ AI และเบื้องหลังงานสร้าง</span>
-              <span class="lang-en">AI Film Production & Behind the Scenes</span>
-            </h3>
-            <div class="project-desc-content">
-              <p class="lang-th">ตัวอย่างกระบวนการทำงานและการศึกษางานภาพยนตร์ด้วย AI ครอบคลุมการทดลองภาพ การตัดต่อ และการเล่าเรื่อง วิดีโอประกอบในส่วนนี้ไม่ได้ระบุว่าผมเป็นผู้สร้างทุกช็อตหรือรับผิดชอบทุกขั้นตอนเพียงคนเดียว</p>
-              <p class="lang-en">Examples of AI filmmaking workflows and production studies, covering visual experiments, editing, and storytelling. Supporting videos do not imply that I created every shot or handled every production stage independently.</p>
-            </div>
-            <div class="tags">
-              <span>AI Film</span><span>Video Editing</span><span>Behind the Scenes</span><span>Workflow Integration</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="contact section">
       <div class="section-header reveal">
@@ -547,8 +763,8 @@
       </div>
       <div class="contact-content reveal">
         <p>
-          <span class="lang-th">ยินดีต้อนรับสำหรับการร่วมงาน สอบถามข้อมูลโปรเจกต์ หรือโอกาสในการสร้างสรรค์ผลงานใหม่ๆ ร่วมกัน</span>
-          <span class="lang-en">Feel free to reach out for collaborations, project inquiries, or networking opportunities.</span>
+          <span class="lang-th">บอกผมได้เลยว่าอยากให้ขึ้นโมเดลหรือผลิตสื่อแบบไหน จะนำไปใช้งานที่ไหน และต้องการรับไฟล์เมื่อไหร่</span>
+          <span class="lang-en">Tell me what you need modeled or produced, where it will be used, and your target delivery date.</span>
         </p>
         
         <div class="contact-details">
@@ -560,6 +776,9 @@
           </div>
           <div class="contact-item">
             <strong>LINE ID:</strong> dwb.ani
+          </div>
+          <div class="contact-item">
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/danaiwit-kanthawong-676368112/" target="_blank" rel="noopener">Danaiwit Kanthawong ↗</a>
           </div>
         </div>
 
@@ -590,16 +809,14 @@
 
         <div class="social-links">
           <a href="https://www.facebook.com/DanaiwitCaptain/" target="_blank">Facebook (Personal)</a>
-          <a href="https://github.com/memolyviza2012-max" target="_blank">GitHub</a>
-          <a href="https://www.facebook.com/NodNuatTranslator/" target="_blank">Facebook (NodNuat Translator)</a>
         </div>
       </div>
     </section>
 
     <!-- Project Modal -->
-    <div id="project-modal" class="modal">
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="modal-content">
-        <span class="close-modal">&times;</span>
+        <button type="button" class="close-modal"><span aria-hidden="true">&times;</span><span class="visually-hidden lang-th">ปิดตัวอย่างผลงาน</span><span class="visually-hidden lang-en">Close project preview</span></button>
         <div class="modal-image" id="modal-img"></div>
         <div class="modal-body">
           <h2 id="modal-title"></h2>
@@ -613,27 +830,16 @@
     </div>
 
     <!-- Lightbox for Fullscreen Images -->
-    <div id="lightbox" class="lightbox">
-      <span class="close-lightbox" id="close-lightbox">&times;</span>
-      <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</button>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-label" aria-describedby="lightbox-caption">
+      <span id="lightbox-label" class="visually-hidden"><span class="lang-th">ภาพผลงานขนาดเต็ม</span><span class="lang-en">Full-size project image</span></span>
+      <button type="button" class="close-lightbox" id="close-lightbox"><span aria-hidden="true">&times;</span><span class="visually-hidden lang-th">ปิดภาพ</span><span class="visually-hidden lang-en">Close image</span></button>
+      <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev"><span aria-hidden="true">&#10094;</span><span class="visually-hidden lang-th">ภาพก่อนหน้า</span><span class="visually-hidden lang-en">Previous image</span></button>
       <div class="lightbox-content">
         <img class="lightbox-img" id="lightbox-img" src="" alt="Fullscreen">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
         <div class="lightbox-counter" id="lightbox-counter"></div>
       </div>
-      <button class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</button>
-    </div>
-
-    <!-- Live Stats Floating Widget -->
-    <div class="live-stats-badge" id="live-stats-badge" title="Real-time website traffic">
-      <div class="stat-item">
-        <span class="pulse-dot"></span>
-        <span><strong id="stats-online-count" class="stat-value">1</strong> Online</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.8;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-        <span><strong id="stats-views-count" class="stat-value">--</strong> Visits</span>
-      </div>
+      <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next"><span aria-hidden="true">&#10095;</span><span class="visually-hidden lang-th">ภาพถัดไป</span><span class="visually-hidden lang-en">Next image</span></button>
     </div>
 
     <footer>
