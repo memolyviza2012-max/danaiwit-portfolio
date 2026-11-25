@@ -849,6 +849,10 @@ span {
   -webkit-text-fill-color: currentColor;
 }
 
+#labeler-study .project-image img {
+  object-position: center 75%;
+}
+
 .freelance-grid .project-info {
   flex: 1;
   display: flex;

@@ -58,7 +58,7 @@ const quickLabels = {
 const searchExamples = {
   medical: ['เช่น ซีอาร์ม', 'e.g. C-arm'],
   drones: ['เช่น Nazgul', 'e.g. Nazgul'],
-  other: ['เช่น ลำโพง', 'e.g. Speaker'],
+  other: ['เช่น Tandem L1', 'e.g. Tandem L1'],
 };
 
 const kindLabels = {
@@ -111,10 +111,10 @@ function buildCollections() {
     return { url, title: [label, label], kind: 'modeling', category: 'modeling' };
   });
 
-  const speaker = entries('#speaker-study', [
-    ['ลำโพง · ภาพเรนเดอร์', 'Speaker · Blender render'],
-    ['ลำโพง · แยกชิ้นส่วน', 'Speaker · Exploded view'],
-    ['ลำโพง · ภาพ Clay', 'Speaker · Clay render'],
+  const labeler = entries('#labeler-study', [
+    ['Tandem L1 · ภาพเรนเดอร์เครื่องติดฉลาก', 'Tandem L1 · Labeler render'],
+    ['Tandem L1 · ทางเดินฉลากและลูกกลิ้ง', 'Tandem L1 · Label feed and rollers'],
+    ['Tandem L1 · สายพาน มอเตอร์ และแผงควบคุม', 'Tandem L1 · Conveyor drive and control panel'],
   ], 'study', 'modeling');
 
   const lokson = entries('#lokson-wat-wiang', [
@@ -156,7 +156,7 @@ function buildCollections() {
     category: 'concept',
   }));
 
-  return { medical, drones, other: [...speaker, ...stroke, ...lokson, ...film, ...concepts] };
+  return { medical, drones, other: [...labeler, ...stroke, ...lokson, ...film, ...concepts] };
 }
 
 function normalize(value) {
