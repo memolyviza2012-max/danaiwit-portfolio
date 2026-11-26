@@ -1,0 +1,135 @@
+.selection-page {
+  background: radial-gradient(ellipse at 55% 0, #162632 0, var(--bg-color) 36rem);
+}
+
+.selection-shell {
+  width: min(1080px, calc(100% - clamp(32px, 8vw, 100px)));
+  margin-inline: auto;
+}
+
+.selection-header {
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.selection-header .selection-shell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 66px;
+}
+
+.selection-return,
+.selection-contact a {
+  color: #aee1de;
+}
+
+.selection-intro {
+  padding-block: clamp(40px, 6vw, 72px) 36px;
+}
+
+.selection-name,
+.selection-type {
+  color: #aee1de;
+  font-size: .96rem;
+  font-weight: 600;
+}
+
+.selection-intro .selection-name {
+  color: #aee1de;
+  margin-bottom: 8px;
+}
+
+.selection-intro h1 {
+  font-size: clamp(2.2rem, 5.4vw, 4rem);
+  line-height: 1.06;
+  margin-bottom: 16px;
+}
+
+.selection-intro p,
+.selection-project > p {
+  max-width: 66ch;
+  color: var(--text-secondary);
+}
+
+.selection-intro p a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.selection-project {
+  border-top: 1px solid var(--surface-border);
+  padding-block: 30px 42px;
+  scroll-margin-top: 16px;
+}
+
+.selection-project > .selection-type {
+  color: #aee1de;
+  margin-bottom: 5px;
+}
+
+.selection-project h2 {
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  margin-bottom: 8px;
+}
+
+.selection-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.selection-gallery figure {
+  min-width: 0;
+  overflow: hidden;
+  background: #101a21;
+  border: 1px solid #283c48;
+  border-radius: 14px;
+}
+
+.selection-gallery a {
+  display: grid;
+  place-items: center;
+  background: #111920;
+  aspect-ratio: 8 / 5;
+}
+
+.selection-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.selection-gallery figcaption {
+  color: #c9d4db;
+  font-size: .9rem;
+  padding: 10px 14px;
+}
+
+.selection-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 22px;
+  border-top: 1px solid var(--surface-border);
+  padding: 22px 0 44px;
+}
+
+.selection-contact h2 {
+  font-size: 1.15rem;
+}
+
+.selection-page a:focus-visible {
+  outline: 2px solid #aee1de;
+  outline-offset: -3px;
+}
+
+@media (max-width: 620px) {
+  .selection-gallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
