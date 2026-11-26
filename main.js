@@ -501,5 +501,17 @@ initImageLibrary((images, index, trigger) => {
   openLightbox(index, trigger);
 });
 
+const aboutPhotos = [...document.querySelectorAll('[data-about-photo]')];
+aboutPhotos.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    const language = document.documentElement.lang;
+    currentGalleryImages = aboutPhotos.map(photo => ({
+      url: photo.dataset.aboutPhoto,
+      label: photo.querySelector('.about-photo-title.lang-' + language).textContent,
+    }));
+    openLightbox(index, button);
+  });
+});
+
 // Initialize real-time visitor counter & presence
 initVisitorCounter();
