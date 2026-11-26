@@ -1,0 +1,135 @@
+.game-dev .selection-project {
+  padding-block: 30px 38px;
+}
+
+.game-dev-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.game-dev-jumps a {
+  padding: 6px 11px;
+  border: 1px solid #35505b;
+  border-radius: 7px;
+  color: #aee1de;
+  font-size: .9rem;
+}
+
+.game-dev-jumps a:hover {
+  background: #21363f;
+}
+
+.game-dev-feature,
+.game-dev-card,
+.game-dev-tool {
+  overflow: hidden;
+  margin-top: 16px;
+  border: 1px solid #283c48;
+  border-radius: 14px;
+  background: #111d25;
+}
+
+.game-dev-feature,
+.game-dev-tool {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+}
+
+.game-dev-feature img,
+.game-dev-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.game-dev-copy {
+  padding: clamp(16px, 2.6vw, 30px);
+}
+
+.game-dev-copy h3 {
+  margin-block: 4px 8px;
+}
+
+.game-dev-feature h3,
+.game-dev-tool h3 {
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+}
+
+.game-dev-copy p:not(.selection-type) {
+  color: var(--text-secondary);
+}
+
+.game-dev-copy a,
+.game-dev-index a {
+  color: #aee1de;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.game-dev-copy a {
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.game-dev-cards,
+.game-dev-index {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.game-dev-card {
+  scroll-margin-top: 16px;
+}
+
+.game-dev-flow {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 18px 18px 18px 38px;
+  background: #0d171e;
+}
+
+.game-dev-flow li {
+  padding: 7px 8px;
+  color: #d3e2e7;
+}
+
+.game-dev-flow li::marker {
+  color: #aee1de;
+  font-weight: 700;
+}
+
+.game-dev-index {
+  margin-top: 14px;
+}
+
+.game-dev-index ul {
+  list-style: none;
+  display: grid;
+  gap: 5px;
+  margin-top: 8px;
+  padding-left: 0;
+}
+
+@media (max-width: 720px) {
+  .game-dev-feature,
+  .game-dev-tool,
+  .game-dev-cards,
+  .game-dev-index {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .game-dev-cards {
+    margin-top: 14px;
+  }
+
+  .game-dev-cards article {
+    margin-top: 0;
+  }
+}

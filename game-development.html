@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Game assets, Thai game localization, and release tools by Danaiwit Kanthawong.">
+    <title>Game Development | Danaiwit Kanthawong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./hard-surface.css">
+    <link rel="stylesheet" href="./game-development.css">
+  </head>
+  <body class="selection-page game-dev">
+    <header class="selection-header">
+      <div class="selection-shell">
+        <a class="logo" href="/" aria-label="Wit, main portfolio">Wit<span>.</span></a>
+        <nav class="selection-nav" aria-label="Portfolio pages">
+          <a class="selection-return" href="/hard-surface.html">Hard-Surface</a>
+          <a class="selection-return" href="/#projects">Full portfolio ↗</a>
+        </nav>
+      </div>
+    </header>
+    <main class="selection-shell">
+      <div class="selection-intro">
+        <p class="selection-name">Danaiwit “Dewit” Kanthawong</p>
+        <h1>Game Development</h1>
+        <p>I model and texture hard-surface game assets, build Thai localization mods, and develop tools to package and install patches. My game asset experience includes Unity and Unreal Engine.</p>
+        <nav class="game-dev-jumps" aria-label="On this page">
+          <a href="#assets">Game Assets</a>
+          <a href="#localization">Localization &amp; Modding</a>
+          <a href="#tools">Tools &amp; Pipelines</a>
+          <a href="#index">Project Index ↓</a>
+        </nav>
+      </div>
+
+      <section id="assets" class="selection-project" aria-labelledby="assets-title">
+        <h2 id="assets-title">Game Assets</h2>
+        <article class="game-dev-feature">
+          <img src="/drones/51_Nazgul%20XL5.jpg" width="1100" height="619" fetchpriority="high" alt="Assembled Nazgul XL5 FPV drone model showing the frame, propellers and camera">
+          <div class="game-dev-copy">
+            <p class="selection-type">Unity · Modeling &amp; texturing</p>
+            <h3>FPV Drone Models</h3>
+            <p>I modeled and textured FPV drones for use in Unity, including the frames, canopies, camera mounts and exposed hardware.</p>
+            <a href="/hard-surface.html#drone-title">View assembly and detail shots →</a>
+          </div>
+        </article>
+      </section>
+
+      <section id="localization" class="selection-project" aria-labelledby="localization-title">
+        <h2 id="localization-title">Localization &amp; Modding</h2>
+        <p>Thai-language mods for existing PC games, with release assets from NodNuat Translator.</p>
+        <div class="game-dev-cards">
+          <article id="hull-rupture" class="game-dev-card">
+            <img src="/game-development/hull-rupture.webp" width="960" height="540" loading="lazy" alt="Hull Rupture Thai mod release cover with an illustrated spaceship">
+            <div class="game-dev-copy">
+              <p class="selection-type">Community mod · Steam</p>
+              <h3>Hull Rupture</h3>
+              <p>Localized the game text and UI into Thai. The v1.0 release included alternate fonts and both installer and manual packages.</p>
+            </div>
+          </article>
+          <article id="pathologic-2" class="game-dev-card">
+            <img src="/game-development/pathologic-2.webp" width="960" height="540" loading="lazy" alt="Pathologic 2 Thai mod release cover with a masked figure and Thai lettering">
+            <div class="game-dev-copy">
+              <p class="selection-type">Community mod · Steam / GOG</p>
+              <h3>Pathologic 2</h3>
+              <p>Worked on Thai text and font integration. The v2.0 release included separate patches for the Steam and GOG builds.</p>
+            </div>
+          </article>
+          <article id="clean-start" class="game-dev-card">
+            <img src="/game-development/clean-start.webp" width="960" height="540" loading="lazy" alt="Clean Start Thai mod release cover with a character cleaning a room">
+            <div class="game-dev-copy">
+              <p class="selection-type">Community mod · Steam</p>
+              <h3>Clean Start</h3>
+              <p>Integrated selectable Thai text and the Mitr font. The release included a package for the developer and a separate installer.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tools" class="selection-project" aria-labelledby="tools-title">
+        <h2 id="tools-title">Tools &amp; Pipelines</h2>
+        <div class="game-dev-tool">
+          <div class="game-dev-copy">
+            <p class="selection-type">Windows · Release Engineering</p>
+            <h3>Offline patch installer</h3>
+            <p>I built the Pathologic 2 Thai mod installer around build-specific binary patches, with source-file checks and an uninstall option.</p>
+          </div>
+          <ol class="game-dev-flow" aria-label="Installer workflow">
+            <li>Verify local files</li>
+            <li>Apply the matching patch</li>
+            <li>Restore originals on uninstall</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="index" class="selection-project" aria-labelledby="index-title">
+        <h2 id="index-title">Project Index</h2>
+        <div class="game-dev-index">
+          <div>
+            <h3>Game Assets</h3>
+            <ul><li><a href="#assets">FPV Drone Models</a></li></ul>
+          </div>
+          <div>
+            <h3>Localization &amp; Modding</h3>
+            <ul>
+              <li><a href="#hull-rupture">Hull Rupture</a></li>
+              <li><a href="#pathologic-2">Pathologic 2</a></li>
+              <li><a href="#clean-start">Clean Start</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Tools &amp; Pipelines</h3>
+            <ul><li><a href="#tools">Offline patch installer</a></li></ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="selection-contact">
+        <h2>Contact</h2>
+        <a href="mailto:danaiwit.dwb@gmail.com">danaiwit.dwb@gmail.com</a>
+        <a href="https://www.linkedin.com/in/danaiwit-kanthawong-676368112/">LinkedIn ↗</a>
+      </footer>
+    </main>
+  </body>
+</html>

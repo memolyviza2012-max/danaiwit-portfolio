@@ -139,7 +139,7 @@ span {
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: clamp(12px, 2vw, 30px);
 }
 
 .nav-links a {
@@ -1605,7 +1605,7 @@ footer {
     grid-column: 1 / -1;
     grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 5px;
   }
 
@@ -1617,6 +1617,8 @@ footer {
     min-height: 44px;
     display: grid;
     place-items: center;
+    text-align: center;
+    line-height: 1.15;
     border-radius: 6px 6px 0 0;
     border-bottom: 2px solid transparent;
   }

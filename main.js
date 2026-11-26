@@ -29,7 +29,7 @@ updateLanguageButtons();
 langBtnTh?.addEventListener('click', () => setLanguage('th'));
 langBtnEn?.addEventListener('click', () => setLanguage('en'));
 
-const navLinks = [...document.querySelectorAll('.nav-links a')];
+const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
 function updateNavigationLocation() {
   const id = location.hash.slice(1) || 'home';
   const section = document.getElementById(id)?.closest('section');

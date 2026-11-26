@@ -19,6 +19,27 @@
   min-height: 66px;
 }
 
+.selection-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px clamp(10px, 2.5vw, 24px);
+}
+
+.selection-nav a {
+  padding-block: 5px;
+}
+
+.selection-nav-feature {
+  font-weight: 600;
+}
+
+.selection-nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
 .selection-return,
 .selection-contact a {
   color: #aee1de;
