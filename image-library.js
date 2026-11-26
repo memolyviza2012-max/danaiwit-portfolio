@@ -28,7 +28,7 @@ const medicalTitles = [
 const categories = {
   all: ['ทุกประเภท', 'All categories'],
   modeling: ['ผลงานโมเดล', 'Modeling work'],
-  concept: ['ภาพแนวคิดทั้งหมด', 'All visual concepts'],
+  concept: ['งานภาพทั้งหมด', 'All visual work'],
   imaging: ['เครื่องถ่ายภาพ', 'Imaging'],
   surgery: ['ห้องผ่าตัด', 'Operating room'],
   critical: ['หอผู้ป่วยวิกฤต', 'Critical care'],
@@ -52,7 +52,7 @@ const quickLabels = {
   all: ['ทั้งหมด', 'All images'],
   modeling: ['ภาพโมเดล', 'Modeling work'],
   film: ['ภาพจากวิดีโอ', 'Film stills'],
-  concept: ['ภาพแนวคิด', 'Visual concepts'],
+  concept: ['งานภาพ', 'Visual work'],
 };
 
 const searchExamples = {
@@ -68,7 +68,7 @@ const kindLabels = {
   film: ['ภาพจากงานวิดีโอ', 'Film still'],
   credit: ['เครดิตผลงานทีม', 'Studio team credit'],
   recreated: ['ปรับภาพต้นฉบับด้วย AI', 'AI rework of original photo'],
-  concept: ['ภาพแนวคิด', 'Visual concept'],
+  concept: ['งานภาพ', 'Visual work'],
 };
 
 function imagesFrom(selector) {
