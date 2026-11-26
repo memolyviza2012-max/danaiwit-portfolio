@@ -1,3 +1,21 @@
+const getinge = 'https://www.getinge.com/uk/products-and-solutions/operating-room/or-equipment/?cat35471=35469';
+const draeger = 'https://www.draeger.com/ro_ro/Products/Vista-300-S';
+
+const medicalConcepts = [
+  ['ultrasound-cart', 'imaging', 'รถเข็นอัลตราซาวนด์', 'Ultrasound cart', 'https://www.documents.philips.com/assets/20250507/2f2a82833fe24c4985a2b2d6012af27d.pdf'],
+  ['mobile-c-arm', 'imaging', 'เครื่องเอกซเรย์แบบซีอาร์ม', 'Mobile C-arm', 'https://www.gehealthcare.com/en-gb/products/surgical-imaging/oec-one-cfd'],
+  ['mobile-x-ray', 'imaging', 'เครื่องเอกซเรย์เคลื่อนที่', 'Mobile X-ray unit', 'https://www.documents.philips.com/assets/20170523/707e16ce0e8c47619a54a77c014ad392.pdf'],
+  ['surgical-light', 'surgery', 'โคมไฟผ่าตัด', 'Surgical light', getinge],
+  ['operating-table', 'surgery', 'เตียงผ่าตัด', 'Operating table', getinge],
+  ['anesthesia-station', 'surgery', 'เครื่องดมยาสลบ', 'Anesthesia workstation', 'https://www.gehealthcare.com/en-us/products/anesthesia-delivery/carestation-750'],
+  ['patient-monitor', 'critical', 'เครื่องติดตามสัญญาณชีพ', 'Patient monitor', draeger],
+  ['icu-ventilator', 'critical', 'เครื่องช่วยหายใจ ICU', 'ICU ventilator', draeger],
+  ['infusion-stack', 'critical', 'ชุดเครื่องควบคุมการให้สารละลาย', 'Infusion pump station', 'https://www.bbraun.com/en/products-and-solutions/therapies/infusion-therapy/automated-infusion-pumps-spaceplus.html'],
+  ['neonatal-incubator', 'support', 'ตู้อบทารกแรกเกิด', 'Neonatal incubator', 'https://www.draeger.com/en-us_ca/Products/draeger-babyleo-tn500'],
+  ['defibrillator', 'support', 'เครื่องกระตุกหัวใจพร้อมจอ', 'Monitor and defibrillator', 'https://www.zoll.com/en-us/products/emergency-care/monitors-and-defibrillators/r-series-plus'],
+  ['steam-sterilizer', 'support', 'เครื่องนึ่งฆ่าเชื้อ', 'Steam sterilizer', 'https://www.steris.com/healthcare/products/steam-sterilizers'],
+];
+
 const medicalTitles = [
   ['รายละเอียดข้อต่อและแขนกล', 'Surgical arm detail'],
   ['หุ่นยนต์ผ่าตัดใน Blender', 'Surgical robot in Blender'],
@@ -11,17 +29,21 @@ const categories = {
   all: ['ทุกประเภท', 'All categories'],
   modeling: ['ผลงานโมเดล', 'Modeling work'],
   concept: ['งานภาพทั้งหมด', 'All visual work'],
+  imaging: ['เครื่องถ่ายภาพ', 'Imaging'],
+  surgery: ['ห้องผ่าตัด', 'Operating room'],
+  critical: ['หอผู้ป่วยวิกฤต', 'Critical care'],
+  support: ['อุปกรณ์สนับสนุน', 'Clinical support'],
   film: ['ภาพจากงานวิดีโอ', 'Film stills'],
 };
 
 const collectionCategories = {
-  medical: ['all'],
+  medical: ['all', 'modeling', 'concept', 'imaging', 'surgery', 'critical', 'support'],
   drones: ['all'],
   other: ['all', 'modeling', 'film', 'concept'],
 };
 
 const quickCategories = {
-  medical: [],
+  medical: ['all', 'modeling', 'concept'],
   drones: [],
   other: ['all', 'modeling', 'film', 'concept'],
 };
@@ -34,7 +56,7 @@ const quickLabels = {
 };
 
 const searchExamples = {
-  medical: ['เช่น หุ่นยนต์ผ่าตัด', 'e.g. surgical robot'],
+  medical: ['เช่น ซีอาร์ม', 'e.g. C-arm'],
   drones: ['เช่น Nazgul', 'e.g. Nazgul'],
   other: ['เช่น Tandem L1', 'e.g. Tandem L1'],
 };
@@ -63,7 +85,15 @@ function entries(selector, titles, kind, category) {
 }
 
 function buildCollections() {
-  const medical = entries('#medical-modeling', medicalTitles, 'modeling', 'modeling');
+  const medical = entries('#medical-modeling', medicalTitles, 'modeling', 'modeling').concat(
+    medicalConcepts.map(([key, category, th, en, reference]) => ({
+      url: '/work-gallery/medical/' + key + '.webp',
+      title: [th, en],
+      kind: 'concept',
+      category,
+      reference,
+    }))
+  );
 
   const drones = imagesFrom('#hard-surface').map(url => {
     const label = decodeURIComponent(url.split('/').at(-1))
@@ -200,6 +230,15 @@ export function initImageLibrary(openPreview) {
     button.addEventListener('click', () => onOpen(button));
     card.append(button);
 
+    if (item.reference) {
+      const link = document.createElement('a');
+      link.href = item.reference;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = lang === 0 ? 'อ้างอิงรูปทรง ↗' : 'Visual reference ↗';
+      link.setAttribute('aria-label', link.textContent + ' · ' + item.title[lang]);
+      card.append(link);
+    }
     return card;
   }
 
