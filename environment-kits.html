@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://danaiwitk-portfolio.vercel.app/environment-kits.html">
+<title>Modular Environment Kits | Danaiwit Kanthawong</title>
+<style>
+:root{color-scheme:dark;--bg:#0d151c;--panel:#14222b;--line:#30434c;--ink:#f1f5f4;--muted:#b4c4ca;--aqua:#aee1de;--warm:#edd09d}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 60% 0,#1a303d 0,transparent 37rem),var(--bg);font:16px/1.5 "Segoe UI",Arial,sans-serif;color:var(--ink)}
+a{color:inherit;text-underline-offset:4px}
+a:focus-visible{outline:2px solid var(--aqua);outline-offset:-2px}
+.shell{width:min(1160px,calc(100% - 36px));margin:auto}
+header{border-bottom:1px solid var(--line)}
+header .shell{display:flex;min-height:62px;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-size:1.55rem;font-weight:800;letter-spacing:-.07em}.brand span,.category{color:var(--aqua)}
+header .brand{text-decoration:none} header nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px 16px;color:var(--aqua);font-size:.88rem}
+.intro{padding:clamp(28px,5vw,60px) 0 24px}
+.intro p,.section>p,.detail-head p,.world-text p,.credits p{margin:0;color:var(--muted);max-width:72ch}
+h1,h2{line-height:1.12;letter-spacing:-.034em;margin:0}
+h1{font-size:clamp(2.25rem,5vw,4.15rem);margin-bottom:10px}
+h2{font-size:clamp(1.45rem,3vw,2.35rem)}
+.twocol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.world,figure{margin:0;min-width:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.alderlock{--tone:var(--warm)}
+.bramblewatch{--tone:var(--aqua)}
+.world-text{padding:16px 18px}
+.world-text .category{color:var(--tone);margin-bottom:5px;font-size:.9rem;font-weight:650}
+.world-text h2{margin-bottom:8px}
+.world-text h2 a{text-decoration:none}
+.world-text h2 a span{color:var(--tone);font-size:.7em}
+.world figure{border-width:1px 0 0;border-radius:0}
+figure a{display:block;background:#18262a}
+img{width:100%;height:auto;display:block}
+figcaption{display:grid;gap:3px;padding:10px 13px;color:var(--muted);font-size:.88rem}
+figcaption strong{color:var(--ink)}
+.section{padding:26px 0 28px;margin-top:20px;border-top:1px solid var(--line);scroll-margin-top:12px}
+.section h2{margin-bottom:10px}
+.section .twocol{margin-top:16px}
+.detail-head{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;align-items:start;margin-bottom:16px}
+.stats{margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.stats>div{padding:10px 12px;background:var(--panel);border:1px solid var(--line);border-radius:9px}
+.stats dt{font-size:.8rem;color:var(--muted)}
+.stats dd{margin:0;color:var(--tone);font-size:1.45rem;font-weight:700}
+.detail-gallery{display:grid;grid-template-columns:1fr 1.1fr;gap:12px}
+.detail-gallery figure:first-child{grid-row:span 2;align-self:start}
+.credits p+p{margin-top:10px}
+.credits{padding-bottom:50px}
+@media(min-width:651px){.world{display:grid;grid-template-rows:subgrid;grid-row:span 2;row-gap:0}}
+@media(max-width:650px){.twocol,.detail-head,.detail-gallery{grid-template-columns:minmax(0,1fr)}.detail-gallery figure:first-child{grid-row:auto}.stats>div{padding:8px}}
+</style>
+</head>
+<body>
+<header><div class="shell"><a class="brand" href="/" aria-label="Wit portfolio homepage">Wit<span>.</span></a><nav aria-label="Portfolio pages"><a href="/#environment-kits">Selected Work</a><a href="/game-development.html#game-environment-kits">Game Development</a></nav></div></header>
+<main class="shell">
+  <div class="intro">
+    <h1>Modular Environment Kits</h1>
+    <p>Two stylized Blender environments built around different settlement layouts. Each personal portfolio kit contains 28 reusable assets.</p>
+  </div>
+  <div class="twocol" aria-label="Compare the two environments">
+<article class="world alderlock">
+    <div class="world-text">
+      <p class="category">River trading town</p>
+      <h2><a href="#alderlock">Alderlock Crossing <span aria-hidden="true">↓</span></a></h2>
+      <p>A toll bridge feeds streets that run parallel to the river. Stepped gables mark the merchant rows, with warehouses, cranes and cargo boats along the quay.</p>
+    </div>
+    <figure>
+      <a href="/environment-kits/alderlock-scene.webp" target="_blank" rel="noopener" aria-label="Open Alderlock Crossing scene render at full size">
+        <img src="/environment-kits/alderlock-scene.webp" alt="The toll bridge leads into the trading town and its waterfront." width="1840" height="1480" decoding="async">
+      </a>
+      <figcaption><strong>Scene render</strong><span>The toll bridge leads into the trading town and its waterfront.</span></figcaption>
+    </figure>
+  </article><article class="world bramblewatch">
+    <div class="world-text">
+      <p class="category">Woodland settlement</p>
+      <h2><a href="#bramblewatch">Bramblewatch Sanctuary <span aria-hidden="true">↓</span></a></h2>
+      <p>Curving paths connect forest clearings. Acorn-shaped cottages, two-level tree homes and circular gardens distinguish the small building clusters.</p>
+    </div>
+    <figure>
+      <a href="/environment-kits/bramblewatch-scene.webp" target="_blank" rel="noopener" aria-label="Open Bramblewatch Sanctuary scene render at full size">
+        <img src="/environment-kits/bramblewatch-scene.webp" alt="The boardwalk opens into a woodland village arranged around clearings." width="1840" height="1480" decoding="async">
+      </a>
+      <figcaption><strong>Scene render</strong><span>The boardwalk opens into a woodland village arranged around clearings.</span></figcaption>
+    </figure>
+  </article>
+  </div>
+  <section class="section" aria-labelledby="plans-title">
+    <h2 id="plans-title">Site plans compared</h2>
+    <p>Alderlock follows a linear quay. Bramblewatch branches into woodland clearings.</p>
+    <div class="twocol"><figure>
+      <a href="/environment-kits/alderlock-plan.webp" target="_blank" rel="noopener" aria-label="Open Alderlock Crossing site plan at full size">
+        <img src="/environment-kits/alderlock-plan.webp" alt="Parallel riverside streets and a straight approach over the toll bridge." width="1600" height="1200" loading="lazy" decoding="async">
+      </a>
+      <figcaption><strong>Site plan</strong><span>Parallel riverside streets and a straight approach over the toll bridge.</span></figcaption>
+    </figure><figure>
+      <a href="/environment-kits/bramblewatch-plan.webp" target="_blank" rel="noopener" aria-label="Open Bramblewatch Sanctuary site plan at full size">
+        <img src="/environment-kits/bramblewatch-plan.webp" alt="Curved trails branch between clearings and circular gardens." width="1600" height="1200" loading="lazy" decoding="async">
+      </a>
+      <figcaption><strong>Site plan</strong><span>Curved trails branch between clearings and circular gardens.</span></figcaption>
+    </figure></div>
+  </section>
+  <section id="alderlock" class="section alderlock" aria-labelledby="alderlock-title">
+  <div class="detail-head">
+    <div>
+      <h2 id="alderlock-title">Alderlock Crossing</h2>
+      <p>The quay links the bridge to timber landings and cargo yards. Rowhouses frame the market and guild square, while loading hatches and crane jibs make the waterfront’s function readable at a distance.</p>
+    </div>
+    <dl class="stats">
+      <div><dt>Reusable assets</dt><dd>28</dd></div>
+      <div><dt>Building placements</dt><dd>31</dd></div>
+      <div><dt>Linked instances</dt><dd>524</dd></div>
+    </dl>
+  </div>
+  <div class="detail-gallery">
+    <figure>
+      <a href="/environment-kits/alderlock-overview.webp" target="_blank" rel="noopener" aria-label="Open Alderlock Crossing settlement overview at full size">
+        <img src="/environment-kits/alderlock-overview.webp" alt="The merchant rows rise behind the working quay." width="1840" height="1480" loading="lazy" decoding="async">
+      </a>
+      <figcaption><strong>Settlement overview</strong><span>The merchant rows rise behind the working quay.</span></figcaption>
+    </figure>
+    <figure>
+      <a href="/environment-kits/alderlock-catalog.webp" target="_blank" rel="noopener" aria-label="Open Alderlock Crossing building catalog at full size">
+        <img src="/environment-kits/alderlock-catalog.webp" alt="Stepped-gable rowhouses, waterfront buildings, cranes and cargo boats." width="2440" height="1250" loading="lazy" decoding="async">
+      </a>
+      <figcaption><strong>Building catalog</strong><span>Stepped-gable rowhouses, waterfront buildings, cranes and cargo boats.</span></figcaption>
+    </figure>
+    <figure>
+      <a href="/environment-kits/alderlock-wireframe.webp" target="_blank" rel="noopener" aria-label="Open Alderlock Crossing building wireframe at full size">
+        <img src="/environment-kits/alderlock-wireframe.webp" alt="Editable meshes for the settlement buildings and waterfront assets." width="2440" height="1250" loading="lazy" decoding="async">
+      </a>
+      <figcaption><strong>Building wireframe</strong><span>Editable meshes for the settlement buildings and waterfront assets.</span></figcaption>
+    </figure>
+  </div>
+</section><section id="bramblewatch" class="section bramblewatch" aria-labelledby="bramblewatch-title">
+  <div class="detail-head">
+    <div>
+      <h2 id="bramblewatch-title">Bramblewatch Sanctuary</h2>
+      <p>A stair and boardwalk lead into the forest. Dirt trails branch around the trees, lantern markers follow the bends, and raised tree homes and perches give the settlement a second level.</p>
+    </div>
+    <dl class="stats">
+      <div><dt>Reusable assets</dt><dd>28</dd></div>
+      <div><dt>Building placements</dt><dd>32</dd></div>
+      <div><dt>Linked instances</dt><dd>462</dd></div>
+    </dl>
+  </div>
+  <div class="detail-gallery">
+    <figure>
+      <a href="/environment-kits/bramblewatch-overview.webp" target="_blank" rel="noopener" aria-label="Open Bramblewatch Sanctuary settlement overview at full size">
+        <img src="/environment-kits/bramblewatch-overview.webp" alt="Acorn roofs and elevated tree homes break up the forest canopy." width="1840" height="1480" loading="lazy" decoding="async">
+      </a>
+      <figcaption><strong>Settlement overview</strong><span>Acorn roofs and elevated tree homes break up the forest canopy.</span></figcaption>
+    </figure>
+    <figure>
+      <a href="/environment-kits/bramblewatch-catalog.webp" target="_blank" rel="noopener" aria-label="Open Bramblewatch Sanctuary building catalog at full size">
+        <img src="/environment-kits/bramblewatch-catalog.webp" alt="Acorn cottages, a crescent-roofed inn, tree homes and circular gardens." width="2440" height="1250" loading="lazy" decoding="async">
+      </a>
+      <figcaption><strong>Building catalog</strong><span>Acorn cottages, a crescent-roofed inn, tree homes and circular gardens.</span></figcaption>
+    </figure>
+    <figure>
+      <a href="/environment-kits/bramblewatch-wireframe.webp" target="_blank" rel="noopener" aria-label="Open Bramblewatch Sanctuary building wireframe at full size">
+        <img src="/environment-kits/bramblewatch-wireframe.webp" alt="Editable meshes for the rounded roofs, stilt structures and woodland assets." width="2440" height="1250" loading="lazy" decoding="async">
+      </a>
+      <figcaption><strong>Building wireframe</strong><span>Editable meshes for the rounded roofs, stilt structures and woodland assets.</span></figcaption>
+    </figure>
+  </div>
+</section>
+  <section class="section credits" aria-labelledby="credits-title">
+    <h2 id="credits-title">Project roles and validation</h2>
+    <p><strong>Danaiwit Kanthawong</strong> defined the creative brief and directed both projects. <strong>Codex</strong> assisted with design, created geometry using Blender Python, and handled materials, scene assembly, lighting, and rendering.</p>
+    <p>The site plans are based on Blender scene placements. Evaluated triangle counts were checked against all 56 GLB exports. Unity import and gameplay have yet to be tested.</p>
+  </section>
+</main>
+</body>
+</html>
